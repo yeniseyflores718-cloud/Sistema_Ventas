@@ -16,5 +16,10 @@ namespace Sistema_Ventas
         {
             InitializeComponent();
         }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
