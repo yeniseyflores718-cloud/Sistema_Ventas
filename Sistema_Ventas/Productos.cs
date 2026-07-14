@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Sistema_Ventas
 {
-    public partial class venrtas : Form
+    public partial class Productos : Form
     {
-        public venrtas()
+        public Productos()
         {
             InitializeComponent();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

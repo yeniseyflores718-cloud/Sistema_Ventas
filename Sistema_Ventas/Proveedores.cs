@@ -21,5 +21,10 @@ namespace Sistema_Ventas
         {
 
         }
+
+        private void dgv_proveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
