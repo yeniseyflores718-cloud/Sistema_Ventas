@@ -110,6 +110,12 @@
     <Compile Include="Formlogin2.Designer.cs">
       <DependentUpon>Formlogin2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Inventario.Designer.cs">
+      <DependentUpon>Form_Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formlogin2.resx">
       <DependentUpon>Formlogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Inventario.resx">
+      <DependentUpon>Form_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
