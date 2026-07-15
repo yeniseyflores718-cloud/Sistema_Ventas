@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistema_Ventas
 {
-    public partial class Proveedores : Form
+    public partial class Devoluciones : Form
     {
-        public Proveedores()
+        public Devoluciones()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgv_proveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
