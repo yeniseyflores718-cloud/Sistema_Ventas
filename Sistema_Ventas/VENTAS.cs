@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Sistema_Ventas
 {
-    public partial class venrtas : Form
+    public partial class VENTAS : Form
     {
-        public venrtas()
+        public VENTAS()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
