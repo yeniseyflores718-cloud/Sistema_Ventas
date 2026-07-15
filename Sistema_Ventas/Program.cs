@@ -16,7 +16,7 @@ namespace Sistema_Ventas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Inventario());
+            Application.Run(new Form1());
         }
     }
 }
