@@ -28,31 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Inventario));
             this.pnl_lateral = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_superior = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_busqueda = new System.Windows.Forms.TextBox();
             this.cmb_stock = new System.Windows.Forms.ComboBox();
             this.cmb_categoria = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_productosRg = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_enstock = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_stockbajo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lbl_sinstock = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txt_busqueda = new System.Windows.Forms.TextBox();
             this.btn_buscador = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbl_productosRg = new System.Windows.Forms.Label();
-            this.lbl_enstock = new System.Windows.Forms.Label();
-            this.lbl_stockbajo = new System.Windows.Forms.Label();
-            this.lbl_sinstock = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -64,12 +67,11 @@
             this.btn_ventas = new System.Windows.Forms.Button();
             this.btn_inicio = new System.Windows.Forms.Button();
             this.pic_icono2 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.pnl_lateral.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnl_superior.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -77,7 +79,6 @@
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -147,6 +148,50 @@
             this.pnl_superior.Size = new System.Drawing.Size(784, 461);
             this.pnl_superior.TabIndex = 2;
             // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.btn_buscador);
+            this.panel7.Controls.Add(this.txt_busqueda);
+            this.panel7.Controls.Add(this.cmb_stock);
+            this.panel7.Controls.Add(this.cmb_categoria);
+            this.panel7.Location = new System.Drawing.Point(31, 110);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(716, 64);
+            this.panel7.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(509, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 14);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Stock";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(274, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 14);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Categoria:";
+            // 
+            // txt_busqueda
+            // 
+            this.txt_busqueda.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_busqueda.Location = new System.Drawing.Point(3, 23);
+            this.txt_busqueda.Name = "txt_busqueda";
+            this.txt_busqueda.Size = new System.Drawing.Size(220, 23);
+            this.txt_busqueda.TabIndex = 5;
+            // 
             // cmb_stock
             // 
             this.cmb_stock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -199,6 +244,26 @@
             this.panel2.Size = new System.Drawing.Size(173, 77);
             this.panel2.TabIndex = 0;
             // 
+            // lbl_productosRg
+            // 
+            this.lbl_productosRg.AutoSize = true;
+            this.lbl_productosRg.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_productosRg.Location = new System.Drawing.Point(114, 44);
+            this.lbl_productosRg.Name = "lbl_productosRg";
+            this.lbl_productosRg.Size = new System.Drawing.Size(14, 14);
+            this.lbl_productosRg.TabIndex = 2;
+            this.lbl_productosRg.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(77, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Productos \r\n registrados:\r\n";
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -211,6 +276,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(173, 77);
             this.panel4.TabIndex = 1;
+            // 
+            // lbl_enstock
+            // 
+            this.lbl_enstock.AutoSize = true;
+            this.lbl_enstock.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_enstock.Location = new System.Drawing.Point(116, 44);
+            this.lbl_enstock.Name = "lbl_enstock";
+            this.lbl_enstock.Size = new System.Drawing.Size(14, 14);
+            this.lbl_enstock.TabIndex = 2;
+            this.lbl_enstock.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(74, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 14);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "En stock:";
             // 
             // panel5
             // 
@@ -225,6 +310,26 @@
             this.panel5.Size = new System.Drawing.Size(173, 77);
             this.panel5.TabIndex = 2;
             // 
+            // lbl_stockbajo
+            // 
+            this.lbl_stockbajo.AutoSize = true;
+            this.lbl_stockbajo.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stockbajo.Location = new System.Drawing.Point(127, 44);
+            this.lbl_stockbajo.Name = "lbl_stockbajo";
+            this.lbl_stockbajo.Size = new System.Drawing.Size(14, 14);
+            this.lbl_stockbajo.TabIndex = 2;
+            this.lbl_stockbajo.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(74, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 14);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Stock bajo:";
+            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -237,6 +342,26 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(176, 77);
             this.panel6.TabIndex = 3;
+            // 
+            // lbl_sinstock
+            // 
+            this.lbl_sinstock.AutoSize = true;
+            this.lbl_sinstock.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sinstock.Location = new System.Drawing.Point(125, 44);
+            this.lbl_sinstock.Name = "lbl_sinstock";
+            this.lbl_sinstock.Size = new System.Drawing.Size(14, 14);
+            this.lbl_sinstock.TabIndex = 2;
+            this.lbl_sinstock.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(79, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 14);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Sin stock:";
             // 
             // panel1
             // 
@@ -260,29 +385,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(719, 255);
             this.dataGridView1.TabIndex = 0;
             // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.btn_buscador);
-            this.panel7.Controls.Add(this.txt_busqueda);
-            this.panel7.Controls.Add(this.cmb_stock);
-            this.panel7.Controls.Add(this.cmb_categoria);
-            this.panel7.Location = new System.Drawing.Point(31, 110);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(716, 64);
-            this.panel7.TabIndex = 5;
-            // 
-            // txt_busqueda
-            // 
-            this.txt_busqueda.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_busqueda.Location = new System.Drawing.Point(3, 23);
-            this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(220, 23);
-            this.txt_busqueda.TabIndex = 5;
-            // 
             // btn_buscador
             // 
             this.btn_buscador.BackgroundImage = global::Sistema_Ventas.Properties.Resources.lupa;
@@ -292,86 +394,6 @@
             this.btn_buscador.Size = new System.Drawing.Size(29, 23);
             this.btn_buscador.TabIndex = 6;
             this.btn_buscador.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(77, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Productos \r\n registrados:\r\n";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 14);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "En stock:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(74, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 14);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Stock bajo:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(79, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 14);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Sin stock:";
-            // 
-            // lbl_productosRg
-            // 
-            this.lbl_productosRg.AutoSize = true;
-            this.lbl_productosRg.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_productosRg.Location = new System.Drawing.Point(114, 44);
-            this.lbl_productosRg.Name = "lbl_productosRg";
-            this.lbl_productosRg.Size = new System.Drawing.Size(14, 14);
-            this.lbl_productosRg.TabIndex = 2;
-            this.lbl_productosRg.Text = "0";
-            // 
-            // lbl_enstock
-            // 
-            this.lbl_enstock.AutoSize = true;
-            this.lbl_enstock.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_enstock.Location = new System.Drawing.Point(116, 44);
-            this.lbl_enstock.Name = "lbl_enstock";
-            this.lbl_enstock.Size = new System.Drawing.Size(14, 14);
-            this.lbl_enstock.TabIndex = 2;
-            this.lbl_enstock.Text = "0";
-            // 
-            // lbl_stockbajo
-            // 
-            this.lbl_stockbajo.AutoSize = true;
-            this.lbl_stockbajo.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_stockbajo.Location = new System.Drawing.Point(127, 44);
-            this.lbl_stockbajo.Name = "lbl_stockbajo";
-            this.lbl_stockbajo.Size = new System.Drawing.Size(14, 14);
-            this.lbl_stockbajo.TabIndex = 2;
-            this.lbl_stockbajo.Text = "0";
-            // 
-            // lbl_sinstock
-            // 
-            this.lbl_sinstock.AutoSize = true;
-            this.lbl_sinstock.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sinstock.Location = new System.Drawing.Point(125, 44);
-            this.lbl_sinstock.Name = "lbl_sinstock";
-            this.lbl_sinstock.Size = new System.Drawing.Size(14, 14);
-            this.lbl_sinstock.TabIndex = 2;
-            this.lbl_sinstock.Text = "0";
             // 
             // pictureBox1
             // 
@@ -520,27 +542,6 @@
             this.pic_icono2.TabIndex = 0;
             this.pic_icono2.TabStop = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(274, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 14);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Categoria:";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(509, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 14);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Stock";
-            // 
             // Form_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,6 +550,7 @@
             this.Controls.Add(this.pnl_superior);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pnl_lateral);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventario";
@@ -557,6 +559,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnl_superior.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -568,8 +572,6 @@
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
