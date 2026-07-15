@@ -116,6 +116,12 @@
     <Compile Include="Formlogin2.Designer.cs">
       <DependentUpon>Formlogin2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlogin2.resx">
       <DependentUpon>Formlogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Inventario.resx">
       <DependentUpon>Form_Inventario.cs</DependentUpon>
@@ -248,6 +257,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientesatendidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numeroventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productosvendidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventastotales.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
