@@ -195,7 +195,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="reporte.pdf" />
+    <None Include="REPORTE DISEÑOS.pdf" />
     <None Include="Resources\inicio.png" />
   </ItemGroup>
   <ItemGroup>
