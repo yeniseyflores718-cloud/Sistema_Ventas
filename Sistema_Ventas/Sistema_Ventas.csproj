@@ -179,6 +179,7 @@
     <EmbeddedResource Include="VENTAS.resx">
       <DependentUpon>VENTAS.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="actividad4 Guia de estilos.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -194,6 +195,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="reporte.pdf" />
     <None Include="Resources\inicio.png" />
   </ItemGroup>
   <ItemGroup>
