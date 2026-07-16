@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formlogin2));
             this.picicono = new System.Windows.Forms.PictureBox();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.txt_contrasena = new System.Windows.Forms.TextBox();
@@ -87,6 +88,7 @@
             this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.picicono);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "Formlogin2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

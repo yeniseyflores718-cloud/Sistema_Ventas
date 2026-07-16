@@ -1,4 +1,4 @@
-﻿namespace Sistema_Ventas
+namespace Sistema_Ventas
 {
     partial class Proveedores
     {
@@ -59,6 +59,7 @@
             this.Dia_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_buscador_prov = new System.Windows.Forms.TextBox();
             this.lbl_buscar = new System.Windows.Forms.Label();
+
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,10 +78,12 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedores)).BeginInit();
+
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -96,6 +99,7 @@
             this.panel2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel4.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -126,7 +130,11 @@
             this.btn_proveedores.Name = "btn_proveedores";
             this.btn_proveedores.Size = new System.Drawing.Size(194, 41);
             this.btn_proveedores.TabIndex = 6;
+
             this.btn_proveedores.Text = "       Proveedores";
+
+            this.btn_proveedores.Text = "Proveedores";
+
             this.btn_proveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_proveedores.UseVisualStyleBackColor = true;
             // 
@@ -142,7 +150,11 @@
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(194, 41);
             this.btn_reportes.TabIndex = 5;
+
             this.btn_reportes.Text = "  Reportes";
+
+            this.btn_reportes.Text = "Reportes";
+
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_reportes.UseVisualStyleBackColor = true;
             // 
@@ -158,7 +170,11 @@
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(194, 41);
             this.btn_inventario.TabIndex = 4;
+
             this.btn_inventario.Text = "     Inventario";
+
+            this.btn_inventario.Text = "Inventario";
+
             this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_inventario.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +190,11 @@
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(194, 41);
             this.btn_productos.TabIndex = 3;
+
             this.btn_productos.Text = "     Productos";
+
+            this.btn_productos.Text = "Productos";
+
             this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_productos.UseVisualStyleBackColor = true;
             // 
@@ -470,6 +490,7 @@
             this.lbl_buscar.TabIndex = 17;
             this.lbl_buscar.Text = "Buscar proveedor";
             // 
+
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -679,6 +700,7 @@
             this.panel14.Size = new System.Drawing.Size(312, 73);
             this.panel14.TabIndex = 1;
             // 
+
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,11 +711,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "Proveedores";
             this.Text = "Proveedores";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedores)).EndInit();
+
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -715,6 +739,7 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+
             this.ResumeLayout(false);
 
         }
