@@ -21,5 +21,9 @@ namespace Sistema_Ventas
         {
 
         }
+        private void txt_cantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
