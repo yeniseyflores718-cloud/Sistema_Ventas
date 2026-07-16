@@ -26,5 +26,10 @@ namespace Sistema_Ventas
         {
 
         }
+
+        private void txt_diaentrega_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
