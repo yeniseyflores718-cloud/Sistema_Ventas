@@ -372,6 +372,7 @@
             this.lbl_productosRg.Size = new System.Drawing.Size(14, 14);
             this.lbl_productosRg.TabIndex = 2;
             this.lbl_productosRg.Text = "0";
+            this.lbl_productosRg.Click += new System.EventHandler(this.lbl_productosRg_Click);
             // 
             // label2
             // 

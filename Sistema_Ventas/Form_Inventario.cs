@@ -46,5 +46,10 @@ namespace Sistema_Ventas
         {
             Navegador.Irproveedores(this);
         }
+
+        private void lbl_productosRg_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
