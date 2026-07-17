@@ -21,5 +21,20 @@ namespace Sistema_Ventas
         {
 
         }
+
+        private void Productos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

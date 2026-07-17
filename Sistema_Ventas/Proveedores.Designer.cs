@@ -60,6 +60,7 @@ namespace Sistema_Ventas
             this.txt_buscador_prov = new System.Windows.Forms.TextBox();
             this.lbl_buscar = new System.Windows.Forms.Label();
 
+
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -79,10 +80,12 @@ namespace Sistema_Ventas
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
 
+
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedores)).BeginInit();
+
 
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -99,6 +102,7 @@ namespace Sistema_Ventas
             this.panel2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel4.SuspendLayout();
+
 
             this.SuspendLayout();
             // 
@@ -131,6 +135,9 @@ namespace Sistema_Ventas
             this.btn_proveedores.Size = new System.Drawing.Size(194, 41);
             this.btn_proveedores.TabIndex = 6;
 
+            this.btn_proveedores.Text = "Proveedores";
+
+
             this.btn_proveedores.Text = "       Proveedores";
 
             this.btn_proveedores.Text = "Proveedores";
@@ -151,9 +158,13 @@ namespace Sistema_Ventas
             this.btn_reportes.Size = new System.Drawing.Size(194, 41);
             this.btn_reportes.TabIndex = 5;
 
+            this.btn_reportes.Text = "Reportes";
+
+
             this.btn_reportes.Text = "  Reportes";
 
             this.btn_reportes.Text = "Reportes";
+
 
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_reportes.UseVisualStyleBackColor = true;
@@ -170,6 +181,9 @@ namespace Sistema_Ventas
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(194, 41);
             this.btn_inventario.TabIndex = 4;
+
+            this.btn_inventario.Text = "Inventario";
+
 
             this.btn_inventario.Text = "     Inventario";
 
@@ -191,9 +205,13 @@ namespace Sistema_Ventas
             this.btn_productos.Size = new System.Drawing.Size(194, 41);
             this.btn_productos.TabIndex = 3;
 
+            this.btn_productos.Text = "Productos";
+
+
             this.btn_productos.Text = "     Productos";
 
             this.btn_productos.Text = "Productos";
+
 
             this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_productos.UseVisualStyleBackColor = true;
@@ -269,6 +287,32 @@ namespace Sistema_Ventas
             this.label1.Text = "Proveedores";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
+            this.panel2.Controls.Add(this.btn_actualizar);
+            this.panel2.Controls.Add(this.btn_eliminar);
+            this.panel2.Controls.Add(this.btn_agregar);
+            this.panel2.Controls.Add(this.txt_diaentrega);
+            this.panel2.Controls.Add(this.txt_estado);
+            this.panel2.Controls.Add(this.txt_empresa);
+            this.panel2.Controls.Add(this.txt_telefono);
+            this.panel2.Controls.Add(this.txt_nombre);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.dgv_proveedores);
+            this.panel2.Controls.Add(this.txt_buscador_prov);
+            this.panel2.Controls.Add(this.lbl_buscar);
+            this.panel2.Location = new System.Drawing.Point(203, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(781, 458);
+            this.panel2.TabIndex = 3;
+            // 
+
             // btn_actualizar
             // 
             this.btn_actualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -439,7 +483,11 @@ namespace Sistema_Ventas
             this.dgv_proveedores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_proveedores.Location = new System.Drawing.Point(0, 0);
             this.dgv_proveedores.Name = "dgv_proveedores";
+
+            this.dgv_proveedores.Size = new System.Drawing.Size(542, 210);
+
             this.dgv_proveedores.Size = new System.Drawing.Size(778, 208);
+
             this.dgv_proveedores.TabIndex = 19;
             this.dgv_proveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_proveedores_CellContentClick);
             // 
@@ -490,6 +538,7 @@ namespace Sistema_Ventas
             this.lbl_buscar.TabIndex = 17;
             this.lbl_buscar.Text = "Buscar proveedor";
             // 
+
 
             // tableLayoutPanel2
             // 
@@ -701,6 +750,7 @@ namespace Sistema_Ventas
             this.panel14.TabIndex = 1;
             // 
 
+
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -717,6 +767,7 @@ namespace Sistema_Ventas
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedores)).EndInit();
+
 
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -739,6 +790,7 @@ namespace Sistema_Ventas
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+
 
             this.ResumeLayout(false);
 
