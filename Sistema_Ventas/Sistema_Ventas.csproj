@@ -134,6 +134,7 @@
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Navegador.cs" />
     <Compile Include="Productos.cs">
       <SubType>Form</SubType>
     </Compile>

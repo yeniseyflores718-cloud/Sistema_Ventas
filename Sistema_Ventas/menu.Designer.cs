@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,6 +59,12 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btn_formproductos = new System.Windows.Forms.Button();
+            this.btn_form_reportes = new System.Windows.Forms.Button();
+            this.btn_formventas = new System.Windows.Forms.Button();
+            this.btn_form_proovedores = new System.Windows.Forms.Button();
+            this.btn_forminventario = new System.Windows.Forms.Button();
+            this.btn_salirsistema = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -138,6 +145,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.btn_formproductos);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
@@ -157,18 +165,10 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Administra el catálogo de tus\r\nproductos";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "PRODUCTOS";
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.producto2;
             this.pictureBox1.Location = new System.Drawing.Point(28, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -177,9 +177,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 27);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "PRODUCTOS";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.btn_formventas);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -205,12 +216,14 @@
             this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(34, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(45, 27);
             this.label3.TabIndex = 2;
             this.label3.Text = "VENTAS";
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Sistema_Ventas.Properties.Resources.venta2;
             this.pictureBox2.Location = new System.Drawing.Point(38, 15);
             this.pictureBox2.Name = "pictureBox2";
@@ -222,6 +235,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.btn_forminventario);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.pictureBox3);
@@ -247,12 +261,14 @@
             this.label4.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 20);
+            this.label4.Size = new System.Drawing.Size(68, 27);
             this.label4.TabIndex = 3;
             this.label4.Text = "INVENTARIO";
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Sistema_Ventas.Properties.Resources.inventario2;
             this.pictureBox3.Location = new System.Drawing.Point(31, 15);
             this.pictureBox3.Name = "pictureBox3";
@@ -264,6 +280,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel5.Controls.Add(this.btn_salirsistema);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.pictureBox6);
@@ -289,12 +306,14 @@
             this.label7.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(32, 104);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 20);
+            this.label7.Size = new System.Drawing.Size(38, 27);
             this.label7.TabIndex = 6;
             this.label7.Text = "SALIR";
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::Sistema_Ventas.Properties.Resources.salir2;
             this.pictureBox6.Location = new System.Drawing.Point(31, 14);
             this.pictureBox6.Name = "pictureBox6";
@@ -306,6 +325,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel6.Controls.Add(this.btn_form_proovedores);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.pictureBox5);
@@ -331,12 +351,14 @@
             this.label6.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(34, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 20);
+            this.label6.Size = new System.Drawing.Size(77, 27);
             this.label6.TabIndex = 5;
             this.label6.Text = "PROVEEDORES";
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = global::Sistema_Ventas.Properties.Resources.proveedor2;
             this.pictureBox5.Location = new System.Drawing.Point(38, 14);
             this.pictureBox5.Name = "pictureBox5";
@@ -348,6 +370,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel7.Controls.Add(this.btn_form_reportes);
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.pictureBox4);
@@ -373,12 +396,14 @@
             this.label5.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(24, 104);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 20);
+            this.label5.Size = new System.Drawing.Size(57, 27);
             this.label5.TabIndex = 4;
             this.label5.Text = "REPORTES";
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::Sistema_Ventas.Properties.Resources.reportes2;
             this.pictureBox4.Location = new System.Drawing.Point(28, 14);
             this.pictureBox4.Name = "pictureBox4";
@@ -399,6 +424,9 @@
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(76, 142);
@@ -406,6 +434,66 @@
             this.label15.Size = new System.Drawing.Size(250, 17);
             this.label15.TabIndex = 4;
             this.label15.Text = "Elige una opción para comenzar";
+            // 
+            // btn_formproductos
+            // 
+            this.btn_formproductos.Location = new System.Drawing.Point(189, 71);
+            this.btn_formproductos.Name = "btn_formproductos";
+            this.btn_formproductos.Size = new System.Drawing.Size(58, 39);
+            this.btn_formproductos.TabIndex = 3;
+            this.btn_formproductos.Text = ">";
+            this.btn_formproductos.UseVisualStyleBackColor = true;
+            this.btn_formproductos.Click += new System.EventHandler(this.btn_formproductos_Click);
+            // 
+            // btn_form_reportes
+            // 
+            this.btn_form_reportes.Location = new System.Drawing.Point(189, 70);
+            this.btn_form_reportes.Name = "btn_form_reportes";
+            this.btn_form_reportes.Size = new System.Drawing.Size(58, 40);
+            this.btn_form_reportes.TabIndex = 5;
+            this.btn_form_reportes.Text = ">";
+            this.btn_form_reportes.UseVisualStyleBackColor = true;
+            this.btn_form_reportes.Click += new System.EventHandler(this.btn_form_reportes_Click);
+            // 
+            // btn_formventas
+            // 
+            this.btn_formventas.Location = new System.Drawing.Point(200, 71);
+            this.btn_formventas.Name = "btn_formventas";
+            this.btn_formventas.Size = new System.Drawing.Size(52, 39);
+            this.btn_formventas.TabIndex = 4;
+            this.btn_formventas.Text = ">";
+            this.btn_formventas.UseVisualStyleBackColor = true;
+            this.btn_formventas.Click += new System.EventHandler(this.btn_formventas_Click);
+            // 
+            // btn_form_proovedores
+            // 
+            this.btn_form_proovedores.Location = new System.Drawing.Point(200, 70);
+            this.btn_form_proovedores.Name = "btn_form_proovedores";
+            this.btn_form_proovedores.Size = new System.Drawing.Size(52, 40);
+            this.btn_form_proovedores.TabIndex = 6;
+            this.btn_form_proovedores.Text = ">";
+            this.btn_form_proovedores.UseVisualStyleBackColor = true;
+            this.btn_form_proovedores.Click += new System.EventHandler(this.btn_form_proovedores_Click);
+            // 
+            // btn_forminventario
+            // 
+            this.btn_forminventario.Location = new System.Drawing.Point(189, 71);
+            this.btn_forminventario.Name = "btn_forminventario";
+            this.btn_forminventario.Size = new System.Drawing.Size(51, 39);
+            this.btn_forminventario.TabIndex = 5;
+            this.btn_forminventario.Text = ">";
+            this.btn_forminventario.UseVisualStyleBackColor = true;
+            this.btn_forminventario.Click += new System.EventHandler(this.btn_forminventario_Click);
+            // 
+            // btn_salirsistema
+            // 
+            this.btn_salirsistema.Location = new System.Drawing.Point(189, 70);
+            this.btn_salirsistema.Name = "btn_salirsistema";
+            this.btn_salirsistema.Size = new System.Drawing.Size(51, 40);
+            this.btn_salirsistema.TabIndex = 7;
+            this.btn_salirsistema.Text = ">";
+            this.btn_salirsistema.UseVisualStyleBackColor = true;
+            this.btn_salirsistema.Click += new System.EventHandler(this.btn_salirsistema_Click);
             // 
             // menu
             // 
@@ -416,8 +504,11 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.menu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -478,5 +569,11 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btn_formproductos;
+        private System.Windows.Forms.Button btn_formventas;
+        private System.Windows.Forms.Button btn_forminventario;
+        private System.Windows.Forms.Button btn_salirsistema;
+        private System.Windows.Forms.Button btn_form_proovedores;
+        private System.Windows.Forms.Button btn_form_reportes;
     }
 }
