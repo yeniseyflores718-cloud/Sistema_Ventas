@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Devoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devoluciones.Designer.cs">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,12 @@
     </Compile>
     <Compile Include="Formlogin2.Designer.cs">
       <DependentUpon>Formlogin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Inventario.cs">
       <SubType>Form</SubType>
@@ -136,8 +148,20 @@
     <Compile Include="Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="VENTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS.Designer.cs">
+      <DependentUpon>VENTAS.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Devoluciones.resx">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlogin2.resx">
       <DependentUpon>Formlogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Inventario.resx">
       <DependentUpon>Form_Inventario.cs</DependentUpon>
@@ -161,6 +185,10 @@
     <EmbeddedResource Include="Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS.resx">
+      <DependentUpon>VENTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="actividad4 Guia de estilos.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -176,6 +204,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="REPORTE DISEÑOS.pdf" />
     <None Include="Resources\inicio.png" />
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +242,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\venta2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enstock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinstock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stockbajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\totalproductos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientesatendidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numeroventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productosvendidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventastotales.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
