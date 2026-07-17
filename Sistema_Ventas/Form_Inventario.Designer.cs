@@ -30,36 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Inventario));
             this.pnl_lateral = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnl_superior = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_busqueda = new System.Windows.Forms.TextBox();
-            this.cmb_stock = new System.Windows.Forms.ComboBox();
-            this.cmb_categoria = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_productosRg = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_enstock = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_stockbajo = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lbl_sinstock = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_buscador = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_proovedores = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
@@ -67,23 +37,53 @@
             this.btn_ventas = new System.Windows.Forms.Button();
             this.btn_inicio = new System.Windows.Forms.Button();
             this.pic_icono2 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_superior = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btn_buscador = new System.Windows.Forms.Button();
+            this.txt_busqueda = new System.Windows.Forms.TextBox();
+            this.cmb_stock = new System.Windows.Forms.ComboBox();
+            this.cmb_categoria = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_productosRg = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_enstock = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_stockbajo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lbl_sinstock = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnl_lateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_icono2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnl_superior.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_icono2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_lateral
@@ -101,6 +101,115 @@
             this.pnl_lateral.Name = "pnl_lateral";
             this.pnl_lateral.Size = new System.Drawing.Size(200, 561);
             this.pnl_lateral.TabIndex = 0;
+            // 
+            // btn_proovedores
+            // 
+            this.btn_proovedores.FlatAppearance.BorderSize = 0;
+            this.btn_proovedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_proovedores.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_proovedores.ForeColor = System.Drawing.Color.White;
+            this.btn_proovedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
+            this.btn_proovedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_proovedores.Location = new System.Drawing.Point(0, 452);
+            this.btn_proovedores.Name = "btn_proovedores";
+            this.btn_proovedores.Size = new System.Drawing.Size(191, 41);
+            this.btn_proovedores.TabIndex = 6;
+            this.btn_proovedores.Text = "          Proveedores";
+            this.btn_proovedores.UseVisualStyleBackColor = true;
+            this.btn_proovedores.Click += new System.EventHandler(this.btn_proovedores_Click);
+            // 
+            // btn_reportes
+            // 
+            this.btn_reportes.FlatAppearance.BorderSize = 0;
+            this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reportes.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reportes.ForeColor = System.Drawing.Color.White;
+            this.btn_reportes.Image = global::Sistema_Ventas.Properties.Resources.reportes;
+            this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reportes.Location = new System.Drawing.Point(0, 393);
+            this.btn_reportes.Name = "btn_reportes";
+            this.btn_reportes.Size = new System.Drawing.Size(191, 41);
+            this.btn_reportes.TabIndex = 5;
+            this.btn_reportes.Text = "     Reportes";
+            this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
+            // 
+            // btn_inventario
+            // 
+            this.btn_inventario.FlatAppearance.BorderSize = 0;
+            this.btn_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inventario.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inventario.ForeColor = System.Drawing.Color.White;
+            this.btn_inventario.Image = global::Sistema_Ventas.Properties.Resources.inventario;
+            this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_inventario.Location = new System.Drawing.Point(0, 336);
+            this.btn_inventario.Name = "btn_inventario";
+            this.btn_inventario.Size = new System.Drawing.Size(191, 41);
+            this.btn_inventario.TabIndex = 4;
+            this.btn_inventario.Text = "       Inventario";
+            this.btn_inventario.UseVisualStyleBackColor = true;
+            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
+            // 
+            // btn_productos
+            // 
+            this.btn_productos.FlatAppearance.BorderSize = 0;
+            this.btn_productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_productos.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_productos.ForeColor = System.Drawing.Color.White;
+            this.btn_productos.Image = global::Sistema_Ventas.Properties.Resources.producto;
+            this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_productos.Location = new System.Drawing.Point(0, 282);
+            this.btn_productos.Name = "btn_productos";
+            this.btn_productos.Size = new System.Drawing.Size(191, 41);
+            this.btn_productos.TabIndex = 3;
+            this.btn_productos.Text = "      Productos";
+            this.btn_productos.UseVisualStyleBackColor = true;
+            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
+            // 
+            // btn_ventas
+            // 
+            this.btn_ventas.BackgroundImage = global::Sistema_Ventas.Properties.Resources.ventas;
+            this.btn_ventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_ventas.FlatAppearance.BorderSize = 0;
+            this.btn_ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ventas.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ventas.ForeColor = System.Drawing.Color.White;
+            this.btn_ventas.Location = new System.Drawing.Point(3, 225);
+            this.btn_ventas.Name = "btn_ventas";
+            this.btn_ventas.Size = new System.Drawing.Size(191, 41);
+            this.btn_ventas.TabIndex = 2;
+            this.btn_ventas.Text = "Ventas";
+            this.btn_ventas.UseVisualStyleBackColor = true;
+            this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
+            // 
+            // btn_inicio
+            // 
+            this.btn_inicio.BackgroundImage = global::Sistema_Ventas.Properties.Resources.inicio;
+            this.btn_inicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_inicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_inicio.FlatAppearance.BorderSize = 0;
+            this.btn_inicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(211)))), ((int)(((byte)(234)))));
+            this.btn_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inicio.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inicio.ForeColor = System.Drawing.Color.White;
+            this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_inicio.Location = new System.Drawing.Point(3, 161);
+            this.btn_inicio.Name = "btn_inicio";
+            this.btn_inicio.Size = new System.Drawing.Size(191, 41);
+            this.btn_inicio.TabIndex = 1;
+            this.btn_inicio.Text = "Inicio";
+            this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
+            // 
+            // pic_icono2
+            // 
+            this.pic_icono2.Image = global::Sistema_Ventas.Properties.Resources.logo;
+            this.pic_icono2.Location = new System.Drawing.Point(37, 9);
+            this.pic_icono2.Name = "pic_icono2";
+            this.pic_icono2.Size = new System.Drawing.Size(116, 88);
+            this.pic_icono2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_icono2.TabIndex = 0;
+            this.pic_icono2.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -184,6 +293,16 @@
             this.label10.TabIndex = 7;
             this.label10.Text = "Categoria:";
             // 
+            // btn_buscador
+            // 
+            this.btn_buscador.BackgroundImage = global::Sistema_Ventas.Properties.Resources.lupa;
+            this.btn_buscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscador.Location = new System.Drawing.Point(220, 23);
+            this.btn_buscador.Name = "btn_buscador";
+            this.btn_buscador.Size = new System.Drawing.Size(29, 23);
+            this.btn_buscador.TabIndex = 6;
+            this.btn_buscador.UseVisualStyleBackColor = true;
+            // 
             // txt_busqueda
             // 
             this.txt_busqueda.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,6 +372,7 @@
             this.lbl_productosRg.Size = new System.Drawing.Size(14, 14);
             this.lbl_productosRg.TabIndex = 2;
             this.lbl_productosRg.Text = "0";
+            this.lbl_productosRg.Click += new System.EventHandler(this.lbl_productosRg_Click);
             // 
             // label2
             // 
@@ -263,6 +383,17 @@
             this.label2.Size = new System.Drawing.Size(76, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Productos \r\n registrados:\r\n";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.totalproductos;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -297,6 +428,17 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "En stock:";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::Sistema_Ventas.Properties.Resources.enstock;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(67, 77);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -329,6 +471,17 @@
             this.label4.Size = new System.Drawing.Size(67, 14);
             this.label4.TabIndex = 1;
             this.label4.Text = "Stock bajo:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = global::Sistema_Ventas.Properties.Resources.stockbajo;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(67, 77);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // panel6
             // 
@@ -363,6 +516,17 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Sin stock:";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox4.Image = global::Sistema_Ventas.Properties.Resources.sinstock;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(72, 77);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -385,163 +549,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(719, 255);
             this.dataGridView1.TabIndex = 0;
             // 
-            // btn_buscador
-            // 
-            this.btn_buscador.BackgroundImage = global::Sistema_Ventas.Properties.Resources.lupa;
-            this.btn_buscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscador.Location = new System.Drawing.Point(220, 23);
-            this.btn_buscador.Name = "btn_buscador";
-            this.btn_buscador.Size = new System.Drawing.Size(29, 23);
-            this.btn_buscador.TabIndex = 6;
-            this.btn_buscador.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.totalproductos;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::Sistema_Ventas.Properties.Resources.enstock;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 77);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::Sistema_Ventas.Properties.Resources.stockbajo;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 77);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox4.Image = global::Sistema_Ventas.Properties.Resources.sinstock;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 77);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btn_proovedores
-            // 
-            this.btn_proovedores.FlatAppearance.BorderSize = 0;
-            this.btn_proovedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_proovedores.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_proovedores.ForeColor = System.Drawing.Color.White;
-            this.btn_proovedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
-            this.btn_proovedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_proovedores.Location = new System.Drawing.Point(0, 452);
-            this.btn_proovedores.Name = "btn_proovedores";
-            this.btn_proovedores.Size = new System.Drawing.Size(191, 41);
-            this.btn_proovedores.TabIndex = 6;
-            this.btn_proovedores.Text = "          Proveedores";
-            this.btn_proovedores.UseVisualStyleBackColor = true;
-            // 
-            // btn_reportes
-            // 
-            this.btn_reportes.FlatAppearance.BorderSize = 0;
-            this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reportes.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reportes.ForeColor = System.Drawing.Color.White;
-            this.btn_reportes.Image = global::Sistema_Ventas.Properties.Resources.reportes;
-            this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reportes.Location = new System.Drawing.Point(0, 393);
-            this.btn_reportes.Name = "btn_reportes";
-            this.btn_reportes.Size = new System.Drawing.Size(191, 41);
-            this.btn_reportes.TabIndex = 5;
-            this.btn_reportes.Text = "     Reportes";
-            this.btn_reportes.UseVisualStyleBackColor = true;
-            // 
-            // btn_inventario
-            // 
-            this.btn_inventario.FlatAppearance.BorderSize = 0;
-            this.btn_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_inventario.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inventario.ForeColor = System.Drawing.Color.White;
-            this.btn_inventario.Image = global::Sistema_Ventas.Properties.Resources.inventario;
-            this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inventario.Location = new System.Drawing.Point(0, 336);
-            this.btn_inventario.Name = "btn_inventario";
-            this.btn_inventario.Size = new System.Drawing.Size(191, 41);
-            this.btn_inventario.TabIndex = 4;
-            this.btn_inventario.Text = "       Inventario";
-            this.btn_inventario.UseVisualStyleBackColor = true;
-            // 
-            // btn_productos
-            // 
-            this.btn_productos.FlatAppearance.BorderSize = 0;
-            this.btn_productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_productos.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_productos.ForeColor = System.Drawing.Color.White;
-            this.btn_productos.Image = global::Sistema_Ventas.Properties.Resources.producto;
-            this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_productos.Location = new System.Drawing.Point(0, 282);
-            this.btn_productos.Name = "btn_productos";
-            this.btn_productos.Size = new System.Drawing.Size(191, 41);
-            this.btn_productos.TabIndex = 3;
-            this.btn_productos.Text = "      Productos";
-            this.btn_productos.UseVisualStyleBackColor = true;
-            // 
-            // btn_ventas
-            // 
-            this.btn_ventas.BackgroundImage = global::Sistema_Ventas.Properties.Resources.ventas;
-            this.btn_ventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_ventas.FlatAppearance.BorderSize = 0;
-            this.btn_ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ventas.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ventas.ForeColor = System.Drawing.Color.White;
-            this.btn_ventas.Location = new System.Drawing.Point(3, 225);
-            this.btn_ventas.Name = "btn_ventas";
-            this.btn_ventas.Size = new System.Drawing.Size(191, 41);
-            this.btn_ventas.TabIndex = 2;
-            this.btn_ventas.Text = "Ventas";
-            this.btn_ventas.UseVisualStyleBackColor = true;
-            // 
-            // btn_inicio
-            // 
-            this.btn_inicio.BackgroundImage = global::Sistema_Ventas.Properties.Resources.inicio;
-            this.btn_inicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_inicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_inicio.FlatAppearance.BorderSize = 0;
-            this.btn_inicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(211)))), ((int)(((byte)(234)))));
-            this.btn_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_inicio.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inicio.ForeColor = System.Drawing.Color.White;
-            this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inicio.Location = new System.Drawing.Point(3, 161);
-            this.btn_inicio.Name = "btn_inicio";
-            this.btn_inicio.Size = new System.Drawing.Size(191, 41);
-            this.btn_inicio.TabIndex = 1;
-            this.btn_inicio.Text = "Inicio";
-            this.btn_inicio.UseVisualStyleBackColor = true;
-            // 
-            // pic_icono2
-            // 
-            this.pic_icono2.Image = global::Sistema_Ventas.Properties.Resources.logo;
-            this.pic_icono2.Location = new System.Drawing.Point(37, 9);
-            this.pic_icono2.Name = "pic_icono2";
-            this.pic_icono2.Size = new System.Drawing.Size(116, 88);
-            this.pic_icono2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_icono2.TabIndex = 0;
-            this.pic_icono2.TabStop = false;
-            // 
             // Form_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,7 +561,9 @@
             this.Name = "Form_Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnl_lateral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_icono2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -564,19 +573,18 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_icono2)).EndInit();
             this.ResumeLayout(false);
 
         }
