@@ -18,7 +18,7 @@ namespace Sistema_Ventas
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Formlogin2());
 
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
 
 
         }
