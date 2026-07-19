@@ -75,6 +75,7 @@
             this.btn_iniciar_sesion.Size = new System.Drawing.Size(154, 34);
             this.btn_iniciar_sesion.TabIndex = 3;
             this.btn_iniciar_sesion.UseVisualStyleBackColor = true;
+            this.btn_iniciar_sesion.Click += new System.EventHandler(this.btn_iniciar_sesion_Click);
             // 
             // Formlogin2
             // 

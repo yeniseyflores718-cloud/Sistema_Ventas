@@ -110,6 +110,7 @@
             this.btn_proovedores.TabIndex = 6;
             this.btn_proovedores.Text = "          Proveedores";
             this.btn_proovedores.UseVisualStyleBackColor = true;
+            this.btn_proovedores.Click += new System.EventHandler(this.btn_proovedores_Click);
             // 
             // btn_reportes
             // 
@@ -126,6 +127,7 @@
             this.btn_reportes.TabIndex = 5;
             this.btn_reportes.Text = "     Reportes";
             this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // btn_inventario
             // 
@@ -142,6 +144,7 @@
             this.btn_inventario.TabIndex = 4;
             this.btn_inventario.Text = "       Inventario";
             this.btn_inventario.UseVisualStyleBackColor = true;
+            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
             // btn_productos
             // 
@@ -158,6 +161,7 @@
             this.btn_productos.TabIndex = 3;
             this.btn_productos.Text = "      Productos";
             this.btn_productos.UseVisualStyleBackColor = true;
+            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
             // btn_ventas
             // 
@@ -174,6 +178,7 @@
             this.btn_ventas.TabIndex = 2;
             this.btn_ventas.Text = "Ventas";
             this.btn_ventas.UseVisualStyleBackColor = true;
+            this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
             // 
             // btn_inicio
             // 
@@ -191,6 +196,7 @@
             this.btn_inicio.TabIndex = 1;
             this.btn_inicio.Text = "Inicio";
             this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // pictureBox1
             // 
@@ -478,7 +484,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2";
+            this.Text = "Reportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -16,5 +16,35 @@ namespace Sistema_Ventas
         {
             InitializeComponent();
         }
+
+        private void btn_inicio_Click(object sender, EventArgs e)
+        {
+            Navegador.Irmenu(this);
+        }
+
+        private void btn_ventas_Click(object sender, EventArgs e)
+        {
+            Navegador.Irventas(this);
+        }
+
+        private void btn_productos_Click(object sender, EventArgs e)
+        {
+            Navegador.Irproductos(this);
+        }
+
+        private void btn_inventario_Click(object sender, EventArgs e)
+        {
+            Navegador.Irinventario(this);
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ya estás en este formulario.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void btn_proovedores_Click(object sender, EventArgs e)
+        {
+            Navegador.Irproveedores(this);
+        }
     }
 }

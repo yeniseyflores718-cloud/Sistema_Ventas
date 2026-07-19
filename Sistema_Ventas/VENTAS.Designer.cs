@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VENTAS));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_provedores = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.btn_productos = new System.Windows.Forms.Button();
@@ -106,7 +107,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_provedores);
             this.panel1.Controls.Add(this.btn_reportes);
             this.panel1.Controls.Add(this.btn_inventario);
             this.panel1.Controls.Add(this.btn_productos);
@@ -119,21 +120,22 @@
             this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // btn_provedores
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(4, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 41);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "            Proveedores";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_provedores.FlatAppearance.BorderSize = 0;
+            this.btn_provedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_provedores.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_provedores.ForeColor = System.Drawing.Color.White;
+            this.btn_provedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
+            this.btn_provedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_provedores.Location = new System.Drawing.Point(4, 454);
+            this.btn_provedores.Name = "btn_provedores";
+            this.btn_provedores.Size = new System.Drawing.Size(194, 41);
+            this.btn_provedores.TabIndex = 6;
+            this.btn_provedores.Text = "            Proveedores";
+            this.btn_provedores.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_provedores.UseVisualStyleBackColor = true;
+            this.btn_provedores.Click += new System.EventHandler(this.btn_provedores_Click);
             // 
             // btn_reportes
             // 
@@ -150,6 +152,7 @@
             this.btn_reportes.Text = "             Reportes";
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // btn_inventario
             // 
@@ -166,6 +169,7 @@
             this.btn_inventario.Text = "             Inventario";
             this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_inventario.UseVisualStyleBackColor = true;
+            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
             // btn_productos
             // 
@@ -182,6 +186,7 @@
             this.btn_productos.Text = "             Productos";
             this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_productos.UseVisualStyleBackColor = true;
+            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
             // btn_ventas
             // 
@@ -198,6 +203,7 @@
             this.btn_ventas.Text = "             Ventas";
             this.btn_ventas.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_ventas.UseVisualStyleBackColor = true;
+            this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
             // 
             // btn_inicio
             // 
@@ -214,6 +220,7 @@
             this.btn_inicio.Text = "             Inicio";
             this.btn_inicio.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // pictureBox1
             // 
@@ -686,7 +693,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VENTAS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VENTAS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
@@ -738,7 +747,7 @@
         private System.Windows.Forms.Button btn_productos;
         private System.Windows.Forms.Button btn_ventas;
         private System.Windows.Forms.Button btn_inventario;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_provedores;
         private System.Windows.Forms.Button btn_reportes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
