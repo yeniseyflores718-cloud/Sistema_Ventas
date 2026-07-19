@@ -55,6 +55,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_categoria = new System.Windows.Forms.ComboBox();
+
             this.dgv_productos = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +72,9 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+
+            this.txt_id = new System.Windows.Forms.TextBox();
+
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -79,6 +83,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dgv_productos = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -86,12 +91,13 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+
             this.tableLayoutPanel5.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -100,6 +106,7 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -130,7 +137,7 @@
             this.btn_proveedores.ForeColor = System.Drawing.Color.White;
             this.btn_proveedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
             this.btn_proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_proveedores.Location = new System.Drawing.Point(3, 390);
+            this.btn_proveedores.Location = new System.Drawing.Point(3, 418);
             this.btn_proveedores.Name = "btn_proveedores";
             this.btn_proveedores.Size = new System.Drawing.Size(194, 41);
             this.btn_proveedores.TabIndex = 44;
@@ -147,7 +154,7 @@
             this.btn_reportes.ForeColor = System.Drawing.Color.White;
             this.btn_reportes.Image = global::Sistema_Ventas.Properties.Resources.reportes;
             this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reportes.Location = new System.Drawing.Point(3, 339);
+            this.btn_reportes.Location = new System.Drawing.Point(3, 363);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(194, 41);
             this.btn_reportes.TabIndex = 43;
@@ -164,7 +171,7 @@
             this.btn_inventario.ForeColor = System.Drawing.Color.White;
             this.btn_inventario.Image = global::Sistema_Ventas.Properties.Resources.inventario;
             this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inventario.Location = new System.Drawing.Point(3, 288);
+            this.btn_inventario.Location = new System.Drawing.Point(3, 310);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(194, 41);
             this.btn_inventario.TabIndex = 42;
@@ -181,7 +188,7 @@
             this.btn_productos.ForeColor = System.Drawing.Color.White;
             this.btn_productos.Image = global::Sistema_Ventas.Properties.Resources.producto;
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_productos.Location = new System.Drawing.Point(3, 237);
+            this.btn_productos.Location = new System.Drawing.Point(3, 255);
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(194, 41);
             this.btn_productos.TabIndex = 41;
@@ -198,7 +205,7 @@
             this.btn_venta.ForeColor = System.Drawing.Color.White;
             this.btn_venta.Image = global::Sistema_Ventas.Properties.Resources.ventas;
             this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_venta.Location = new System.Drawing.Point(3, 186);
+            this.btn_venta.Location = new System.Drawing.Point(4, 201);
             this.btn_venta.Name = "btn_venta";
             this.btn_venta.Size = new System.Drawing.Size(194, 41);
             this.btn_venta.TabIndex = 40;
@@ -215,7 +222,7 @@
             this.btn_inicio.ForeColor = System.Drawing.Color.White;
             this.btn_inicio.Image = global::Sistema_Ventas.Properties.Resources.inicio;
             this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inicio.Location = new System.Drawing.Point(3, 136);
+            this.btn_inicio.Location = new System.Drawing.Point(3, 141);
             this.btn_inicio.Name = "btn_inicio";
             this.btn_inicio.Size = new System.Drawing.Size(194, 41);
             this.btn_inicio.TabIndex = 39;
@@ -276,6 +283,7 @@
             this.btn_actualizar.TabIndex = 43;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_eliminar
             // 
@@ -305,6 +313,7 @@
             this.btn_agregar.TabIndex = 41;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_stock_actual
             // 
@@ -460,6 +469,7 @@
             this.cmb_categoria.Size = new System.Drawing.Size(237, 27);
             this.cmb_categoria.TabIndex = 21;
             // 
+
             // dgv_productos
             // 
             this.dgv_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -519,6 +529,7 @@
             this.txt_buscador_prod.Name = "txt_buscador_prod";
             this.txt_buscador_prod.Size = new System.Drawing.Size(378, 27);
             this.txt_buscador_prod.TabIndex = 19;
+            this.txt_buscador_prod.TextChanged += new System.EventHandler(this.txt_buscador_prod_TextChanged);
             // 
             // lbl_buscar
             // 
@@ -612,12 +623,25 @@
             // 
             // panel14
             // 
+
+            this.panel14.Controls.Add(this.txt_id);
+
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(149, 36);
             this.panel14.TabIndex = 1;
             // 
+
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(30, 6);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.TabIndex = 0;
+            this.txt_id.Visible = false;
+            // 
+
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 3;
@@ -710,6 +734,21 @@
             this.panel5.Size = new System.Drawing.Size(778, 234);
             this.panel5.TabIndex = 1;
             // 
+            // dgv_productos
+            // 
+            this.dgv_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_productos.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_productos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_productos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_productos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_productos.Location = new System.Drawing.Point(0, 0);
+            this.dgv_productos.Name = "dgv_productos";
+            this.dgv_productos.Size = new System.Drawing.Size(778, 234);
+            this.dgv_productos.TabIndex = 20;
+            this.dgv_productos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_productos_CellClick);
+            this.dgv_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_productos_CellContentClick);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
@@ -773,12 +812,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
+
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -792,6 +834,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -817,7 +860,6 @@
         private System.Windows.Forms.Button btn_venta;
         private System.Windows.Forms.Label lbl_buscar;
         private System.Windows.Forms.TextBox txt_buscador_prod;
-        private System.Windows.Forms.DataGridView dgv_productos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmb_categoria;
         private System.Windows.Forms.Label label4;
@@ -854,11 +896,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_v;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_c;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stock_act;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stock_min;
+        private System.Windows.Forms.DataGridView dgv_productos;
+        private System.Windows.Forms.TextBox txt_id;
     }
 }

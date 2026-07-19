@@ -25,6 +25,7 @@ namespace Sistema_Ventas
 
         }
 
+
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
             string usuario= txt_usuario.Text.Trim();
@@ -65,5 +66,6 @@ namespace Sistema_Ventas
                 MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
