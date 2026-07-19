@@ -16,7 +16,7 @@ namespace Sistema_Ventas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu());
+            Application.Run(new Form1());
 
         }
     }
