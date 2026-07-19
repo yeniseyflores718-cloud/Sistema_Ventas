@@ -93,6 +93,7 @@
             this.Name = "Formlogin2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar sesión";
+            this.Load += new System.EventHandler(this.Formlogin2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picicono)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

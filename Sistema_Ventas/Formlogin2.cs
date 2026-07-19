@@ -16,5 +16,10 @@ namespace Sistema_Ventas
         {
             InitializeComponent();
         }
+
+        private void Formlogin2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -55,55 +55,51 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_categoria = new System.Windows.Forms.ComboBox();
-            this.dgv_productos = new System.Windows.Forms.DataGridView();
             this.txt_buscador_prod = new System.Windows.Forms.TextBox();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dgv_productos = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_v = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock_act = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock_min = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,7 +126,7 @@
             this.btn_proveedores.ForeColor = System.Drawing.Color.White;
             this.btn_proveedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
             this.btn_proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_proveedores.Location = new System.Drawing.Point(3, 390);
+            this.btn_proveedores.Location = new System.Drawing.Point(3, 418);
             this.btn_proveedores.Name = "btn_proveedores";
             this.btn_proveedores.Size = new System.Drawing.Size(194, 41);
             this.btn_proveedores.TabIndex = 44;
@@ -146,7 +142,7 @@
             this.btn_reportes.ForeColor = System.Drawing.Color.White;
             this.btn_reportes.Image = global::Sistema_Ventas.Properties.Resources.reportes;
             this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reportes.Location = new System.Drawing.Point(3, 339);
+            this.btn_reportes.Location = new System.Drawing.Point(3, 363);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(194, 41);
             this.btn_reportes.TabIndex = 43;
@@ -162,7 +158,7 @@
             this.btn_inventario.ForeColor = System.Drawing.Color.White;
             this.btn_inventario.Image = global::Sistema_Ventas.Properties.Resources.inventario;
             this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inventario.Location = new System.Drawing.Point(3, 288);
+            this.btn_inventario.Location = new System.Drawing.Point(3, 310);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(194, 41);
             this.btn_inventario.TabIndex = 42;
@@ -178,7 +174,7 @@
             this.btn_productos.ForeColor = System.Drawing.Color.White;
             this.btn_productos.Image = global::Sistema_Ventas.Properties.Resources.producto;
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_productos.Location = new System.Drawing.Point(3, 237);
+            this.btn_productos.Location = new System.Drawing.Point(3, 255);
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(194, 41);
             this.btn_productos.TabIndex = 41;
@@ -194,7 +190,7 @@
             this.btn_venta.ForeColor = System.Drawing.Color.White;
             this.btn_venta.Image = global::Sistema_Ventas.Properties.Resources.ventas;
             this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_venta.Location = new System.Drawing.Point(3, 186);
+            this.btn_venta.Location = new System.Drawing.Point(4, 201);
             this.btn_venta.Name = "btn_venta";
             this.btn_venta.Size = new System.Drawing.Size(194, 41);
             this.btn_venta.TabIndex = 40;
@@ -210,7 +206,7 @@
             this.btn_inicio.ForeColor = System.Drawing.Color.White;
             this.btn_inicio.Image = global::Sistema_Ventas.Properties.Resources.inicio;
             this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inicio.Location = new System.Drawing.Point(3, 136);
+            this.btn_inicio.Location = new System.Drawing.Point(3, 141);
             this.btn_inicio.Name = "btn_inicio";
             this.btn_inicio.Size = new System.Drawing.Size(194, 41);
             this.btn_inicio.TabIndex = 39;
@@ -270,6 +266,7 @@
             this.btn_actualizar.TabIndex = 43;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_eliminar
             // 
@@ -299,6 +296,7 @@
             this.btn_agregar.TabIndex = 41;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_stock_actual
             // 
@@ -454,26 +452,6 @@
             this.cmb_categoria.Size = new System.Drawing.Size(237, 27);
             this.cmb_categoria.TabIndex = 21;
             // 
-            // dgv_productos
-            // 
-            this.dgv_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_productos.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_productos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_productos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Categoria,
-            this.precio_v,
-            this.precio_c,
-            this.stock_act,
-            this.stock_min});
-            this.dgv_productos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_productos.Location = new System.Drawing.Point(0, 0);
-            this.dgv_productos.Name = "dgv_productos";
-            this.dgv_productos.Size = new System.Drawing.Size(778, 234);
-            this.dgv_productos.TabIndex = 20;
-            // 
             // txt_buscador_prod
             // 
             this.txt_buscador_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -483,6 +461,7 @@
             this.txt_buscador_prod.Name = "txt_buscador_prod";
             this.txt_buscador_prod.Size = new System.Drawing.Size(378, 27);
             this.txt_buscador_prod.TabIndex = 19;
+            this.txt_buscador_prod.TextChanged += new System.EventHandler(this.txt_buscador_prod_TextChanged);
             // 
             // lbl_buscar
             // 
@@ -517,6 +496,126 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(784, 461);
             this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 5;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.Controls.Add(this.panel18, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel17, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel16, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel15, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel14, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 416);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(778, 42);
+            this.tableLayoutPanel7.TabIndex = 5;
+            // 
+            // panel18
+            // 
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel18.Location = new System.Drawing.Point(623, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(152, 36);
+            this.panel18.TabIndex = 5;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.btn_eliminar);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(468, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(149, 36);
+            this.panel17.TabIndex = 4;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.btn_actualizar);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(313, 3);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(149, 36);
+            this.panel16.TabIndex = 3;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.btn_agregar);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(158, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(149, 36);
+            this.panel15.TabIndex = 2;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.txt_id);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(3, 3);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(149, 36);
+            this.panel14.TabIndex = 1;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(30, 6);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.TabIndex = 0;
+            this.txt_id.Visible = false;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.32134F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.70437F));
+            this.tableLayoutPanel5.Controls.Add(this.panel11, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel10, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel9, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 377);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(778, 33);
+            this.tableLayoutPanel5.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label8);
+            this.panel11.Controls.Add(this.txt_stock_minimo);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(510, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(265, 27);
+            this.panel11.TabIndex = 3;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label5);
+            this.panel10.Controls.Add(this.txt_precio_venta);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(314, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(190, 27);
+            this.panel10.TabIndex = 2;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Controls.Add(this.txt_categoria);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(305, 27);
+            this.panel9.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
@@ -563,6 +662,21 @@
             this.panel5.Size = new System.Drawing.Size(778, 234);
             this.panel5.TabIndex = 1;
             // 
+            // dgv_productos
+            // 
+            this.dgv_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_productos.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_productos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_productos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_productos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_productos.Location = new System.Drawing.Point(0, 0);
+            this.dgv_productos.Name = "dgv_productos";
+            this.dgv_productos.Size = new System.Drawing.Size(778, 234);
+            this.dgv_productos.TabIndex = 20;
+            this.dgv_productos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_productos_CellClick);
+            this.dgv_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_productos_CellContentClick);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
@@ -580,53 +694,15 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(778, 33);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // tableLayoutPanel5
+            // panel8
             // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.32134F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.70437F));
-            this.tableLayoutPanel5.Controls.Add(this.panel11, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.panel10, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.panel9, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 377);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(778, 33);
-            this.tableLayoutPanel5.TabIndex = 3;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 5;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.panel18, 4, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel17, 3, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel16, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel15, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel14, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 416);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(778, 42);
-            this.tableLayoutPanel7.TabIndex = 5;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.txt_nombre);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(305, 27);
-            this.panel6.TabIndex = 0;
+            this.panel8.Controls.Add(this.label7);
+            this.panel8.Controls.Add(this.txt_stock_actual);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(510, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(265, 27);
+            this.panel8.TabIndex = 2;
             // 
             // panel7
             // 
@@ -638,118 +714,15 @@
             this.panel7.Size = new System.Drawing.Size(190, 27);
             this.panel7.TabIndex = 1;
             // 
-            // panel8
+            // panel6
             // 
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Controls.Add(this.txt_stock_actual);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(510, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(265, 27);
-            this.panel8.TabIndex = 2;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.txt_categoria);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(3, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(305, 27);
-            this.panel9.TabIndex = 1;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label5);
-            this.panel10.Controls.Add(this.txt_precio_venta);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(314, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(190, 27);
-            this.panel10.TabIndex = 2;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label8);
-            this.panel11.Controls.Add(this.txt_stock_minimo);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(510, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(265, 27);
-            this.panel11.TabIndex = 3;
-            // 
-            // panel14
-            // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 3);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(149, 36);
-            this.panel14.TabIndex = 1;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.btn_agregar);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(158, 3);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(149, 36);
-            this.panel15.TabIndex = 2;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.btn_actualizar);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(313, 3);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(149, 36);
-            this.panel16.TabIndex = 3;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.btn_eliminar);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(468, 3);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(149, 36);
-            this.panel17.TabIndex = 4;
-            // 
-            // panel18
-            // 
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(623, 3);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(152, 36);
-            this.panel18.TabIndex = 5;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoría";
-            this.Categoria.Name = "Categoria";
-            // 
-            // precio_v
-            // 
-            this.precio_v.HeaderText = "Precio de Venta";
-            this.precio_v.Name = "precio_v";
-            // 
-            // precio_c
-            // 
-            this.precio_c.HeaderText = "Precio de compra";
-            this.precio_c.Name = "precio_c";
-            // 
-            // stock_act
-            // 
-            this.stock_act.HeaderText = "Stock actual";
-            this.stock_act.Name = "stock_act";
-            // 
-            // stock_min
-            // 
-            this.stock_min.HeaderText = "Stock minimo";
-            this.stock_min.Name = "stock_min";
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.txt_nombre);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(305, 27);
+            this.panel6.TabIndex = 0;
             // 
             // Productos
             // 
@@ -766,32 +739,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -810,7 +785,6 @@
         private System.Windows.Forms.Button btn_venta;
         private System.Windows.Forms.Label lbl_buscar;
         private System.Windows.Forms.TextBox txt_buscador_prod;
-        private System.Windows.Forms.DataGridView dgv_productos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmb_categoria;
         private System.Windows.Forms.Label label4;
@@ -847,11 +821,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_v;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio_c;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stock_act;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stock_min;
+        private System.Windows.Forms.DataGridView dgv_productos;
+        private System.Windows.Forms.TextBox txt_id;
     }
 }
