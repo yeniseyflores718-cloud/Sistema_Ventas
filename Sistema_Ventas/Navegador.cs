@@ -57,6 +57,9 @@ namespace Sistema_Ventas
             Abrir(actual, new Formlogin2());
         }
 
+        
+        
+
         // Salir del sistema
         public static void Salir()
         {
