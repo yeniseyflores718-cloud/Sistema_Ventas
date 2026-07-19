@@ -55,5 +55,21 @@ namespace Sistema_Ventas
         {
             Navegador.Irproveedores(this);
         }
+
+        private void btn_cancelarventa_Click(object sender, EventArgs e)
+        {
+            Devoluciones frm = new Devoluciones();
+            frm.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VENTAS_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace Sistema_Ventas
         {
             Navegador.Irproveedores(this);
         }
+
+        private void data_reportes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

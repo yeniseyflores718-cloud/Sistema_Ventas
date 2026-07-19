@@ -45,7 +45,7 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.btn_cobrar = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_cancelarventa = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.txt_buscarProducto = new System.Windows.Forms.TextBox();
@@ -119,6 +119,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_provedores
             // 
@@ -328,27 +329,28 @@
             // 
             // panel17
             // 
-            this.panel17.Controls.Add(this.button2);
+            this.panel17.Controls.Add(this.btn_cancelarventa);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(374, 3);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(187, 77);
             this.panel17.TabIndex = 1;
             // 
-            // button2
+            // btn_cancelarventa
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Cancelar venta(ESC)";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_cancelarventa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_cancelarventa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cancelarventa.FlatAppearance.BorderSize = 0;
+            this.btn_cancelarventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelarventa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelarventa.ForeColor = System.Drawing.Color.White;
+            this.btn_cancelarventa.Location = new System.Drawing.Point(3, 22);
+            this.btn_cancelarventa.Name = "btn_cancelarventa";
+            this.btn_cancelarventa.Size = new System.Drawing.Size(148, 30);
+            this.btn_cancelarventa.TabIndex = 4;
+            this.btn_cancelarventa.Text = "Cancelar venta(ESC)";
+            this.btn_cancelarventa.UseVisualStyleBackColor = false;
+            this.btn_cancelarventa.Click += new System.EventHandler(this.btn_cancelarventa_Click);
             // 
             // panel18
             // 
@@ -694,10 +696,12 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "VENTAS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VENTAS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.VENTAS_KeyDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -761,7 +765,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_cancelarventa;
         private System.Windows.Forms.Button btn_cobrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label2;

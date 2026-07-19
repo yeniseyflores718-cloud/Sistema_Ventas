@@ -130,6 +130,7 @@
             this.btn_cancelar.TabIndex = 9;
             this.btn_cancelar.Text = "✖️ Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // Devoluciones
             // 
@@ -148,11 +149,13 @@
             this.Controls.Add(this.txt_idVenta);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Devoluciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Devoluciones";
+            this.Load += new System.EventHandler(this.Devoluciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

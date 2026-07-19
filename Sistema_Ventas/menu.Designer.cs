@@ -34,37 +34,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_formproductos = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_formventas = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_forminventario = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_salirsistema = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_form_proovedores = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_form_reportes = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btn_formproductos = new System.Windows.Forms.Button();
-            this.btn_form_reportes = new System.Windows.Forms.Button();
-            this.btn_formventas = new System.Windows.Forms.Button();
-            this.btn_form_proovedores = new System.Windows.Forms.Button();
-            this.btn_forminventario = new System.Windows.Forms.Button();
-            this.btn_salirsistema = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -155,11 +155,22 @@
             this.panel2.Size = new System.Drawing.Size(266, 172);
             this.panel2.TabIndex = 0;
             // 
+            // btn_formproductos
+            // 
+            this.btn_formproductos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_formproductos.Location = new System.Drawing.Point(237, 0);
+            this.btn_formproductos.Name = "btn_formproductos";
+            this.btn_formproductos.Size = new System.Drawing.Size(29, 172);
+            this.btn_formproductos.TabIndex = 3;
+            this.btn_formproductos.Text = ">";
+            this.btn_formproductos.UseVisualStyleBackColor = true;
+            this.btn_formproductos.Click += new System.EventHandler(this.btn_formproductos_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 129);
+            this.label8.Location = new System.Drawing.Point(3, 113);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(211, 40);
             this.label8.TabIndex = 2;
@@ -170,7 +181,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.producto2;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,7 +192,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 103);
+            this.label2.Location = new System.Drawing.Point(3, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 27);
             this.label2.TabIndex = 1;
@@ -199,6 +210,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(266, 172);
             this.panel3.TabIndex = 1;
+            // 
+            // btn_formventas
+            // 
+            this.btn_formventas.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_formventas.Location = new System.Drawing.Point(237, 0);
+            this.btn_formventas.Name = "btn_formventas";
+            this.btn_formventas.Size = new System.Drawing.Size(29, 172);
+            this.btn_formventas.TabIndex = 4;
+            this.btn_formventas.Text = ">";
+            this.btn_formventas.UseVisualStyleBackColor = true;
+            this.btn_formventas.Click += new System.EventHandler(this.btn_formventas_Click);
             // 
             // label9
             // 
@@ -245,11 +267,22 @@
             this.panel4.Size = new System.Drawing.Size(268, 172);
             this.panel4.TabIndex = 2;
             // 
+            // btn_forminventario
+            // 
+            this.btn_forminventario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_forminventario.Location = new System.Drawing.Point(239, 0);
+            this.btn_forminventario.Name = "btn_forminventario";
+            this.btn_forminventario.Size = new System.Drawing.Size(29, 172);
+            this.btn_forminventario.TabIndex = 5;
+            this.btn_forminventario.Text = ">";
+            this.btn_forminventario.UseVisualStyleBackColor = true;
+            this.btn_forminventario.Click += new System.EventHandler(this.btn_forminventario_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(28, 129);
+            this.label10.Location = new System.Drawing.Point(3, 129);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(253, 40);
             this.label10.TabIndex = 4;
@@ -289,6 +322,17 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(268, 173);
             this.panel5.TabIndex = 3;
+            // 
+            // btn_salirsistema
+            // 
+            this.btn_salirsistema.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_salirsistema.Location = new System.Drawing.Point(239, 0);
+            this.btn_salirsistema.Name = "btn_salirsistema";
+            this.btn_salirsistema.Size = new System.Drawing.Size(29, 173);
+            this.btn_salirsistema.TabIndex = 7;
+            this.btn_salirsistema.Text = ">";
+            this.btn_salirsistema.UseVisualStyleBackColor = true;
+            this.btn_salirsistema.Click += new System.EventHandler(this.btn_salirsistema_Click);
             // 
             // label13
             // 
@@ -335,6 +379,17 @@
             this.panel6.Size = new System.Drawing.Size(266, 173);
             this.panel6.TabIndex = 4;
             // 
+            // btn_form_proovedores
+            // 
+            this.btn_form_proovedores.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_form_proovedores.Location = new System.Drawing.Point(237, 0);
+            this.btn_form_proovedores.Name = "btn_form_proovedores";
+            this.btn_form_proovedores.Size = new System.Drawing.Size(29, 173);
+            this.btn_form_proovedores.TabIndex = 6;
+            this.btn_form_proovedores.Text = ">";
+            this.btn_form_proovedores.UseVisualStyleBackColor = true;
+            this.btn_form_proovedores.Click += new System.EventHandler(this.btn_form_proovedores_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -379,6 +434,17 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(266, 173);
             this.panel7.TabIndex = 5;
+            // 
+            // btn_form_reportes
+            // 
+            this.btn_form_reportes.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_form_reportes.Location = new System.Drawing.Point(237, 0);
+            this.btn_form_reportes.Name = "btn_form_reportes";
+            this.btn_form_reportes.Size = new System.Drawing.Size(29, 173);
+            this.btn_form_reportes.TabIndex = 5;
+            this.btn_form_reportes.Text = ">";
+            this.btn_form_reportes.UseVisualStyleBackColor = true;
+            this.btn_form_reportes.Click += new System.EventHandler(this.btn_form_reportes_Click);
             // 
             // label11
             // 
@@ -434,66 +500,6 @@
             this.label15.Size = new System.Drawing.Size(250, 17);
             this.label15.TabIndex = 4;
             this.label15.Text = "Elige una opción para comenzar";
-            // 
-            // btn_formproductos
-            // 
-            this.btn_formproductos.Location = new System.Drawing.Point(189, 71);
-            this.btn_formproductos.Name = "btn_formproductos";
-            this.btn_formproductos.Size = new System.Drawing.Size(58, 39);
-            this.btn_formproductos.TabIndex = 3;
-            this.btn_formproductos.Text = ">";
-            this.btn_formproductos.UseVisualStyleBackColor = true;
-            this.btn_formproductos.Click += new System.EventHandler(this.btn_formproductos_Click);
-            // 
-            // btn_form_reportes
-            // 
-            this.btn_form_reportes.Location = new System.Drawing.Point(189, 70);
-            this.btn_form_reportes.Name = "btn_form_reportes";
-            this.btn_form_reportes.Size = new System.Drawing.Size(58, 40);
-            this.btn_form_reportes.TabIndex = 5;
-            this.btn_form_reportes.Text = ">";
-            this.btn_form_reportes.UseVisualStyleBackColor = true;
-            this.btn_form_reportes.Click += new System.EventHandler(this.btn_form_reportes_Click);
-            // 
-            // btn_formventas
-            // 
-            this.btn_formventas.Location = new System.Drawing.Point(200, 71);
-            this.btn_formventas.Name = "btn_formventas";
-            this.btn_formventas.Size = new System.Drawing.Size(52, 39);
-            this.btn_formventas.TabIndex = 4;
-            this.btn_formventas.Text = ">";
-            this.btn_formventas.UseVisualStyleBackColor = true;
-            this.btn_formventas.Click += new System.EventHandler(this.btn_formventas_Click);
-            // 
-            // btn_form_proovedores
-            // 
-            this.btn_form_proovedores.Location = new System.Drawing.Point(200, 70);
-            this.btn_form_proovedores.Name = "btn_form_proovedores";
-            this.btn_form_proovedores.Size = new System.Drawing.Size(52, 40);
-            this.btn_form_proovedores.TabIndex = 6;
-            this.btn_form_proovedores.Text = ">";
-            this.btn_form_proovedores.UseVisualStyleBackColor = true;
-            this.btn_form_proovedores.Click += new System.EventHandler(this.btn_form_proovedores_Click);
-            // 
-            // btn_forminventario
-            // 
-            this.btn_forminventario.Location = new System.Drawing.Point(189, 71);
-            this.btn_forminventario.Name = "btn_forminventario";
-            this.btn_forminventario.Size = new System.Drawing.Size(51, 39);
-            this.btn_forminventario.TabIndex = 5;
-            this.btn_forminventario.Text = ">";
-            this.btn_forminventario.UseVisualStyleBackColor = true;
-            this.btn_forminventario.Click += new System.EventHandler(this.btn_forminventario_Click);
-            // 
-            // btn_salirsistema
-            // 
-            this.btn_salirsistema.Location = new System.Drawing.Point(189, 70);
-            this.btn_salirsistema.Name = "btn_salirsistema";
-            this.btn_salirsistema.Size = new System.Drawing.Size(51, 40);
-            this.btn_salirsistema.TabIndex = 7;
-            this.btn_salirsistema.Text = ">";
-            this.btn_salirsistema.UseVisualStyleBackColor = true;
-            this.btn_salirsistema.Click += new System.EventHandler(this.btn_salirsistema_Click);
             // 
             // menu
             // 

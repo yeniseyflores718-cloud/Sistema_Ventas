@@ -16,5 +16,22 @@ namespace Sistema_Ventas
         {
             InitializeComponent();
         }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Desea cancelar la devolución?","Cancelar devolución", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+       
+
+        private void Devoluciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
