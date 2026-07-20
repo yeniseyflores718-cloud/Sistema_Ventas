@@ -51,5 +51,11 @@ namespace Sistema_Ventas
         {
             Navegador.Salir();
         }
+
+        private void btn_nuevousuario_Click(object sender, EventArgs e)
+        {
+            FormNuevoUsuario frm = new FormNuevoUsuario();
+            frm.ShowDialog();
+        }
     }
 }
