@@ -59,13 +59,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btn_nuevousuario = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btn_nuevousuario = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -75,6 +76,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -99,6 +101,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_nuevousuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
@@ -135,12 +138,12 @@
             this.tableLayoutPanel2.Controls.Add(this.panel5, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel6, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel7, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(76, 177);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(76, 162);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(818, 357);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(842, 372);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // panel2
@@ -153,15 +156,15 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(266, 172);
+            this.panel2.Size = new System.Drawing.Size(274, 180);
             this.panel2.TabIndex = 0;
             // 
             // btn_formproductos
             // 
             this.btn_formproductos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_formproductos.Location = new System.Drawing.Point(237, 0);
+            this.btn_formproductos.Location = new System.Drawing.Point(245, 0);
             this.btn_formproductos.Name = "btn_formproductos";
-            this.btn_formproductos.Size = new System.Drawing.Size(29, 172);
+            this.btn_formproductos.Size = new System.Drawing.Size(29, 180);
             this.btn_formproductos.TabIndex = 3;
             this.btn_formproductos.Text = ">";
             this.btn_formproductos.UseVisualStyleBackColor = true;
@@ -171,7 +174,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 113);
+            this.label8.Location = new System.Drawing.Point(3, 129);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(211, 40);
             this.label8.TabIndex = 2;
@@ -181,7 +184,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 86);
+            this.label2.Location = new System.Drawing.Point(2, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 27);
             this.label2.TabIndex = 1;
@@ -190,22 +193,21 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.btn_formventas);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(275, 3);
+            this.panel3.Location = new System.Drawing.Point(283, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(266, 172);
+            this.panel3.Size = new System.Drawing.Size(274, 180);
             this.panel3.TabIndex = 1;
             // 
             // btn_formventas
             // 
             this.btn_formventas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_formventas.Location = new System.Drawing.Point(237, 0);
+            this.btn_formventas.Location = new System.Drawing.Point(245, 0);
             this.btn_formventas.Name = "btn_formventas";
-            this.btn_formventas.Size = new System.Drawing.Size(29, 172);
+            this.btn_formventas.Size = new System.Drawing.Size(29, 180);
             this.btn_formventas.TabIndex = 4;
             this.btn_formventas.Text = ">";
             this.btn_formventas.UseVisualStyleBackColor = true;
@@ -213,9 +215,10 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(34, 129);
+            this.label9.Location = new System.Drawing.Point(6, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 20);
             this.label9.TabIndex = 3;
@@ -223,11 +226,13 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 103);
+            this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 27);
+            this.label3.Size = new System.Drawing.Size(71, 44);
             this.label3.TabIndex = 2;
             this.label3.Text = "VENTAS";
             // 
@@ -239,17 +244,17 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(547, 3);
+            this.panel4.Location = new System.Drawing.Point(563, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(268, 172);
+            this.panel4.Size = new System.Drawing.Size(276, 180);
             this.panel4.TabIndex = 2;
             // 
             // btn_forminventario
             // 
             this.btn_forminventario.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_forminventario.Location = new System.Drawing.Point(239, 0);
+            this.btn_forminventario.Location = new System.Drawing.Point(247, 0);
             this.btn_forminventario.Name = "btn_forminventario";
-            this.btn_forminventario.Size = new System.Drawing.Size(29, 172);
+            this.btn_forminventario.Size = new System.Drawing.Size(29, 180);
             this.btn_forminventario.TabIndex = 5;
             this.btn_forminventario.Text = ">";
             this.btn_forminventario.UseVisualStyleBackColor = true;
@@ -261,15 +266,15 @@
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(3, 129);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(253, 40);
+            this.label10.Size = new System.Drawing.Size(206, 40);
             this.label10.TabIndex = 4;
-            this.label10.Text = "Controla el stock, entrada y salidas\r\nde tus productos";
+            this.label10.Text = "Controla el stock, entrada y \r\nsalidas de tus productos";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sans Serif Collection", 5.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 103);
+            this.label4.Location = new System.Drawing.Point(9, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 27);
             this.label4.TabIndex = 3;
@@ -283,17 +288,17 @@
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(547, 181);
+            this.panel5.Location = new System.Drawing.Point(563, 189);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(268, 173);
+            this.panel5.Size = new System.Drawing.Size(276, 180);
             this.panel5.TabIndex = 3;
             // 
             // btn_salirsistema
             // 
             this.btn_salirsistema.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_salirsistema.Location = new System.Drawing.Point(239, 0);
+            this.btn_salirsistema.Location = new System.Drawing.Point(247, 0);
             this.btn_salirsistema.Name = "btn_salirsistema";
-            this.btn_salirsistema.Size = new System.Drawing.Size(29, 173);
+            this.btn_salirsistema.Size = new System.Drawing.Size(29, 180);
             this.btn_salirsistema.TabIndex = 7;
             this.btn_salirsistema.Text = ">";
             this.btn_salirsistema.UseVisualStyleBackColor = true;
@@ -327,17 +332,17 @@
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(275, 181);
+            this.panel6.Location = new System.Drawing.Point(283, 189);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(266, 173);
+            this.panel6.Size = new System.Drawing.Size(274, 180);
             this.panel6.TabIndex = 4;
             // 
             // btn_form_proovedores
             // 
             this.btn_form_proovedores.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_form_proovedores.Location = new System.Drawing.Point(237, 0);
+            this.btn_form_proovedores.Location = new System.Drawing.Point(245, 0);
             this.btn_form_proovedores.Name = "btn_form_proovedores";
-            this.btn_form_proovedores.Size = new System.Drawing.Size(29, 173);
+            this.btn_form_proovedores.Size = new System.Drawing.Size(29, 180);
             this.btn_form_proovedores.TabIndex = 6;
             this.btn_form_proovedores.Text = ">";
             this.btn_form_proovedores.UseVisualStyleBackColor = true;
@@ -371,17 +376,17 @@
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.pictureBox4);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 181);
+            this.panel7.Location = new System.Drawing.Point(3, 189);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(266, 173);
+            this.panel7.Size = new System.Drawing.Size(274, 180);
             this.panel7.TabIndex = 5;
             // 
             // btn_form_reportes
             // 
             this.btn_form_reportes.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_form_reportes.Location = new System.Drawing.Point(237, 0);
+            this.btn_form_reportes.Location = new System.Drawing.Point(245, 0);
             this.btn_form_reportes.Name = "btn_form_reportes";
-            this.btn_form_reportes.Size = new System.Drawing.Size(29, 173);
+            this.btn_form_reportes.Size = new System.Drawing.Size(29, 180);
             this.btn_form_reportes.TabIndex = 5;
             this.btn_form_reportes.Text = ">";
             this.btn_form_reportes.UseVisualStyleBackColor = true;
@@ -430,39 +435,35 @@
             this.label15.TabIndex = 4;
             this.label15.Text = "Elige una opción para comenzar";
             // 
-            // btn_nuevousuario
+            // panel8
             // 
-            this.btn_nuevousuario.BackgroundImage = global::Sistema_Ventas.Properties.Resources.botondeusuarios;
-            this.btn_nuevousuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_nuevousuario.FlatAppearance.BorderSize = 0;
-            this.btn_nuevousuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nuevousuario.Location = new System.Drawing.Point(816, 108);
-            this.btn_nuevousuario.Name = "btn_nuevousuario";
-            this.btn_nuevousuario.Size = new System.Drawing.Size(75, 66);
-            this.btn_nuevousuario.TabIndex = 1;
-            this.btn_nuevousuario.UseVisualStyleBackColor = true;
-            this.btn_nuevousuario.Click += new System.EventHandler(this.btn_nuevousuario_Click);
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(92, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(153, 180);
+            this.panel8.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.producto2;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(92, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::Sistema_Ventas.Properties.Resources.venta2;
-            this.pictureBox2.Location = new System.Drawing.Point(38, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(84, 80);
+            this.pictureBox2.Size = new System.Drawing.Size(92, 180);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -472,9 +473,9 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Sistema_Ventas.Properties.Resources.inventario2;
-            this.pictureBox3.Location = new System.Drawing.Point(31, 15);
+            this.pictureBox3.Location = new System.Drawing.Point(7, 15);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(84, 80);
+            this.pictureBox3.Size = new System.Drawing.Size(92, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -486,7 +487,7 @@
             this.pictureBox6.Image = global::Sistema_Ventas.Properties.Resources.salir2;
             this.pictureBox6.Location = new System.Drawing.Point(31, 14);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(74, 80);
+            this.pictureBox6.Size = new System.Drawing.Size(82, 80);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
@@ -498,7 +499,7 @@
             this.pictureBox5.Image = global::Sistema_Ventas.Properties.Resources.proveedor2;
             this.pictureBox5.Location = new System.Drawing.Point(38, 14);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(84, 80);
+            this.pictureBox5.Size = new System.Drawing.Size(92, 80);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
@@ -510,17 +511,29 @@
             this.pictureBox4.Image = global::Sistema_Ventas.Properties.Resources.reportes2;
             this.pictureBox4.Location = new System.Drawing.Point(28, 14);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(84, 80);
+            this.pictureBox4.Size = new System.Drawing.Size(92, 80);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+            // 
+            // btn_nuevousuario
+            // 
+            this.btn_nuevousuario.BackgroundImage = global::Sistema_Ventas.Properties.Resources.agregarusuario;
+            this.btn_nuevousuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nuevousuario.FlatAppearance.BorderSize = 0;
+            this.btn_nuevousuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevousuario.Location = new System.Drawing.Point(841, 28);
+            this.btn_nuevousuario.Name = "btn_nuevousuario";
+            this.btn_nuevousuario.Size = new System.Drawing.Size(61, 63);
+            this.btn_nuevousuario.TabIndex = 1;
+            this.btn_nuevousuario.UseVisualStyleBackColor = true;
+            this.btn_nuevousuario.Click += new System.EventHandler(this.btn_nuevousuario_Click);
             // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.btn_nuevousuario);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -538,7 +551,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -547,6 +559,8 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -597,5 +611,6 @@
         private System.Windows.Forms.Button btn_form_proovedores;
         private System.Windows.Forms.Button btn_form_reportes;
         private System.Windows.Forms.Button btn_nuevousuario;
+        private System.Windows.Forms.Panel panel8;
     }
 }

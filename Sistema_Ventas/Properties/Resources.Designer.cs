@@ -63,6 +63,16 @@ namespace Sistema_Ventas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregarusuario {
+            get {
+                object obj = ResourceManager.GetObject("agregarusuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botondeusuarios {
             get {
                 object obj = ResourceManager.GetObject("botondeusuarios", resourceCulture);
