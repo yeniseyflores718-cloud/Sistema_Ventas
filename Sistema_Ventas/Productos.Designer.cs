@@ -55,14 +55,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_categoria = new System.Windows.Forms.ComboBox();
-
-            this.dgv_productos = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_v = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock_act = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock_min = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_buscador_prod = new System.Windows.Forms.TextBox();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -72,9 +64,7 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-
             this.txt_id = new System.Windows.Forms.TextBox();
-
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -97,7 +87,6 @@
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
-
             this.tableLayoutPanel5.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -144,7 +133,6 @@
             this.btn_proveedores.Text = "          Proveedores";
             this.btn_proveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_proveedores.UseVisualStyleBackColor = true;
-            this.btn_proveedores.Click += new System.EventHandler(this.btn_proveedores_Click);
             // 
             // btn_reportes
             // 
@@ -161,7 +149,6 @@
             this.btn_reportes.Text = "     Reportes";
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_reportes.UseVisualStyleBackColor = true;
-            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // btn_inventario
             // 
@@ -178,7 +165,6 @@
             this.btn_inventario.Text = "       Inventario";
             this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_inventario.UseVisualStyleBackColor = true;
-            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
             // btn_productos
             // 
@@ -195,7 +181,6 @@
             this.btn_productos.Text = "       Productos";
             this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_productos.UseVisualStyleBackColor = true;
-            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
             // btn_venta
             // 
@@ -212,7 +197,6 @@
             this.btn_venta.Text = " Ventas";
             this.btn_venta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_venta.UseVisualStyleBackColor = true;
-            this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
             // 
             // btn_inicio
             // 
@@ -229,7 +213,6 @@
             this.btn_inicio.Text = "Inicio";
             this.btn_inicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_inicio.UseVisualStyleBackColor = true;
-            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // pictureBox1
             // 
@@ -469,57 +452,6 @@
             this.cmb_categoria.Size = new System.Drawing.Size(237, 27);
             this.cmb_categoria.TabIndex = 21;
             // 
-
-            // dgv_productos
-            // 
-            this.dgv_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_productos.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_productos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_productos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Categoria,
-            this.precio_v,
-            this.precio_c,
-            this.stock_act,
-            this.stock_min});
-            this.dgv_productos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_productos.Location = new System.Drawing.Point(0, 0);
-            this.dgv_productos.Name = "dgv_productos";
-            this.dgv_productos.Size = new System.Drawing.Size(778, 234);
-            this.dgv_productos.TabIndex = 20;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoría";
-            this.Categoria.Name = "Categoria";
-            // 
-            // precio_v
-            // 
-            this.precio_v.HeaderText = "Precio de Venta";
-            this.precio_v.Name = "precio_v";
-            // 
-            // precio_c
-            // 
-            this.precio_c.HeaderText = "Precio de compra";
-            this.precio_c.Name = "precio_c";
-            // 
-            // stock_act
-            // 
-            this.stock_act.HeaderText = "Stock actual";
-            this.stock_act.Name = "stock_act";
-            // 
-            // stock_min
-            // 
-            this.stock_min.HeaderText = "Stock minimo";
-            this.stock_min.Name = "stock_min";
-            // 
             // txt_buscador_prod
             // 
             this.txt_buscador_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -623,16 +555,13 @@
             // 
             // panel14
             // 
-
             this.panel14.Controls.Add(this.txt_id);
-
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(149, 36);
             this.panel14.TabIndex = 1;
             // 
-
             // txt_id
             // 
             this.txt_id.Location = new System.Drawing.Point(30, 6);
@@ -641,7 +570,6 @@
             this.txt_id.TabIndex = 0;
             this.txt_id.Visible = false;
             // 
-
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 3;
@@ -806,7 +734,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "Productos";
             this.Text = "Productos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Productos_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -817,10 +744,8 @@
             this.panel17.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();

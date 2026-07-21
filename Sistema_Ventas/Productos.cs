@@ -255,7 +255,6 @@ namespace Sistema_Ventas
                 dgv_productos.Columns["fecha_cad"].Visible = false;
                 dgv_productos.Columns["id_categoria"].Visible = false;
             }
-        }
 
 
         private void btn_inicio_Click(object sender, EventArgs e)
