@@ -53,11 +53,6 @@ namespace Sistema_Ventas
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_proveedores = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dia_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_buscador_prov = new System.Windows.Forms.TextBox();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -78,6 +73,7 @@ namespace Sistema_Ventas
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -95,6 +91,7 @@ namespace Sistema_Ventas
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -123,12 +120,12 @@ namespace Sistema_Ventas
             this.btn_proveedores.ForeColor = System.Drawing.Color.White;
             this.btn_proveedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
             this.btn_proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_proveedores.Location = new System.Drawing.Point(3, 379);
+            this.btn_proveedores.Location = new System.Drawing.Point(3, 451);
             this.btn_proveedores.Name = "btn_proveedores";
             this.btn_proveedores.Size = new System.Drawing.Size(194, 41);
             this.btn_proveedores.TabIndex = 6;
-            this.btn_proveedores.Text = "Proveedores";
-            this.btn_proveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_proveedores.Text = "             Proveedores";
+            this.btn_proveedores.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_proveedores.UseVisualStyleBackColor = true;
             this.btn_proveedores.Click += new System.EventHandler(this.btn_proveedores_Click);
             // 
@@ -140,12 +137,12 @@ namespace Sistema_Ventas
             this.btn_reportes.ForeColor = System.Drawing.Color.White;
             this.btn_reportes.Image = global::Sistema_Ventas.Properties.Resources.reportes;
             this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reportes.Location = new System.Drawing.Point(3, 330);
+            this.btn_reportes.Location = new System.Drawing.Point(3, 397);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(194, 41);
             this.btn_reportes.TabIndex = 5;
-            this.btn_reportes.Text = "Reportes";
-            this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_reportes.Text = "             Reportes";
+            this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_reportes.UseVisualStyleBackColor = true;
             this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
@@ -157,12 +154,12 @@ namespace Sistema_Ventas
             this.btn_inventario.ForeColor = System.Drawing.Color.White;
             this.btn_inventario.Image = global::Sistema_Ventas.Properties.Resources.inventario;
             this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inventario.Location = new System.Drawing.Point(3, 280);
+            this.btn_inventario.Location = new System.Drawing.Point(3, 339);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(194, 41);
             this.btn_inventario.TabIndex = 4;
-            this.btn_inventario.Text = "Inventario";
-            this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_inventario.Text = "             Inventario";
+            this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_inventario.UseVisualStyleBackColor = true;
             this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
@@ -174,12 +171,12 @@ namespace Sistema_Ventas
             this.btn_productos.ForeColor = System.Drawing.Color.White;
             this.btn_productos.Image = global::Sistema_Ventas.Properties.Resources.producto;
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_productos.Location = new System.Drawing.Point(3, 231);
+            this.btn_productos.Location = new System.Drawing.Point(3, 279);
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(194, 41);
             this.btn_productos.TabIndex = 3;
-            this.btn_productos.Text = "Productos";
-            this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_productos.Text = "             Productos";
+            this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_productos.UseVisualStyleBackColor = true;
             this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
@@ -191,7 +188,7 @@ namespace Sistema_Ventas
             this.btn_ventas.ForeColor = System.Drawing.Color.White;
             this.btn_ventas.Image = global::Sistema_Ventas.Properties.Resources.ventas;
             this.btn_ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ventas.Location = new System.Drawing.Point(3, 183);
+            this.btn_ventas.Location = new System.Drawing.Point(3, 218);
             this.btn_ventas.Name = "btn_ventas";
             this.btn_ventas.Size = new System.Drawing.Size(194, 41);
             this.btn_ventas.TabIndex = 2;
@@ -203,9 +200,9 @@ namespace Sistema_Ventas
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -218,7 +215,7 @@ namespace Sistema_Ventas
             this.btn_inicio.ForeColor = System.Drawing.Color.White;
             this.btn_inicio.Image = global::Sistema_Ventas.Properties.Resources.inicio;
             this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inicio.Location = new System.Drawing.Point(3, 136);
+            this.btn_inicio.Location = new System.Drawing.Point(3, 153);
             this.btn_inicio.Name = "btn_inicio";
             this.btn_inicio.Size = new System.Drawing.Size(194, 41);
             this.btn_inicio.TabIndex = 0;
@@ -269,6 +266,7 @@ namespace Sistema_Ventas
             this.btn_actualizar.TabIndex = 38;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_eliminar
             // 
@@ -283,6 +281,7 @@ namespace Sistema_Ventas
             this.btn_eliminar.TabIndex = 37;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_agregar
             // 
@@ -297,6 +296,7 @@ namespace Sistema_Ventas
             this.btn_agregar.TabIndex = 36;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_diaentrega
             // 
@@ -417,43 +417,13 @@ namespace Sistema_Ventas
             this.dgv_proveedores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_proveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_proveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Telefono,
-            this.Empresa,
-            this.Estado,
-            this.Dia_Entrega});
             this.dgv_proveedores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_proveedores.Location = new System.Drawing.Point(0, 0);
             this.dgv_proveedores.Name = "dgv_proveedores";
             this.dgv_proveedores.Size = new System.Drawing.Size(778, 208);
             this.dgv_proveedores.TabIndex = 19;
+            this.dgv_proveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_proveedores_CellClick);
             this.dgv_proveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_proveedores_CellContentClick);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Teléfono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Empresa
-            // 
-            this.Empresa.HeaderText = "Empresa";
-            this.Empresa.Name = "Empresa";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // Dia_Entrega
-            // 
-            this.Dia_Entrega.HeaderText = "Día de entrega";
-            this.Dia_Entrega.Name = "Dia_Entrega";
             // 
             // txt_buscador_prov
             // 
@@ -462,8 +432,9 @@ namespace Sistema_Ventas
             this.txt_buscador_prov.Location = new System.Drawing.Point(115, 15);
             this.txt_buscador_prov.Multiline = true;
             this.txt_buscador_prov.Name = "txt_buscador_prov";
-            this.txt_buscador_prov.Size = new System.Drawing.Size(326, 23);
+            this.txt_buscador_prov.Size = new System.Drawing.Size(235, 23);
             this.txt_buscador_prov.TabIndex = 18;
+            this.txt_buscador_prov.TextChanged += new System.EventHandler(this.txt_buscador_prov_TextChanged);
             // 
             // lbl_buscar
             // 
@@ -640,6 +611,7 @@ namespace Sistema_Ventas
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.txt_id);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
@@ -687,6 +659,14 @@ namespace Sistema_Ventas
             this.panel14.Size = new System.Drawing.Size(312, 73);
             this.panel14.TabIndex = 1;
             // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(19, 10);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.TabIndex = 0;
+            this.txt_id.Visible = false;
+            // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,8 +678,9 @@ namespace Sistema_Ventas
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Proveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Proveedores";
+            this.Text = "        Proveedores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Proveedores_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -723,6 +704,8 @@ namespace Sistema_Ventas
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -770,16 +753,12 @@ namespace Sistema_Ventas
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Empresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dia_Entrega;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.TextBox txt_id;
     }
 }
