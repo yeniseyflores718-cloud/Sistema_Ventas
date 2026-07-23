@@ -199,6 +199,7 @@
             this.btn_venta.Text = " Ventas";
             this.btn_venta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_venta.UseVisualStyleBackColor = true;
+            this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
             // 
             // btn_inicio
             // 
@@ -215,6 +216,7 @@
             this.btn_inicio.Text = "Inicio";
             this.btn_inicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // pictureBox1
             // 

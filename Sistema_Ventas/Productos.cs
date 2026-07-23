@@ -21,36 +21,6 @@ namespace Sistema_Ventas
             InitializeComponent();
         }
 
-        private void btn_inicio_Click(object sender, EventArgs e)
-        {
-            Navegador.Irmenu(this);
-        }
-
-        private void btn_venta_Click(object sender, EventArgs e)
-        {
-            Navegador.Irventas(this);
-        }
-
-        private void btn_productos_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Ya estás en este formulario.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btn_inventario_Click(object sender, EventArgs e)
-        {
-            Navegador.Irinventario(this);
-        }
-
-        private void btn_reportes_Click(object sender, EventArgs e)
-        {
-            Navegador.Irreportes(this);
-        }
-
-        private void btn_proveedores_Click(object sender, EventArgs e)
-        {
-            Navegador.Irproveedores(this);
-
-        }
         private void cargarDatos()
         {
             conexion = new dataAcces();
@@ -296,6 +266,16 @@ namespace Sistema_Ventas
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_inicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_venta_Click(object sender, EventArgs e)
+        {
+            Navegador.Irventas(this);
         }
     }
     
