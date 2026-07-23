@@ -152,6 +152,7 @@
             this.btn_aceptarNuevoUS.TabIndex = 10;
             this.btn_aceptarNuevoUS.Text = "✔️ Aceptar";
             this.btn_aceptarNuevoUS.UseVisualStyleBackColor = true;
+            this.btn_aceptarNuevoUS.Click += new System.EventHandler(this.btn_aceptarNuevoUS_Click);
             // 
             // label6
             // 
