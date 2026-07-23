@@ -14,7 +14,7 @@ namespace Sistema_Ventas.DataAcces
         private readonly string cadena;
         public dataAcces()
         {
-            cadena = "Server=localhost;Database=SistemaV;Uid=root;Pwd=;Port=3306;SslMode=0";
+            cadena = "Server=localhost;Database=SistemaVentas;Uid=root;Pwd=;Port=3306;SslMode=0";
         }
         public MySqlConnection getConnection()
         {
