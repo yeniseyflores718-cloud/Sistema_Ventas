@@ -16,11 +16,11 @@ namespace Sistema_Ventas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu());
+            Application.Run(new Formlogin2());
 
             //Application.Run(new Form1());
 
-            //version 3 del señor color nochem
+            //version 3 del señor color noche
         }
     }
 }
