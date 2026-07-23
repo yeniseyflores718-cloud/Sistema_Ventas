@@ -22,49 +22,57 @@ namespace Sistema_Ventas
 
         private void Formlogin2_Load(object sender, EventArgs e)
         {
-
         }
-
-
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
-            string usuario= txt_usuario.Text.Trim();
-            string contrasena = txt_contrasena.Text.Trim();
-            if(string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
+            string usuario = txt_usuario.Text.Trim();
+            string pass = txt_contrasena.Text.Trim();
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(pass))
             {
-                MessageBox.Show("Por favor, ingrese un usuario y una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, llena todos los campos.", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            dataAcces conexion = new dataAcces();
-            try
+            dataAcces con = new dataAcces();
+            MySqlConnection dbconn = con.getConnection();
+
+            if (dbconn == null)
             {
-                using (MySqlConnection con=conexion.getConnection())
+                MessageBox.Show("No se pudo conectar a la Base de Datos. Verifica que MySQL esté activo.", "Error de Red", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string consulta = "SELECT contrasena, rol FROM empleados WHERE nombre_usuario=@nombre";
+            MySqlCommand cmd = new MySqlCommand(consulta, dbconn);
+            cmd.Parameters.AddWithValue("@nombre", usuario);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                string hashAlmacenado = reader["contrasena"].ToString();
+                string rol = reader["rol"].ToString();
+                bool credencialValida = BCrypt.Net.BCrypt.Verify(pass, hashAlmacenado);
+                if (credencialValida)
                 {
-                    if(con==null)
-                    return;
-                    string consulta= "SELECT nombre_usuario FROM empleados WHERE usuario=@usuario and contrasena=@password";
-                    MySqlCommand command = new MySqlCommand(consulta, con);
-                    command.Parameters.AddWithValue("@usuario", txt_usuario.Text);
-                    command.Parameters.AddWithValue("@password", txt_contrasena.Text);
-                    object result = command.ExecuteScalar();
-                    if (result != null)
-                    {
-                        MessageBox.Show("Inicio de sesión exitoso.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        menu menuu = new menu();
-                        this.Hide();
-                        menuu.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                    MessageBox.Show("¡Bienvenido al sistema!", "Acceso Autorizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dbconn.Close();
+
+                    menu menuu= new menu();
+                    this.Hide();
+                    menuu.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña incorrecta.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El usuario no existe.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            dbconn.Close();
+        
+
         }
 
     }
