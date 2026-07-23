@@ -20,7 +20,7 @@ namespace Sistema_Ventas
 
             //Application.Run(new Form1());
 
-            //version 3 del señor 
+            //version 3 del señor color nochem
         }
     }
 }
