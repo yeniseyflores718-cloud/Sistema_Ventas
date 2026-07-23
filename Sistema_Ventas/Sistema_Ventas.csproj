@@ -287,5 +287,23 @@
   <ItemGroup>
     <None Include="Resources\agregarusuario.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventariosucro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productososcuro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedoresoscuro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporetsoscuro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salirosucro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventasoscuro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

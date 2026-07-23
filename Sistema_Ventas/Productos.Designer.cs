@@ -118,7 +118,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_proveedores
             // 
@@ -135,6 +134,7 @@
             this.btn_proveedores.Text = "          Proveedores";
             this.btn_proveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_proveedores.UseVisualStyleBackColor = true;
+            this.btn_proveedores.Click += new System.EventHandler(this.btn_proveedores_Click);
             // 
             // btn_reportes
             // 
@@ -151,6 +151,7 @@
             this.btn_reportes.Text = "     Reportes";
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // btn_inventario
             // 
@@ -167,6 +168,7 @@
             this.btn_inventario.Text = "       Inventario";
             this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_inventario.UseVisualStyleBackColor = true;
+            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
             // btn_productos
             // 
@@ -183,6 +185,7 @@
             this.btn_productos.Text = "       Productos";
             this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_productos.UseVisualStyleBackColor = true;
+            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
             // btn_venta
             // 
@@ -199,6 +202,7 @@
             this.btn_venta.Text = " Ventas";
             this.btn_venta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_venta.UseVisualStyleBackColor = true;
+            this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
             // 
             // btn_inicio
             // 
@@ -215,6 +219,7 @@
             this.btn_inicio.Text = "Inicio";
             this.btn_inicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // pictureBox1
             // 
