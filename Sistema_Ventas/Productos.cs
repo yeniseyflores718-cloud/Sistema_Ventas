@@ -26,16 +26,23 @@ namespace Sistema_Ventas
             MySqlConnection con = conexion.getConnection();
             if (con != null)
             {
-                string consulta = "SELECT * FROM productos";
+                string consulta = @"
+                SELECT
+                p.id_Producto,
+                p.nombre_producto,
+                p.precio_c,
+                p.precio_v,
+                p.stock_act,
+                p.stock_min,
+                c.categoria
+                FROM productos p
+                INNER JOIN categoria c
+                ON p.id_categoria = c.id_categoria";
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, con);
                 DataTable dt = new DataTable();
                 adaptador.Fill(dt);
                 dgv_productos.DataSource = dt;
-                dgv_productos.Columns["id_Producto"].Visible = false;
-                dgv_productos.Columns["descripcion"].Visible = false;
-                dgv_productos.Columns["fecha_com"].Visible = false;
-                dgv_productos.Columns["fecha_cad"].Visible = false;
-                dgv_productos.Columns["id_categoria"].Visible = false;
+                
             }
 
 
@@ -159,6 +166,7 @@ namespace Sistema_Ventas
                 txt_stock_actual.Text = fila.Cells["stock_act"].Value.ToString();
                 txt_precio_venta.Text = fila.Cells["precio_v"].Value.ToString();
                 txt_stock_minimo.Text = fila.Cells["stock_min"].Value.ToString();
+                txt_categoria.Text = fila.Cells["categoria"].Value.ToString();
             }
         }
 
@@ -243,7 +251,19 @@ namespace Sistema_Ventas
             if (con != null)
             {
                 TextBox txt = (TextBox)sender;
-                string consulta = "SELECT * FROM productos WHERE nombre_Producto LIKE @busqueda";
+                string consulta = @"
+                SELECT
+                p.id_Producto,
+                p.nombre_producto,
+                p.precio_c,
+                p.precio_v,
+                p.stock_act,
+                p.stock_min,
+                c.categoria
+                FROM productos p
+                INNER JOIN categoria c
+                ON p.id_categoria = c.id_categoria
+                WHERE p.nombre_producto LIKE @busqueda";
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, con);
                 adaptador.SelectCommand.Parameters.AddWithValue("@busqueda", "%" + txt.Text + "%");
                 DataTable dt = new DataTable();
