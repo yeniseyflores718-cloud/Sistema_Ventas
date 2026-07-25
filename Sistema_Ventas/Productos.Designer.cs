@@ -458,6 +458,7 @@
             this.cmb_categoria.Name = "cmb_categoria";
             this.cmb_categoria.Size = new System.Drawing.Size(237, 27);
             this.cmb_categoria.TabIndex = 21;
+            this.cmb_categoria.SelectedIndexChanged += new System.EventHandler(this.cmb_categoria_SelectedIndexChanged);
             // 
             // txt_buscador_prod
             // 
