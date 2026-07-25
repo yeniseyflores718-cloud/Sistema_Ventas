@@ -21,32 +21,61 @@ namespace Sistema_Ventas
             InitializeComponent();
         }
 
-        private void cargarDatos()
+        private void cargarDatos(int categoria = 0)
         {
             conexion = new dataAcces();
             MySqlConnection con = conexion.getConnection();
-            if (con != null)
+
+            string consulta = @"
+            SELECT
+            p.id_Producto,
+            p.nombre_producto,
+            p.precio_c,
+            p.precio_v,
+            p.stock_act,
+            p.stock_min,
+            c.categoria
+            FROM productos p
+            INNER JOIN categoria c
+            ON p.id_categoria = c.id_categoria";
+
+            if (categoria != 0)
             {
-                string consulta = @"
-                SELECT
-                p.id_Producto,
-                p.nombre_producto,
-                p.precio_c,
-                p.precio_v,
-                p.stock_act,
-                p.stock_min,
-                c.categoria
-                FROM productos p
-                INNER JOIN categoria c
-                ON p.id_categoria = c.id_categoria";
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, con);
-                DataTable dt = new DataTable();
-                adaptador.Fill(dt);
-                dgv_productos.DataSource = dt;
-                
+                consulta += " WHERE p.id_categoria=@categoria";
             }
 
+            MySqlDataAdapter da = new MySqlDataAdapter(consulta, con);
 
+            if (categoria != 0)
+            {
+                da.SelectCommand.Parameters.AddWithValue("@categoria", categoria);
+            }
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            dgv_productos.DataSource = dt;
+
+        }
+        private void cargarCategorias()
+        {
+            conexion = new dataAcces();
+            MySqlConnection con = conexion.getConnection();
+
+            string consulta = "SELECT id_categoria, categoria FROM categoria";
+
+            MySqlDataAdapter da = new MySqlDataAdapter(consulta, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            DataRow fila = dt.NewRow();
+            fila["id_categoria"] = 0;
+            fila["categoria"] = "Todas";
+            dt.Rows.InsertAt(fila, 0);
+
+            cmb_categoria.DataSource = dt;
+            cmb_categoria.DisplayMember = "categoria";
+            cmb_categoria.ValueMember = "id_categoria";
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -56,7 +85,9 @@ namespace Sistema_Ventas
 
         private void Productos_Load(object sender, EventArgs e)
         {
+            cargarCategorias();
             cargarDatos();
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -307,7 +338,16 @@ namespace Sistema_Ventas
         private void btn_proveedores_Click(object sender, EventArgs e)
         {
             Navegador.Irproveedores(this);
-        }   
+        }
+
+        private void cmb_categoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_categoria.SelectedValue != null &&
+        int.TryParse(cmb_categoria.SelectedValue.ToString(), out int categoria))
+            {
+                cargarDatos(categoria);
+            }
+        }
     }
     
 }
