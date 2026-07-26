@@ -139,7 +139,7 @@ namespace Sistema_Ventas
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_precio_compra.Text) || string.IsNullOrEmpty(txt_stock_actual.Text) || string.IsNullOrEmpty(txt_precio_venta.Text) || string.IsNullOrEmpty(txt_stock_minimo.Text) || string.IsNullOrEmpty(txt_categoria.Text))
+            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_precio_compra.Text) || string.IsNullOrEmpty(txt_stock_actual.Text) || string.IsNullOrEmpty(txt_precio_venta.Text) || string.IsNullOrEmpty(txt_stock_minimo.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -150,13 +150,31 @@ namespace Sistema_Ventas
                 return;
             try
             {
-                string consulta = @"INSERT INTO productos (nombre_Producto, precio_c, stock_act, precio_v, stock_min) VALUES (@nombre_Producto, @precio_c, @stock_act, @precio_v, @stock_min)";
+                string consultaCategoria = "SELECT id_categoria FROM categoria WHERE categoria=@categoria";
+                MySqlCommand cmdCategoria = new MySqlCommand(consultaCategoria, con);
+                cmdCategoria.Parameters.AddWithValue("@categoria", txt_categoria.Text.Trim());
+
+                object resultado = cmdCategoria.ExecuteScalar();
+
+                if (resultado == null)
+                {
+                    MessageBox.Show("La categoría no existe.");
+                    return;
+                }
+
+                int idCategoria = Convert.ToInt32(resultado);
+                string consulta = @"INSERT INTO productos
+                (nombre_producto, precio_c, stock_act, precio_v, stock_min, id_categoria)
+                VALUES
+                (@nombre_producto, @precio_c, @stock_act, @precio_v, @stock_min, @id_categoria)";
                 MySqlCommand comando = new MySqlCommand(consulta, con);
-                comando.Parameters.AddWithValue("@nombre_Producto", txt_nombre.Text);
+                comando.Parameters.AddWithValue("@nombre_producto", txt_nombre.Text);
                 comando.Parameters.AddWithValue("@precio_c", txt_precio_compra.Text);
                 comando.Parameters.AddWithValue("@stock_act", txt_stock_actual.Text);
                 comando.Parameters.AddWithValue("@precio_v", txt_precio_venta.Text);
                 comando.Parameters.AddWithValue("@stock_min", txt_stock_minimo.Text);
+                comando.Parameters.AddWithValue("@id_categoria", idCategoria);
+
                 int filasAfectadas = comando.ExecuteNonQuery();
                 con.Close();
                 if (filasAfectadas > 0)
@@ -301,11 +319,7 @@ namespace Sistema_Ventas
                 DataTable dt = new DataTable();
                 adaptador.Fill(dt);
                 dgv_productos.DataSource = dt;
-                dgv_productos.Columns["id_Producto"].Visible = false;
-                dgv_productos.Columns["descripcion"].Visible = false;
-                dgv_productos.Columns["fecha_com"].Visible = false;
-                dgv_productos.Columns["fecha_cad"].Visible = false;
-                dgv_productos.Columns["id_categoria"].Visible = false;
+                dgv_productos.Columns["id_Producto"].Visible = false;               
             }
         }
 
