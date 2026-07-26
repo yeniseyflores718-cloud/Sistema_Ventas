@@ -55,7 +55,7 @@ namespace Sistema_Ventas
                     MessageBox.Show("¡Bienvenido al sistema!", "Acceso Autorizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dbconn.Close();
 
-                    menu menuu= new menu();
+                    menu menuu= new menu(rol);
                     this.Hide();
                     menuu.Show();
 

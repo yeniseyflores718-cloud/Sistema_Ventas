@@ -31,14 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             this.tbl_superior = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_superior = new System.Windows.Forms.Panel();
+            this.btn_nuevousuario = new System.Windows.Forms.Button();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.tlpMenu = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_productos = new System.Windows.Forms.Panel();
             this.btn_formproductos = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.picProductos = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_ventas = new System.Windows.Forms.Panel();
+            this.picVentas = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_formventas = new System.Windows.Forms.Button();
@@ -46,43 +49,40 @@
             this.btn_forminventario = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.picInventario = new System.Windows.Forms.PictureBox();
             this.pnl_salir = new System.Windows.Forms.Panel();
             this.btn_salirsistema = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.picSalir = new System.Windows.Forms.PictureBox();
             this.pnl_proveedores = new System.Windows.Forms.Panel();
             this.btn_form_proovedores = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.picproveedores = new System.Windows.Forms.PictureBox();
             this.pnl_reportes = new System.Windows.Forms.Panel();
             this.btn_form_reportes = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.picReportes = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.btn_modoOscuro = new System.Windows.Forms.Button();
-            this.picProductos = new System.Windows.Forms.PictureBox();
-            this.picVentas = new System.Windows.Forms.PictureBox();
-            this.picInventario = new System.Windows.Forms.PictureBox();
-            this.picSalir = new System.Windows.Forms.PictureBox();
-            this.picproveedores = new System.Windows.Forms.PictureBox();
-            this.picReportes = new System.Windows.Forms.PictureBox();
-            this.btn_nuevousuario = new System.Windows.Forms.Button();
             this.tbl_superior.SuspendLayout();
             this.pnl_superior.SuspendLayout();
             this.tlpMenu.SuspendLayout();
             this.pnl_productos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProductos)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnl_ventas.SuspendLayout();
-            this.pnl_inventario.SuspendLayout();
-            this.pnl_salir.SuspendLayout();
-            this.pnl_proveedores.SuspendLayout();
-            this.pnl_reportes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVentas)).BeginInit();
+            this.pnl_inventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInventario)).BeginInit();
+            this.pnl_salir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
+            this.pnl_proveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picproveedores)).BeginInit();
+            this.pnl_reportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picReportes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +109,20 @@
             this.pnl_superior.Name = "pnl_superior";
             this.pnl_superior.Size = new System.Drawing.Size(978, 94);
             this.pnl_superior.TabIndex = 0;
+            // 
+            // btn_nuevousuario
+            // 
+            this.btn_nuevousuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_nuevousuario.BackgroundImage = global::Sistema_Ventas.Properties.Resources.agregarusuario;
+            this.btn_nuevousuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nuevousuario.FlatAppearance.BorderSize = 0;
+            this.btn_nuevousuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevousuario.Location = new System.Drawing.Point(864, 28);
+            this.btn_nuevousuario.Name = "btn_nuevousuario";
+            this.btn_nuevousuario.Size = new System.Drawing.Size(61, 63);
+            this.btn_nuevousuario.TabIndex = 1;
+            this.btn_nuevousuario.UseVisualStyleBackColor = true;
+            this.btn_nuevousuario.Click += new System.EventHandler(this.btn_nuevousuario_Click);
             // 
             // lbltitulo
             // 
@@ -192,6 +206,16 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Administra el catálogo de tus\r\nproductos";
             // 
+            // picProductos
+            // 
+            this.picProductos.Image = global::Sistema_Ventas.Properties.Resources.producto2;
+            this.picProductos.Location = new System.Drawing.Point(3, 5);
+            this.picProductos.Name = "picProductos";
+            this.picProductos.Size = new System.Drawing.Size(117, 110);
+            this.picProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProductos.TabIndex = 0;
+            this.picProductos.TabStop = false;
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -227,6 +251,16 @@
             this.pnl_ventas.Name = "pnl_ventas";
             this.pnl_ventas.Size = new System.Drawing.Size(245, 180);
             this.pnl_ventas.TabIndex = 5;
+            // 
+            // picVentas
+            // 
+            this.picVentas.Image = global::Sistema_Ventas.Properties.Resources.venta2;
+            this.picVentas.Location = new System.Drawing.Point(3, 5);
+            this.picVentas.Name = "picVentas";
+            this.picVentas.Size = new System.Drawing.Size(117, 110);
+            this.picVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picVentas.TabIndex = 4;
+            this.picVentas.TabStop = false;
             // 
             // label9
             // 
@@ -327,6 +361,16 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "INVENTARIO";
             // 
+            // picInventario
+            // 
+            this.picInventario.Image = global::Sistema_Ventas.Properties.Resources.inventario2;
+            this.picInventario.Location = new System.Drawing.Point(3, 5);
+            this.picInventario.Name = "picInventario";
+            this.picInventario.Size = new System.Drawing.Size(117, 110);
+            this.picInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picInventario.TabIndex = 2;
+            this.picInventario.TabStop = false;
+            // 
             // pnl_salir
             // 
             this.pnl_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
@@ -382,6 +426,16 @@
             this.label7.Size = new System.Drawing.Size(54, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "SALIR";
+            // 
+            // picSalir
+            // 
+            this.picSalir.Image = global::Sistema_Ventas.Properties.Resources.salir2;
+            this.picSalir.Location = new System.Drawing.Point(3, 3);
+            this.picSalir.Name = "picSalir";
+            this.picSalir.Size = new System.Drawing.Size(117, 110);
+            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSalir.TabIndex = 3;
+            this.picSalir.TabStop = false;
             // 
             // pnl_proveedores
             // 
@@ -439,6 +493,16 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "PROVEEDORES";
             // 
+            // picproveedores
+            // 
+            this.picproveedores.Image = global::Sistema_Ventas.Properties.Resources.proveedor2;
+            this.picproveedores.Location = new System.Drawing.Point(3, 0);
+            this.picproveedores.Name = "picproveedores";
+            this.picproveedores.Size = new System.Drawing.Size(117, 110);
+            this.picproveedores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picproveedores.TabIndex = 2;
+            this.picproveedores.TabStop = false;
+            // 
             // pnl_reportes
             // 
             this.pnl_reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
@@ -495,6 +559,16 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "REPORTES";
             // 
+            // picReportes
+            // 
+            this.picReportes.Image = global::Sistema_Ventas.Properties.Resources.reportes2;
+            this.picReportes.Location = new System.Drawing.Point(3, 3);
+            this.picReportes.Name = "picReportes";
+            this.picReportes.Size = new System.Drawing.Size(117, 110);
+            this.picReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picReportes.TabIndex = 1;
+            this.picReportes.TabStop = false;
+            // 
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
@@ -530,80 +604,6 @@
             this.btn_modoOscuro.UseVisualStyleBackColor = true;
             this.btn_modoOscuro.Click += new System.EventHandler(this.btn_modoOscuro_Click);
             // 
-            // picProductos
-            // 
-            this.picProductos.Image = global::Sistema_Ventas.Properties.Resources.producto2;
-            this.picProductos.Location = new System.Drawing.Point(3, 5);
-            this.picProductos.Name = "picProductos";
-            this.picProductos.Size = new System.Drawing.Size(117, 110);
-            this.picProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picProductos.TabIndex = 0;
-            this.picProductos.TabStop = false;
-            // 
-            // picVentas
-            // 
-            this.picVentas.Image = global::Sistema_Ventas.Properties.Resources.venta2;
-            this.picVentas.Location = new System.Drawing.Point(3, 5);
-            this.picVentas.Name = "picVentas";
-            this.picVentas.Size = new System.Drawing.Size(117, 110);
-            this.picVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picVentas.TabIndex = 4;
-            this.picVentas.TabStop = false;
-            // 
-            // picInventario
-            // 
-            this.picInventario.Image = global::Sistema_Ventas.Properties.Resources.inventario2;
-            this.picInventario.Location = new System.Drawing.Point(3, 5);
-            this.picInventario.Name = "picInventario";
-            this.picInventario.Size = new System.Drawing.Size(117, 110);
-            this.picInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picInventario.TabIndex = 2;
-            this.picInventario.TabStop = false;
-            // 
-            // picSalir
-            // 
-            this.picSalir.Image = global::Sistema_Ventas.Properties.Resources.salir2;
-            this.picSalir.Location = new System.Drawing.Point(3, 3);
-            this.picSalir.Name = "picSalir";
-            this.picSalir.Size = new System.Drawing.Size(117, 110);
-            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSalir.TabIndex = 3;
-            this.picSalir.TabStop = false;
-            // 
-            // picproveedores
-            // 
-            this.picproveedores.Image = global::Sistema_Ventas.Properties.Resources.proveedor2;
-            this.picproveedores.Location = new System.Drawing.Point(3, 0);
-            this.picproveedores.Name = "picproveedores";
-            this.picproveedores.Size = new System.Drawing.Size(117, 110);
-            this.picproveedores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picproveedores.TabIndex = 2;
-            this.picproveedores.TabStop = false;
-            // 
-            // picReportes
-            // 
-            this.picReportes.Image = global::Sistema_Ventas.Properties.Resources.reportes2;
-            this.picReportes.Location = new System.Drawing.Point(3, 3);
-            this.picReportes.Name = "picReportes";
-            this.picReportes.Size = new System.Drawing.Size(117, 110);
-            this.picReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picReportes.TabIndex = 1;
-            this.picReportes.TabStop = false;
-            // 
-            // btn_nuevousuario
-            // 
-            this.btn_nuevousuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_nuevousuario.BackgroundImage = global::Sistema_Ventas.Properties.Resources.agregarusuario;
-            this.btn_nuevousuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_nuevousuario.FlatAppearance.BorderSize = 0;
-            this.btn_nuevousuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nuevousuario.Location = new System.Drawing.Point(841, 28);
-            this.btn_nuevousuario.Name = "btn_nuevousuario";
-            this.btn_nuevousuario.Size = new System.Drawing.Size(61, 63);
-            this.btn_nuevousuario.TabIndex = 1;
-            this.btn_nuevousuario.UseVisualStyleBackColor = true;
-            this.btn_nuevousuario.Click += new System.EventHandler(this.btn_nuevousuario_Click);
-            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,28 +620,29 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.menu_Load_1);
             this.tbl_superior.ResumeLayout(false);
             this.pnl_superior.ResumeLayout(false);
             this.pnl_superior.PerformLayout();
             this.tlpMenu.ResumeLayout(false);
             this.pnl_productos.ResumeLayout(false);
             this.pnl_productos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProductos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnl_ventas.ResumeLayout(false);
             this.pnl_ventas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVentas)).EndInit();
             this.pnl_inventario.ResumeLayout(false);
             this.pnl_inventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInventario)).EndInit();
             this.pnl_salir.ResumeLayout(false);
             this.pnl_salir.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
             this.pnl_proveedores.ResumeLayout(false);
             this.pnl_proveedores.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picproveedores)).EndInit();
             this.pnl_reportes.ResumeLayout(false);
             this.pnl_reportes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picproveedores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReportes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

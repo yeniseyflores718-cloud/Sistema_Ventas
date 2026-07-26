@@ -13,15 +13,22 @@ namespace Sistema_Ventas
     public partial class menu : Form
     {
         private bool esModoOscuro = false;
+        private string rolUsuario;
         public menu()
         {
             InitializeComponent();
+            rolUsuario = "";
+        }
+        public menu(string rol)
+        {
+            InitializeComponent();
+            rolUsuario = rol;
         }
        
         private void menu_Load(object sender, EventArgs e)
         {
-
             
+
         }
 
         private void btn_formproductos_Click(object sender, EventArgs e)
@@ -132,6 +139,15 @@ namespace Sistema_Ventas
                 picReportes.Image = Properties.Resources.reportes2;
                 picSalir.Image = Properties.Resources.salir2;
                 picproveedores.Image = Properties.Resources.proveedor2;
+            }
+        }
+
+        private void menu_Load_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Rol recibido: " + rolUsuario);
+            if (rolUsuario.ToLower() == "empleado")
+            {
+                btn_nuevousuario.Visible = false;
             }
         }
     }
