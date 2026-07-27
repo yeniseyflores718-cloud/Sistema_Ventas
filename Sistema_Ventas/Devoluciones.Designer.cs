@@ -32,14 +32,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_idVenta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_producto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.nud_cantidad = new System.Windows.Forms.NumericUpDown();
+            this.num_cantidad = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_motivo = new System.Windows.Forms.TextBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_cantidad)).BeginInit();
+            this.lst_productos = new System.Windows.Forms.ListBox();
+            this.rb_activo = new System.Windows.Forms.RadioButton();
+            this.rb_inactivo = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +60,8 @@
             this.txt_idVenta.Name = "txt_idVenta";
             this.txt_idVenta.Size = new System.Drawing.Size(209, 20);
             this.txt_idVenta.TabIndex = 1;
+            this.txt_idVenta.TextChanged += new System.EventHandler(this.txt_idVenta_TextChanged);
+            this.txt_idVenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_idVenta_KeyDown);
             // 
             // label2
             // 
@@ -69,13 +73,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Producto";
             // 
-            // txt_producto
-            // 
-            this.txt_producto.Location = new System.Drawing.Point(48, 151);
-            this.txt_producto.Name = "txt_producto";
-            this.txt_producto.Size = new System.Drawing.Size(209, 20);
-            this.txt_producto.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -86,12 +83,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Cantidad a devolver";
             // 
-            // nud_cantidad
+            // num_cantidad
             // 
-            this.nud_cantidad.Location = new System.Drawing.Point(48, 224);
-            this.nud_cantidad.Name = "nud_cantidad";
-            this.nud_cantidad.Size = new System.Drawing.Size(209, 20);
-            this.nud_cantidad.TabIndex = 5;
+            this.num_cantidad.Location = new System.Drawing.Point(48, 224);
+            this.num_cantidad.Name = "num_cantidad";
+            this.num_cantidad.Size = new System.Drawing.Size(209, 20);
+            this.num_cantidad.TabIndex = 5;
             // 
             // label4
             // 
@@ -114,17 +111,18 @@
             // btn_aceptar
             // 
             this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_aceptar.Location = new System.Drawing.Point(61, 351);
+            this.btn_aceptar.Location = new System.Drawing.Point(59, 398);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
             this.btn_aceptar.TabIndex = 8;
             this.btn_aceptar.Text = "✔️ Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // btn_cancelar
             // 
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Location = new System.Drawing.Point(165, 351);
+            this.btn_cancelar.Location = new System.Drawing.Point(162, 398);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
             this.btn_cancelar.TabIndex = 9;
@@ -132,19 +130,53 @@
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
+            // lst_productos
+            // 
+            this.lst_productos.FormattingEnabled = true;
+            this.lst_productos.Location = new System.Drawing.Point(47, 154);
+            this.lst_productos.Name = "lst_productos";
+            this.lst_productos.Size = new System.Drawing.Size(210, 30);
+            this.lst_productos.TabIndex = 10;
+            // 
+            // rb_activo
+            // 
+            this.rb_activo.AutoSize = true;
+            this.rb_activo.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_activo.Location = new System.Drawing.Point(59, 359);
+            this.rb_activo.Name = "rb_activo";
+            this.rb_activo.Size = new System.Drawing.Size(66, 20);
+            this.rb_activo.TabIndex = 11;
+            this.rb_activo.TabStop = true;
+            this.rb_activo.Text = "Activo";
+            this.rb_activo.UseVisualStyleBackColor = true;
+            // 
+            // rb_inactivo
+            // 
+            this.rb_inactivo.AutoSize = true;
+            this.rb_inactivo.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_inactivo.Location = new System.Drawing.Point(162, 359);
+            this.rb_inactivo.Name = "rb_inactivo";
+            this.rb_inactivo.Size = new System.Drawing.Size(77, 20);
+            this.rb_inactivo.TabIndex = 12;
+            this.rb_inactivo.TabStop = true;
+            this.rb_inactivo.Text = "Inactivo";
+            this.rb_inactivo.UseVisualStyleBackColor = true;
+            // 
             // Devoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(314, 411);
+            this.ClientSize = new System.Drawing.Size(312, 448);
+            this.Controls.Add(this.rb_inactivo);
+            this.Controls.Add(this.rb_activo);
+            this.Controls.Add(this.lst_productos);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.txt_motivo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.nud_cantidad);
+            this.Controls.Add(this.num_cantidad);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_producto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_idVenta);
             this.Controls.Add(this.label1);
@@ -156,7 +188,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Devoluciones";
             this.Load += new System.EventHandler(this.Devoluciones_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nud_cantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,12 +199,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_idVenta;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_producto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown nud_cantidad;
+        private System.Windows.Forms.NumericUpDown num_cantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_motivo;
         private System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.ListBox lst_productos;
+        private System.Windows.Forms.RadioButton rb_activo;
+        private System.Windows.Forms.RadioButton rb_inactivo;
     }
 }

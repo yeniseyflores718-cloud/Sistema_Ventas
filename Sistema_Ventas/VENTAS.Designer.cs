@@ -53,10 +53,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -119,7 +115,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_provedores
             // 
@@ -326,6 +321,7 @@
             this.btn_cobrar.TabIndex = 3;
             this.btn_cobrar.Text = "Cobrar (F5)";
             this.btn_cobrar.UseVisualStyleBackColor = false;
+            this.btn_cobrar.Click += new System.EventHandler(this.btn_cobrar_Click);
             // 
             // panel17
             // 
@@ -375,8 +371,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_buscarProducto.Location = new System.Drawing.Point(32, 51);
             this.txt_buscarProducto.Name = "txt_buscarProducto";
-            this.txt_buscarProducto.Size = new System.Drawing.Size(153, 20);
+            this.txt_buscarProducto.Size = new System.Drawing.Size(423, 20);
             this.txt_buscarProducto.TabIndex = 2;
+            this.txt_buscarProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_buscarProducto_KeyDown);
             // 
             // label1
             // 
@@ -420,38 +417,14 @@
             // 
             // dgv_ventas
             // 
+            this.dgv_ventas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
-            this.Cantidad,
-            this.Precio,
-            this.Total});
             this.dgv_ventas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ventas.Location = new System.Drawing.Point(0, 0);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.Size = new System.Drawing.Size(419, 278);
             this.dgv_ventas.TabIndex = 0;
-            this.dgv_ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
+            this.dgv_ventas.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellValueChanged);
             // 
             // panel4
             // 
@@ -647,6 +620,7 @@
             this.txt_recibido.Name = "txt_recibido";
             this.txt_recibido.Size = new System.Drawing.Size(116, 20);
             this.txt_recibido.TabIndex = 4;
+            this.txt_recibido.TextChanged += new System.EventHandler(this.txt_recibido_TextChanged);
             // 
             // panel14
             // 
@@ -701,7 +675,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VENTAS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.VENTAS_KeyDown);
+            this.Load += new System.EventHandler(this.VENTAS_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -757,11 +731,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txt_buscarProducto;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgv_ventas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
@@ -793,5 +762,6 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.DataGridView dgv_ventas;
     }
 }
