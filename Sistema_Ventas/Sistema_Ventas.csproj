@@ -305,5 +305,11 @@
   <ItemGroup>
     <None Include="Resources\ventasoscuro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caducado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCaducar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
