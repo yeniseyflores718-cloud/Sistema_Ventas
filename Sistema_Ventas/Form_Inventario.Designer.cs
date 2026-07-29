@@ -41,52 +41,59 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_superior = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dgv_inventario = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_busqueda = new System.Windows.Forms.TextBox();
+            this.btn_buscador = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.cmb_categoria = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmb_estado = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_productosRg = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_stockbajo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_stockbajo = new System.Windows.Forms.Label();
+            this.lbl_Pcaducar = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lbl_caducados = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv_inventario = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmb_categoria = new System.Windows.Forms.ComboBox();
-            this.cmb_estado = new System.Windows.Forms.ComboBox();
-            this.txt_busqueda = new System.Windows.Forms.TextBox();
-            this.btn_buscador = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.btn_stockBajo = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.btn_proximosC = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.btn_caducados = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.btn_exportar = new System.Windows.Forms.Button();
-            this.lbl_Pcaducar = new System.Windows.Forms.Label();
-            this.lbl_caducados = new System.Windows.Forms.Label();
             this.pnl_lateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_icono2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnl_superior.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventario)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,14 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventario)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -280,6 +280,173 @@
             this.pnl_superior.Size = new System.Drawing.Size(784, 461);
             this.pnl_superior.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.tableLayoutPanel3);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(784, 461);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Controls.Add(this.dgv_inventario);
+            this.panel7.Location = new System.Drawing.Point(37, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(715, 205);
+            this.panel7.TabIndex = 5;
+            // 
+            // dgv_inventario
+            // 
+            this.dgv_inventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_inventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_inventario.Location = new System.Drawing.Point(0, 0);
+            this.dgv_inventario.Name = "dgv_inventario";
+            this.dgv_inventario.Size = new System.Drawing.Size(715, 205);
+            this.dgv_inventario.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel9, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel10, 2, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(34, 11);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(716, 55);
+            this.tableLayoutPanel3.TabIndex = 4;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Controls.Add(this.txt_busqueda);
+            this.panel8.Controls.Add(this.btn_buscador);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(232, 49);
+            this.panel8.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 14);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Buscar producto:";
+            // 
+            // txt_busqueda
+            // 
+            this.txt_busqueda.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_busqueda.Location = new System.Drawing.Point(3, 23);
+            this.txt_busqueda.Name = "txt_busqueda";
+            this.txt_busqueda.Size = new System.Drawing.Size(184, 23);
+            this.txt_busqueda.TabIndex = 5;
+            this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
+            // 
+            // btn_buscador
+            // 
+            this.btn_buscador.BackgroundImage = global::Sistema_Ventas.Properties.Resources.lupa;
+            this.btn_buscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscador.Location = new System.Drawing.Point(185, 23);
+            this.btn_buscador.Name = "btn_buscador";
+            this.btn_buscador.Size = new System.Drawing.Size(27, 23);
+            this.btn_buscador.TabIndex = 6;
+            this.btn_buscador.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.cmb_categoria);
+            this.panel9.Controls.Add(this.label10);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(241, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(232, 49);
+            this.panel9.TabIndex = 1;
+            // 
+            // cmb_categoria
+            // 
+            this.cmb_categoria.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_categoria.FormattingEnabled = true;
+            this.cmb_categoria.Items.AddRange(new object[] {
+            "Todas",
+            "Bebidas",
+            "Lacteos",
+            "Abarrotes",
+            "Limpieza",
+            "Botanas"});
+            this.cmb_categoria.Location = new System.Drawing.Point(12, 23);
+            this.cmb_categoria.Name = "cmb_categoria";
+            this.cmb_categoria.Size = new System.Drawing.Size(201, 24);
+            this.cmb_categoria.TabIndex = 2;
+            this.cmb_categoria.SelectedIndexChanged += new System.EventHandler(this.cmb_categoria_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 14);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Categoria:";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label11);
+            this.panel10.Controls.Add(this.cmb_estado);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(479, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(234, 49);
+            this.panel10.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 14);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Estado";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // cmb_estado
+            // 
+            this.cmb_estado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_estado.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_estado.FormattingEnabled = true;
+            this.cmb_estado.Items.AddRange(new object[] {
+            "Todos",
+            "Disponible",
+            "Stock bajo",
+            "Próximo a caducar",
+            "Caducado"});
+            this.cmb_estado.Location = new System.Drawing.Point(3, 23);
+            this.cmb_estado.Name = "cmb_estado";
+            this.cmb_estado.Size = new System.Drawing.Size(201, 24);
+            this.cmb_estado.TabIndex = 4;
+            this.cmb_estado.SelectedIndexChanged += new System.EventHandler(this.cmb_estado_SelectedIndexChanged);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -358,6 +525,16 @@
             this.panel4.Size = new System.Drawing.Size(173, 63);
             this.panel4.TabIndex = 1;
             // 
+            // lbl_stockbajo
+            // 
+            this.lbl_stockbajo.AutoSize = true;
+            this.lbl_stockbajo.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stockbajo.Location = new System.Drawing.Point(120, 44);
+            this.lbl_stockbajo.Name = "lbl_stockbajo";
+            this.lbl_stockbajo.Size = new System.Drawing.Size(14, 14);
+            this.lbl_stockbajo.TabIndex = 2;
+            this.lbl_stockbajo.Text = "0";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -392,15 +569,15 @@
             this.panel5.Size = new System.Drawing.Size(173, 63);
             this.panel5.TabIndex = 2;
             // 
-            // lbl_stockbajo
+            // lbl_Pcaducar
             // 
-            this.lbl_stockbajo.AutoSize = true;
-            this.lbl_stockbajo.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_stockbajo.Location = new System.Drawing.Point(120, 44);
-            this.lbl_stockbajo.Name = "lbl_stockbajo";
-            this.lbl_stockbajo.Size = new System.Drawing.Size(14, 14);
-            this.lbl_stockbajo.TabIndex = 2;
-            this.lbl_stockbajo.Text = "0";
+            this.lbl_Pcaducar.AutoSize = true;
+            this.lbl_Pcaducar.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Pcaducar.Location = new System.Drawing.Point(139, 44);
+            this.lbl_Pcaducar.Name = "lbl_Pcaducar";
+            this.lbl_Pcaducar.Size = new System.Drawing.Size(14, 14);
+            this.lbl_Pcaducar.TabIndex = 3;
+            this.lbl_Pcaducar.Text = "0";
             // 
             // label4
             // 
@@ -414,6 +591,8 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = global::Sistema_Ventas.Properties.Resources.PCaducar;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
@@ -435,6 +614,16 @@
             this.panel6.Size = new System.Drawing.Size(176, 63);
             this.panel6.TabIndex = 3;
             // 
+            // lbl_caducados
+            // 
+            this.lbl_caducados.AutoSize = true;
+            this.lbl_caducados.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_caducados.Location = new System.Drawing.Point(147, 44);
+            this.lbl_caducados.Name = "lbl_caducados";
+            this.lbl_caducados.Size = new System.Drawing.Size(14, 14);
+            this.lbl_caducados.TabIndex = 6;
+            this.lbl_caducados.Text = "0";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -447,6 +636,8 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackgroundImage = global::Sistema_Ventas.Properties.Resources.Caducado;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
             this.pictureBox4.Name = "pictureBox4";
@@ -454,27 +645,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.tableLayoutPanel3);
-            this.panel1.Controls.Add(this.tableLayoutPanel2);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 461);
-            this.panel1.TabIndex = 0;
-            // 
-            // dgv_inventario
-            // 
-            this.dgv_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_inventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_inventario.Location = new System.Drawing.Point(0, 0);
-            this.dgv_inventario.Name = "dgv_inventario";
-            this.dgv_inventario.Size = new System.Drawing.Size(715, 205);
-            this.dgv_inventario.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -487,151 +657,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "        CONSULTAS RÁPIDAS";
-            // 
-            // cmb_categoria
-            // 
-            this.cmb_categoria.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_categoria.FormattingEnabled = true;
-            this.cmb_categoria.Items.AddRange(new object[] {
-            "Todas",
-            "Bebidas",
-            "Lacteos",
-            "Abarrotes",
-            "Limpieza",
-            "Botanas"});
-            this.cmb_categoria.Location = new System.Drawing.Point(12, 23);
-            this.cmb_categoria.Name = "cmb_categoria";
-            this.cmb_categoria.Size = new System.Drawing.Size(201, 24);
-            this.cmb_categoria.TabIndex = 2;
-            this.cmb_categoria.SelectedIndexChanged += new System.EventHandler(this.cmb_categoria_SelectedIndexChanged);
-            // 
-            // cmb_estado
-            // 
-            this.cmb_estado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_estado.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_estado.FormattingEnabled = true;
-            this.cmb_estado.Items.AddRange(new object[] {
-            "Todos",
-            "Disponible",
-            "Stock bajo",
-            "Próximo a caducar",
-            "Caducado"});
-            this.cmb_estado.Location = new System.Drawing.Point(3, 23);
-            this.cmb_estado.Name = "cmb_estado";
-            this.cmb_estado.Size = new System.Drawing.Size(201, 24);
-            this.cmb_estado.TabIndex = 4;
-            this.cmb_estado.SelectedIndexChanged += new System.EventHandler(this.cmb_estado_SelectedIndexChanged);
-            // 
-            // txt_busqueda
-            // 
-            this.txt_busqueda.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_busqueda.Location = new System.Drawing.Point(3, 23);
-            this.txt_busqueda.Name = "txt_busqueda";
-            this.txt_busqueda.Size = new System.Drawing.Size(184, 23);
-            this.txt_busqueda.TabIndex = 5;
-            this.txt_busqueda.TextChanged += new System.EventHandler(this.txt_busqueda_TextChanged);
-            // 
-            // btn_buscador
-            // 
-            this.btn_buscador.BackgroundImage = global::Sistema_Ventas.Properties.Resources.lupa;
-            this.btn_buscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscador.Location = new System.Drawing.Point(185, 23);
-            this.btn_buscador.Name = "btn_buscador";
-            this.btn_buscador.Size = new System.Drawing.Size(27, 23);
-            this.btn_buscador.TabIndex = 6;
-            this.btn_buscador.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 6);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 14);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Categoria:";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 6);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 14);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Estado";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 14);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Buscar producto:";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.panel8, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel9, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel10, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(34, 11);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(716, 55);
-            this.tableLayoutPanel3.TabIndex = 4;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label6);
-            this.panel8.Controls.Add(this.txt_busqueda);
-            this.panel8.Controls.Add(this.btn_buscador);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(232, 49);
-            this.panel8.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.cmb_categoria);
-            this.panel9.Controls.Add(this.label10);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(241, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(232, 49);
-            this.panel9.TabIndex = 1;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label11);
-            this.panel10.Controls.Add(this.cmb_estado);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(479, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(234, 49);
-            this.panel10.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.dgv_inventario);
-            this.panel7.Location = new System.Drawing.Point(37, 147);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(715, 205);
-            this.panel7.TabIndex = 5;
             // 
             // tableLayoutPanel4
             // 
@@ -661,33 +686,6 @@
             this.panel11.Size = new System.Drawing.Size(170, 66);
             this.panel11.TabIndex = 0;
             // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.btn_proximosC);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(179, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(170, 66);
-            this.panel12.TabIndex = 1;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.btn_caducados);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(355, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(170, 66);
-            this.panel13.TabIndex = 2;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.btn_exportar);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(531, 3);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(173, 66);
-            this.panel14.TabIndex = 3;
-            // 
             // btn_stockBajo
             // 
             this.btn_stockBajo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -700,6 +698,15 @@
             this.btn_stockBajo.Text = "⚠️ Productos con\r\n       Bajo stock";
             this.btn_stockBajo.UseVisualStyleBackColor = false;
             this.btn_stockBajo.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btn_proximosC);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(179, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(170, 66);
+            this.panel12.TabIndex = 1;
             // 
             // btn_proximosC
             // 
@@ -714,6 +721,15 @@
             this.btn_proximosC.UseVisualStyleBackColor = false;
             this.btn_proximosC.Click += new System.EventHandler(this.btn_proximosC_Click);
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btn_caducados);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(355, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(170, 66);
+            this.panel13.TabIndex = 2;
+            // 
             // btn_caducados
             // 
             this.btn_caducados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -727,6 +743,15 @@
             this.btn_caducados.UseVisualStyleBackColor = false;
             this.btn_caducados.Click += new System.EventHandler(this.btn_caducados_Click);
             // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btn_exportar);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(531, 3);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(173, 66);
+            this.panel14.TabIndex = 3;
+            // 
             // btn_exportar
             // 
             this.btn_exportar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -738,26 +763,7 @@
             this.btn_exportar.TabIndex = 3;
             this.btn_exportar.Text = "🖨️Exportar";
             this.btn_exportar.UseVisualStyleBackColor = false;
-            // 
-            // lbl_Pcaducar
-            // 
-            this.lbl_Pcaducar.AutoSize = true;
-            this.lbl_Pcaducar.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Pcaducar.Location = new System.Drawing.Point(139, 44);
-            this.lbl_Pcaducar.Name = "lbl_Pcaducar";
-            this.lbl_Pcaducar.Size = new System.Drawing.Size(14, 14);
-            this.lbl_Pcaducar.TabIndex = 3;
-            this.lbl_Pcaducar.Text = "0";
-            // 
-            // lbl_caducados
-            // 
-            this.lbl_caducados.AutoSize = true;
-            this.lbl_caducados.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_caducados.Location = new System.Drawing.Point(147, 44);
-            this.lbl_caducados.Name = "lbl_caducados";
-            this.lbl_caducados.Size = new System.Drawing.Size(14, 14);
-            this.lbl_caducados.TabIndex = 6;
-            this.lbl_caducados.Text = "0";
+            this.btn_exportar.Click += new System.EventHandler(this.btn_exportar_Click);
             // 
             // Form_Inventario
             // 
@@ -779,6 +785,16 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnl_superior.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventario)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -792,17 +808,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventario)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel7.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);

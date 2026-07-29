@@ -83,6 +83,16 @@ namespace Sistema_Ventas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Caducado {
+            get {
+                object obj = ResourceManager.GetObject("Caducado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clientesatendidos {
             get {
                 object obj = ResourceManager.GetObject("clientesatendidos", resourceCulture);
@@ -196,6 +206,16 @@ namespace Sistema_Ventas.Properties {
         internal static System.Drawing.Bitmap numeroventas {
             get {
                 object obj = ResourceManager.GetObject("numeroventas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCaducar {
+            get {
+                object obj = ResourceManager.GetObject("PCaducar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
