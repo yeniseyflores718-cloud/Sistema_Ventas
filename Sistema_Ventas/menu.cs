@@ -144,7 +144,7 @@ namespace Sistema_Ventas
 
         private void menu_Load_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Rol recibido: " + rolUsuario);
+            //MessageBox.Show("Rol recibido: " + rolUsuario);
             if (rolUsuario.ToLower() == "empleado")
             {
                 btn_nuevousuario.Visible = false;
