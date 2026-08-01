@@ -34,6 +34,8 @@ namespace Sistema_Ventas
             p.precio_v,
             p.stock_act,
             p.stock_min,
+            p.fecha_com,
+            p.fecha_cad,
             c.categoria
             FROM productos p
             INNER JOIN categoria c
@@ -139,9 +141,64 @@ namespace Sistema_Ventas
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_precio_compra.Text) || string.IsNullOrEmpty(txt_stock_actual.Text) || string.IsNullOrEmpty(txt_precio_venta.Text) || string.IsNullOrEmpty(txt_stock_minimo.Text))
+            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_precio_compra.Text) || string.IsNullOrEmpty(txt_stock_actual.Text) || string.IsNullOrEmpty(txt_precio_venta.Text) || string.IsNullOrEmpty(txt_stock_minimo.Text) || string.IsNullOrEmpty(txt_categoria.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!decimal.TryParse(txt_precio_compra.Text, out decimal precioCompra))
+            {
+                MessageBox.Show("Ingrese un precio de compra válido.");
+                return;
+            }
+
+            if (!decimal.TryParse(txt_precio_venta.Text, out decimal precioVenta))
+            {
+                MessageBox.Show("Ingrese un precio de venta válido.");
+                return;
+            }
+
+            if (!int.TryParse(txt_stock_actual.Text, out int stockActual))
+            {
+                MessageBox.Show("Ingrese un stock actual válido.");
+                return;
+            }
+
+            if (!int.TryParse(txt_stock_minimo.Text, out int stockMinimo))
+            {
+                MessageBox.Show("Ingrese un stock mínimo válido.");
+                return;
+            }
+            if (precioCompra <= 0)
+            {
+                MessageBox.Show("El precio de compra debe ser mayor a 0.");
+                return;
+            }
+
+            if (precioVenta <= 0)
+            {
+                MessageBox.Show("El precio de venta debe ser mayor a 0.");
+                return;
+            }
+            if (stockActual < 0)
+            {
+                MessageBox.Show("El stock actual no puede ser negativo.");
+                return;
+            }
+
+            if (stockMinimo < 0)
+            {
+                MessageBox.Show("El stock mínimo no puede ser negativo.");
+                return;
+            }
+            if (stockMinimo > stockActual)
+            {
+                MessageBox.Show("El stock mínimo no puede ser mayor que el stock actual.");
+                return;
+            }
+            if (dtp_fechaCad.Value < dtp_fechaCom.Value)
+            {
+                MessageBox.Show("La fecha de caducidad no puede ser menor que la fecha de compra.");
                 return;
             }
             dataAcces conexion = new dataAcces();
@@ -164,15 +221,17 @@ namespace Sistema_Ventas
 
                 int idCategoria = Convert.ToInt32(resultado);
                 string consulta = @"INSERT INTO productos
-                (nombre_producto, precio_c, stock_act, precio_v, stock_min, id_categoria)
+                (nombre_producto, precio_c, stock_act, precio_v, stock_min, fecha_com, fecha_cad, id_categoria)
                 VALUES
-                (@nombre_producto, @precio_c, @stock_act, @precio_v, @stock_min, @id_categoria)";
+                (@nombre_producto, @precio_c, @stock_act, @precio_v, @stock_min, @fecha_com, @fecha_cad, @id_categoria)";
                 MySqlCommand comando = new MySqlCommand(consulta, con);
                 comando.Parameters.AddWithValue("@nombre_producto", txt_nombre.Text);
-                comando.Parameters.AddWithValue("@precio_c", txt_precio_compra.Text);
-                comando.Parameters.AddWithValue("@stock_act", txt_stock_actual.Text);
-                comando.Parameters.AddWithValue("@precio_v", txt_precio_venta.Text);
-                comando.Parameters.AddWithValue("@stock_min", txt_stock_minimo.Text);
+                comando.Parameters.AddWithValue("@precio_c", precioCompra);
+                comando.Parameters.AddWithValue("@stock_act", stockActual);
+                comando.Parameters.AddWithValue("@precio_v", precioVenta);
+                comando.Parameters.AddWithValue("@stock_min", stockMinimo);
+                comando.Parameters.AddWithValue("@fecha_com", dtp_fechaCom.Value.Date);
+                comando.Parameters.AddWithValue("fecha_cad", dtp_fechaCad.Value.Date);
                 comando.Parameters.AddWithValue("@id_categoria", idCategoria);
 
                 int filasAfectadas = comando.ExecuteNonQuery();
@@ -217,6 +276,8 @@ namespace Sistema_Ventas
                 txt_precio_venta.Text = fila.Cells["precio_v"].Value.ToString();
                 txt_stock_minimo.Text = fila.Cells["stock_min"].Value.ToString();
                 txt_categoria.Text = fila.Cells["categoria"].Value.ToString();
+                dtp_fechaCom.Value = Convert.ToDateTime(fila.Cells["fecha_com"].Value);
+                dtp_fechaCad.Value = Convert.ToDateTime(fila.Cells["fecha_cad"].Value);
             }
         }
 
@@ -248,6 +309,38 @@ namespace Sistema_Ventas
                 MessageBox.Show("Ingrese un stock mínimo válido.");
                 return;
             }
+            if (precioCompra <= 0)
+            {
+                MessageBox.Show("El precio de compra debe ser mayor a 0.");
+                return;
+            }
+
+            if (precioVenta <= 0)
+            {
+                MessageBox.Show("El precio de venta debe ser mayor a 0.");
+                return;
+            }
+            if (stockActual < 0)
+            {
+                MessageBox.Show("El stock actual no puede ser negativo.");
+                return;
+            }
+
+            if (stockMinimo < 0)
+            {
+                MessageBox.Show("El stock mínimo no puede ser negativo.");
+                return;
+            }
+            if (stockMinimo > stockActual)
+            {
+                MessageBox.Show("El stock mínimo no puede ser mayor que el stock actual.");
+                return;
+            }
+            if (dtp_fechaCad.Value < dtp_fechaCom.Value)
+            {
+                MessageBox.Show("La fecha de caducidad no puede ser menor que la fecha de compra.");
+                return;
+            }
 
             conexion = new dataAcces();
             MySqlConnection con = conexion.getConnection();
@@ -262,7 +355,9 @@ namespace Sistema_Ventas
                                 precio_c = @precioCompra,
                                 precio_v = @precioVenta,
                                 stock_act = @stockActual,
-                                stock_min = @stockMinimo
+                                stock_min = @stockMinimo,
+                                fecha_com = @fechaCompra,
+                                fecha_cad = @fechaCaducidad
                             WHERE id_Producto = @id";
 
                 MySqlCommand comando = new MySqlCommand(consulta, con);
@@ -272,6 +367,8 @@ namespace Sistema_Ventas
                 comando.Parameters.AddWithValue("@precioVenta", precioVenta);
                 comando.Parameters.AddWithValue("@stockActual", stockActual);
                 comando.Parameters.AddWithValue("@stockMinimo", stockMinimo);
+                comando.Parameters.AddWithValue("@fechaCompra", dtp_fechaCom.Value.Date);
+                comando.Parameters.AddWithValue("@fechaCaducidad", dtp_fechaCad.Value.Date);
                 comando.Parameters.AddWithValue("@id", txt_id.Text);
 
                 int filasAfectadas = comando.ExecuteNonQuery();
@@ -309,6 +406,8 @@ namespace Sistema_Ventas
                 p.precio_v,
                 p.stock_act,
                 p.stock_min,
+                p.fecha_com,
+                p.fecha_cad,
                 c.categoria
                 FROM productos p
                 INNER JOIN categoria c
@@ -361,6 +460,11 @@ namespace Sistema_Ventas
             {
                 cargarDatos(categoria);
             }
+        }
+
+        private void txt_categoria_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
