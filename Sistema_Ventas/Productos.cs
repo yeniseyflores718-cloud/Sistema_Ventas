@@ -70,12 +70,20 @@ namespace Sistema_Ventas
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            DataRow fila = dt.NewRow();
+            // ===== Combo para AGREGAR/EDITAR =====
+            cmb_categoriaProducto.DataSource = dt.Copy();
+            cmb_categoriaProducto.DisplayMember = "categoria";
+            cmb_categoriaProducto.ValueMember = "id_categoria";
+
+            // ===== Combo para FILTRAR =====
+            DataTable dtFiltro = dt.Copy();
+
+            DataRow fila = dtFiltro.NewRow();
             fila["id_categoria"] = 0;
             fila["categoria"] = "Todas";
-            dt.Rows.InsertAt(fila, 0);
+            dtFiltro.Rows.InsertAt(fila, 0);
 
-            cmb_categoria.DataSource = dt;
+            cmb_categoria.DataSource = dtFiltro;
             cmb_categoria.DisplayMember = "categoria";
             cmb_categoria.ValueMember = "id_categoria";
         }
@@ -141,7 +149,7 @@ namespace Sistema_Ventas
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_precio_compra.Text) || string.IsNullOrEmpty(txt_stock_actual.Text) || string.IsNullOrEmpty(txt_precio_venta.Text) || string.IsNullOrEmpty(txt_stock_minimo.Text) || string.IsNullOrEmpty(txt_categoria.Text))
+            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_precio_compra.Text) || string.IsNullOrEmpty(txt_stock_actual.Text) || string.IsNullOrEmpty(txt_precio_venta.Text) || string.IsNullOrEmpty(txt_stock_minimo.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -207,19 +215,7 @@ namespace Sistema_Ventas
                 return;
             try
             {
-                string consultaCategoria = "SELECT id_categoria FROM categoria WHERE categoria=@categoria";
-                MySqlCommand cmdCategoria = new MySqlCommand(consultaCategoria, con);
-                cmdCategoria.Parameters.AddWithValue("@categoria", txt_categoria.Text.Trim());
-
-                object resultado = cmdCategoria.ExecuteScalar();
-
-                if (resultado == null)
-                {
-                    MessageBox.Show("La categoría no existe.");
-                    return;
-                }
-
-                int idCategoria = Convert.ToInt32(resultado);
+                int idCategoria = Convert.ToInt32(cmb_categoriaProducto.SelectedValue);
                 string consulta = @"INSERT INTO productos
                 (nombre_producto, precio_c, stock_act, precio_v, stock_min, fecha_com, fecha_cad, id_categoria)
                 VALUES
@@ -260,7 +256,7 @@ namespace Sistema_Ventas
             txt_stock_actual.Text = "";
             txt_precio_venta.Text = "";
             txt_stock_minimo.Text = "";
-            txt_categoria.Text = "";
+            cmb_categoriaProducto.SelectedIndex = 0;
         }
 
         private void dgv_productos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -275,7 +271,7 @@ namespace Sistema_Ventas
                 txt_stock_actual.Text = fila.Cells["stock_act"].Value.ToString();
                 txt_precio_venta.Text = fila.Cells["precio_v"].Value.ToString();
                 txt_stock_minimo.Text = fila.Cells["stock_min"].Value.ToString();
-                txt_categoria.Text = fila.Cells["categoria"].Value.ToString();
+                cmb_categoriaProducto.Text = fila.Cells["categoria"].Value.ToString();
                 dtp_fechaCom.Value = Convert.ToDateTime(fila.Cells["fecha_com"].Value);
                 dtp_fechaCad.Value = Convert.ToDateTime(fila.Cells["fecha_cad"].Value);
             }
@@ -369,6 +365,8 @@ namespace Sistema_Ventas
                 comando.Parameters.AddWithValue("@stockMinimo", stockMinimo);
                 comando.Parameters.AddWithValue("@fechaCompra", dtp_fechaCom.Value.Date);
                 comando.Parameters.AddWithValue("@fechaCaducidad", dtp_fechaCad.Value.Date);
+                comando.Parameters.AddWithValue("@idCategoria",
+                cmb_categoriaProducto.SelectedValue);
                 comando.Parameters.AddWithValue("@id", txt_id.Text);
 
                 int filasAfectadas = comando.ExecuteNonQuery();
@@ -465,6 +463,16 @@ namespace Sistema_Ventas
         private void txt_categoria_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            Agregar_categoria categoria = new Agregar_categoria();
+
+            if (categoria.ShowDialog() == DialogResult.OK)
+            {
+                cargarCategorias(); // vuelve a cargar el ComboBox
+            }
         }
     }
     

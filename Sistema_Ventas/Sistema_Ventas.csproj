@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar categoria.Designer.cs">
+      <DependentUpon>Agregar categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataAcces\dataAcces.cs" />
     <Compile Include="Devoluciones.cs">
       <SubType>Form</SubType>
@@ -162,6 +168,9 @@
     <Compile Include="VENTAS.Designer.cs">
       <DependentUpon>VENTAS.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agregar categoria.resx">
+      <DependentUpon>Agregar categoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Devoluciones.resx">
       <DependentUpon>Devoluciones.cs</DependentUpon>
     </EmbeddedResource>
