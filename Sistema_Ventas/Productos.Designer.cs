@@ -30,13 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_proveedores = new System.Windows.Forms.Button();
-            this.btn_reportes = new System.Windows.Forms.Button();
-            this.btn_inventario = new System.Windows.Forms.Button();
-            this.btn_productos = new System.Windows.Forms.Button();
-            this.btn_venta = new System.Windows.Forms.Button();
-            this.btn_inicio = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_actualizar = new System.Windows.Forms.Button();
@@ -70,6 +63,9 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.dtp_fechaCad = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -80,16 +76,22 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.dtp_fechaCom = new System.Windows.Forms.DateTimePicker();
-            this.dtp_fechaCad = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmb_categoriaProducto = new System.Windows.Forms.ComboBox();
+            this.btn_proveedores = new System.Windows.Forms.Button();
+            this.btn_reportes = new System.Windows.Forms.Button();
+            this.btn_inventario = new System.Windows.Forms.Button();
+            this.btn_productos = new System.Windows.Forms.Button();
+            this.btn_venta = new System.Windows.Forms.Button();
+            this.btn_inicio = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -98,6 +100,7 @@
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -108,7 +111,7 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,118 +129,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 0;
-            // 
-            // btn_proveedores
-            // 
-            this.btn_proveedores.FlatAppearance.BorderSize = 0;
-            this.btn_proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_proveedores.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_proveedores.ForeColor = System.Drawing.Color.White;
-            this.btn_proveedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
-            this.btn_proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_proveedores.Location = new System.Drawing.Point(3, 418);
-            this.btn_proveedores.Name = "btn_proveedores";
-            this.btn_proveedores.Size = new System.Drawing.Size(194, 41);
-            this.btn_proveedores.TabIndex = 44;
-            this.btn_proveedores.Text = "          Proveedores";
-            this.btn_proveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_proveedores.UseVisualStyleBackColor = true;
-            this.btn_proveedores.Click += new System.EventHandler(this.btn_proveedores_Click);
-            // 
-            // btn_reportes
-            // 
-            this.btn_reportes.FlatAppearance.BorderSize = 0;
-            this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reportes.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reportes.ForeColor = System.Drawing.Color.White;
-            this.btn_reportes.Image = global::Sistema_Ventas.Properties.Resources.reportes;
-            this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reportes.Location = new System.Drawing.Point(3, 363);
-            this.btn_reportes.Name = "btn_reportes";
-            this.btn_reportes.Size = new System.Drawing.Size(194, 41);
-            this.btn_reportes.TabIndex = 43;
-            this.btn_reportes.Text = "     Reportes";
-            this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_reportes.UseVisualStyleBackColor = true;
-            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
-            // 
-            // btn_inventario
-            // 
-            this.btn_inventario.FlatAppearance.BorderSize = 0;
-            this.btn_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_inventario.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inventario.ForeColor = System.Drawing.Color.White;
-            this.btn_inventario.Image = global::Sistema_Ventas.Properties.Resources.inventario;
-            this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inventario.Location = new System.Drawing.Point(3, 310);
-            this.btn_inventario.Name = "btn_inventario";
-            this.btn_inventario.Size = new System.Drawing.Size(194, 41);
-            this.btn_inventario.TabIndex = 42;
-            this.btn_inventario.Text = "       Inventario";
-            this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_inventario.UseVisualStyleBackColor = true;
-            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
-            // 
-            // btn_productos
-            // 
-            this.btn_productos.FlatAppearance.BorderSize = 0;
-            this.btn_productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_productos.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_productos.ForeColor = System.Drawing.Color.White;
-            this.btn_productos.Image = global::Sistema_Ventas.Properties.Resources.producto;
-            this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_productos.Location = new System.Drawing.Point(3, 255);
-            this.btn_productos.Name = "btn_productos";
-            this.btn_productos.Size = new System.Drawing.Size(194, 41);
-            this.btn_productos.TabIndex = 41;
-            this.btn_productos.Text = "       Productos";
-            this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_productos.UseVisualStyleBackColor = true;
-            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
-            // 
-            // btn_venta
-            // 
-            this.btn_venta.FlatAppearance.BorderSize = 0;
-            this.btn_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_venta.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_venta.ForeColor = System.Drawing.Color.White;
-            this.btn_venta.Image = global::Sistema_Ventas.Properties.Resources.ventas;
-            this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_venta.Location = new System.Drawing.Point(4, 201);
-            this.btn_venta.Name = "btn_venta";
-            this.btn_venta.Size = new System.Drawing.Size(194, 41);
-            this.btn_venta.TabIndex = 40;
-            this.btn_venta.Text = " Ventas";
-            this.btn_venta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_venta.UseVisualStyleBackColor = true;
-            this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
-            // 
-            // btn_inicio
-            // 
-            this.btn_inicio.FlatAppearance.BorderSize = 0;
-            this.btn_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_inicio.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inicio.ForeColor = System.Drawing.Color.White;
-            this.btn_inicio.Image = global::Sistema_Ventas.Properties.Resources.inicio;
-            this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inicio.Location = new System.Drawing.Point(3, 141);
-            this.btn_inicio.Name = "btn_inicio";
-            this.btn_inicio.Size = new System.Drawing.Size(194, 41);
-            this.btn_inicio.TabIndex = 39;
-            this.btn_inicio.Text = "Inicio";
-            this.btn_inicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_inicio.UseVisualStyleBackColor = true;
-            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 88);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -337,11 +228,12 @@
             // 
             this.txt_categoria.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_categoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_categoria.Location = new System.Drawing.Point(79, 6);
+            this.txt_categoria.Location = new System.Drawing.Point(9, 10);
             this.txt_categoria.Multiline = true;
             this.txt_categoria.Name = "txt_categoria";
             this.txt_categoria.Size = new System.Drawing.Size(101, 16);
             this.txt_categoria.TabIndex = 34;
+            this.txt_categoria.Visible = false;
             this.txt_categoria.TextChanged += new System.EventHandler(this.txt_categoria_TextChanged);
             // 
             // label9
@@ -350,7 +242,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 7);
+            this.label9.Location = new System.Drawing.Point(3, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 14);
             this.label9.TabIndex = 33;
@@ -406,10 +298,10 @@
             // 
             this.txt_precio_venta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_precio_venta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_precio_venta.Location = new System.Drawing.Point(101, 5);
+            this.txt_precio_venta.Location = new System.Drawing.Point(98, 5);
             this.txt_precio_venta.Multiline = true;
             this.txt_precio_venta.Name = "txt_precio_venta";
-            this.txt_precio_venta.Size = new System.Drawing.Size(83, 16);
+            this.txt_precio_venta.Size = new System.Drawing.Size(70, 16);
             this.txt_precio_venta.TabIndex = 28;
             // 
             // txt_nombre
@@ -428,7 +320,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 7);
+            this.label5.Location = new System.Drawing.Point(0, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 14);
             this.label5.TabIndex = 26;
@@ -537,6 +429,7 @@
             // 
             // panel18
             // 
+            this.panel18.Controls.Add(this.txt_categoria);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(623, 3);
             this.panel18.Name = "panel18";
@@ -590,8 +483,8 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 4;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel5.Controls.Add(this.panel11, 2, 0);
@@ -621,20 +514,48 @@
             this.panel10.Controls.Add(this.label5);
             this.panel10.Controls.Add(this.txt_precio_venta);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(197, 3);
+            this.panel10.Location = new System.Drawing.Point(213, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(188, 27);
+            this.panel10.Size = new System.Drawing.Size(172, 27);
             this.panel10.TabIndex = 2;
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.btnAgregarCategoria);
+            this.panel9.Controls.Add(this.cmb_categoriaProducto);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.txt_categoria);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(188, 27);
+            this.panel9.Size = new System.Drawing.Size(204, 27);
             this.panel9.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.dtp_fechaCad);
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Location = new System.Drawing.Point(523, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(252, 27);
+            this.panel12.TabIndex = 4;
+            // 
+            // dtp_fechaCad
+            // 
+            this.dtp_fechaCad.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fechaCad.Location = new System.Drawing.Point(109, 4);
+            this.dtp_fechaCad.Name = "dtp_fechaCad";
+            this.dtp_fechaCad.Size = new System.Drawing.Size(130, 20);
+            this.dtp_fechaCad.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 8);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 14);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Fecha caducidad:";
             // 
             // tableLayoutPanel3
             // 
@@ -754,14 +675,13 @@
             this.panel2.Size = new System.Drawing.Size(252, 27);
             this.panel2.TabIndex = 3;
             // 
-            // panel12
+            // dtp_fechaCom
             // 
-            this.panel12.Controls.Add(this.dtp_fechaCad);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Location = new System.Drawing.Point(523, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(252, 27);
-            this.panel12.TabIndex = 4;
+            this.dtp_fechaCom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fechaCom.Location = new System.Drawing.Point(107, 3);
+            this.dtp_fechaCom.Name = "dtp_fechaCom";
+            this.dtp_fechaCom.Size = new System.Drawing.Size(132, 20);
+            this.dtp_fechaCom.TabIndex = 1;
             // 
             // label3
             // 
@@ -773,31 +693,137 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Fecha compra:";
             // 
-            // label10
+            // cmb_categoriaProducto
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 8);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 14);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Fecha caducidad:";
+            this.cmb_categoriaProducto.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmb_categoriaProducto.FormattingEnabled = true;
+            this.cmb_categoriaProducto.Location = new System.Drawing.Point(66, 4);
+            this.cmb_categoriaProducto.Name = "cmb_categoriaProducto";
+            this.cmb_categoriaProducto.Size = new System.Drawing.Size(110, 21);
+            this.cmb_categoriaProducto.TabIndex = 34;
             // 
-            // dtp_fechaCom
+            // btn_proveedores
             // 
-            this.dtp_fechaCom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fechaCom.Location = new System.Drawing.Point(107, 3);
-            this.dtp_fechaCom.Name = "dtp_fechaCom";
-            this.dtp_fechaCom.Size = new System.Drawing.Size(132, 20);
-            this.dtp_fechaCom.TabIndex = 1;
+            this.btn_proveedores.FlatAppearance.BorderSize = 0;
+            this.btn_proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_proveedores.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_proveedores.ForeColor = System.Drawing.Color.White;
+            this.btn_proveedores.Image = global::Sistema_Ventas.Properties.Resources.proveedores;
+            this.btn_proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_proveedores.Location = new System.Drawing.Point(3, 418);
+            this.btn_proveedores.Name = "btn_proveedores";
+            this.btn_proveedores.Size = new System.Drawing.Size(194, 41);
+            this.btn_proveedores.TabIndex = 44;
+            this.btn_proveedores.Text = "          Proveedores";
+            this.btn_proveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_proveedores.UseVisualStyleBackColor = true;
+            this.btn_proveedores.Click += new System.EventHandler(this.btn_proveedores_Click);
             // 
-            // dtp_fechaCad
+            // btn_reportes
             // 
-            this.dtp_fechaCad.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fechaCad.Location = new System.Drawing.Point(109, 4);
-            this.dtp_fechaCad.Name = "dtp_fechaCad";
-            this.dtp_fechaCad.Size = new System.Drawing.Size(130, 20);
-            this.dtp_fechaCad.TabIndex = 1;
+            this.btn_reportes.FlatAppearance.BorderSize = 0;
+            this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reportes.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reportes.ForeColor = System.Drawing.Color.White;
+            this.btn_reportes.Image = global::Sistema_Ventas.Properties.Resources.reportes;
+            this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reportes.Location = new System.Drawing.Point(3, 363);
+            this.btn_reportes.Name = "btn_reportes";
+            this.btn_reportes.Size = new System.Drawing.Size(194, 41);
+            this.btn_reportes.TabIndex = 43;
+            this.btn_reportes.Text = "     Reportes";
+            this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
+            // 
+            // btn_inventario
+            // 
+            this.btn_inventario.FlatAppearance.BorderSize = 0;
+            this.btn_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inventario.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inventario.ForeColor = System.Drawing.Color.White;
+            this.btn_inventario.Image = global::Sistema_Ventas.Properties.Resources.inventario;
+            this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_inventario.Location = new System.Drawing.Point(3, 310);
+            this.btn_inventario.Name = "btn_inventario";
+            this.btn_inventario.Size = new System.Drawing.Size(194, 41);
+            this.btn_inventario.TabIndex = 42;
+            this.btn_inventario.Text = "       Inventario";
+            this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_inventario.UseVisualStyleBackColor = true;
+            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
+            // 
+            // btn_productos
+            // 
+            this.btn_productos.FlatAppearance.BorderSize = 0;
+            this.btn_productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_productos.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_productos.ForeColor = System.Drawing.Color.White;
+            this.btn_productos.Image = global::Sistema_Ventas.Properties.Resources.producto;
+            this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_productos.Location = new System.Drawing.Point(3, 255);
+            this.btn_productos.Name = "btn_productos";
+            this.btn_productos.Size = new System.Drawing.Size(194, 41);
+            this.btn_productos.TabIndex = 41;
+            this.btn_productos.Text = "       Productos";
+            this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_productos.UseVisualStyleBackColor = true;
+            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
+            // 
+            // btn_venta
+            // 
+            this.btn_venta.FlatAppearance.BorderSize = 0;
+            this.btn_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_venta.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_venta.ForeColor = System.Drawing.Color.White;
+            this.btn_venta.Image = global::Sistema_Ventas.Properties.Resources.ventas;
+            this.btn_venta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_venta.Location = new System.Drawing.Point(4, 201);
+            this.btn_venta.Name = "btn_venta";
+            this.btn_venta.Size = new System.Drawing.Size(194, 41);
+            this.btn_venta.TabIndex = 40;
+            this.btn_venta.Text = " Ventas";
+            this.btn_venta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_venta.UseVisualStyleBackColor = true;
+            this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
+            // 
+            // btn_inicio
+            // 
+            this.btn_inicio.FlatAppearance.BorderSize = 0;
+            this.btn_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inicio.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inicio.ForeColor = System.Drawing.Color.White;
+            this.btn_inicio.Image = global::Sistema_Ventas.Properties.Resources.inicio;
+            this.btn_inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_inicio.Location = new System.Drawing.Point(3, 141);
+            this.btn_inicio.Name = "btn_inicio";
+            this.btn_inicio.Size = new System.Drawing.Size(194, 41);
+            this.btn_inicio.TabIndex = 39;
+            this.btn_inicio.Text = "Inicio";
+            this.btn_inicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_Ventas.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(39, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(179, 3);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(22, 23);
+            this.btnAgregarCategoria.TabIndex = 35;
+            this.btnAgregarCategoria.Text = "➕";
+            this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // Productos
             // 
@@ -813,11 +839,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Productos_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
@@ -830,6 +857,8 @@
             this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -846,8 +875,7 @@
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -910,5 +938,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtp_fechaCom;
         private System.Windows.Forms.DateTimePicker dtp_fechaCad;
+        private System.Windows.Forms.ComboBox cmb_categoriaProducto;
+        private System.Windows.Forms.Button btnAgregarCategoria;
     }
 }
