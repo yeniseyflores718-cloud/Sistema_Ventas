@@ -9,11 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 
 namespace Sistema_Ventas
 {
     public partial class FormReportes : Form
     {
+        private int filaActualImpresion = 0;
+        private string tituloReporte = "";
         public FormReportes()
         {
             InitializeComponent();
@@ -233,6 +236,175 @@ namespace Sistema_Ventas
                 }
             }
         }
+
+        private void pd_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font fuenteTitulo = new Font("Times New Roman", 13, FontStyle.Bold);
+            Font fuenteSubtitulo = new Font("Times New Roman", 13, FontStyle.Bold);
+            Font fuenteEncabezado = new Font("Times New Roman", 10, FontStyle.Bold);
+            Font fuenteTexto = new Font("Times New Roman", 10);
+
+            int x = e.MarginBounds.Left;
+            int y = e.MarginBounds.Top;
+            int altoFila = 30;
+
+            int cantidadColumnas = dgv_reporte.Columns.Count;
+            int anchoColumna = e.MarginBounds.Width / cantidadColumnas;
+
+            // Encabezado
+
+            e.Graphics.DrawString(
+                "SISTEMA DE VENTAS",
+                fuenteTitulo,
+                Brushes.Black,
+                x,
+                y);
+
+            y += 30;
+
+            e.Graphics.DrawString(
+                tituloReporte,
+                fuenteSubtitulo,
+                Brushes.Black,
+                x,
+                y);
+
+            y += 25;
+
+            e.Graphics.DrawString(
+                "Fecha de impresión: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
+                fuenteTexto,
+                Brushes.Black,
+                x,
+                y);
+
+            y += 20;
+
+            // Encabezados
+
+            for (int i = 0; i < dgv_reporte.Columns.Count; i++)
+            {
+                Rectangle rectangulo = new Rectangle(
+                    x + (i * anchoColumna),
+                    y,
+                    anchoColumna,
+                    altoFila);
+
+                e.Graphics.FillRectangle(Brushes.LightGray, rectangulo);
+                e.Graphics.DrawRectangle(Pens.Black, rectangulo);
+
+                StringFormat formato = new StringFormat();
+                formato.Alignment = StringAlignment.Center;
+                formato.LineAlignment = StringAlignment.Center;
+
+                e.Graphics.DrawString(
+                    dgv_reporte.Columns[i].HeaderText,
+                    fuenteEncabezado,
+                    Brushes.Black,
+                    rectangulo,
+                    formato);
+            }
+
+            y += altoFila;
+
+            // Datos
+
+            while (filaActualImpresion < dgv_reporte.Rows.Count)
+            {
+                DataGridViewRow fila = dgv_reporte.Rows[filaActualImpresion];
+
+                if (fila.IsNewRow)
+                {
+                    filaActualImpresion++;
+                    continue;
+                }
+
+                if (y + altoFila > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true;
+                    return;
+                }
+
+                for (int i = 0; i < dgv_reporte.Columns.Count; i++)
+                {
+                    Rectangle rectangulo = new Rectangle(
+                        x + (i * anchoColumna),
+                        y,
+                        anchoColumna,
+                        altoFila);
+
+                    e.Graphics.DrawRectangle(Pens.Black, rectangulo);
+
+                    string valor = fila.Cells[i].Value?.ToString() ?? "";
+
+                    StringFormat formato = new StringFormat();
+                    formato.Alignment = StringAlignment.Center;
+                    formato.LineAlignment = StringAlignment.Center;
+
+                    RectangleF texto = new RectangleF(
+                        rectangulo.X + 2,
+                        rectangulo.Y + 2,
+                        rectangulo.Width - 4,
+                        rectangulo.Height - 4);
+
+                    e.Graphics.DrawString(
+                        valor,
+                        fuenteTexto,
+                        Brushes.Black,
+                        texto,
+                        formato);
+                }
+
+                y += altoFila;
+                filaActualImpresion++;
+            }
+
+            e.HasMorePages = false;
+            filaActualImpresion = 0;
+
+            fuenteTitulo.Dispose();
+            fuenteSubtitulo.Dispose();
+            fuenteEncabezado.Dispose();
+            fuenteTexto.Dispose();
+        }
+        private void FormReportes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_exportar_Click(object sender, EventArgs e)
+        {
+            if (dgv_reporte.Rows.Count == 0)
+            {
+                MessageBox.Show(
+                    "No hay datos para imprimir.",
+                    "Advertencia",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+
+            tituloReporte =
+                "REPORTE DE VENTAS\n" +
+                "DEL " + dtp_inicio.Value.ToString("dd/MM/yyyy") +
+                " AL " + dtp_fin.Value.ToString("dd/MM/yyyy");
+
+            filaActualImpresion = 0;
+
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(pd_PrintPage);
+
+            pd.DefaultPageSettings.Landscape = true;
+
+            PrintPreviewDialog ppd = new PrintPreviewDialog();
+
+            ppd.Document = pd;
+            ppd.WindowState = FormWindowState.Maximized;
+
+            ppd.ShowDialog();
+        }
+    
     }
     
 }

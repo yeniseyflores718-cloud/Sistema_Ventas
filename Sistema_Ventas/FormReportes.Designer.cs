@@ -41,9 +41,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_buscar = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.dtp_fin = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_menosVendido = new System.Windows.Forms.Button();
+            this.btn_masVendido = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgv_reporte = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,15 +67,14 @@
             this.lbl_totalVentas = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_masVendido = new System.Windows.Forms.Button();
-            this.btn_menosVendido = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.btn_exportar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reporte)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -83,8 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -266,16 +267,15 @@
             this.panel3.Size = new System.Drawing.Size(784, 461);
             this.panel3.TabIndex = 2;
             // 
-            // btn_buscar
+            // panel10
             // 
-            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_buscar.Location = new System.Drawing.Point(460, 3);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(135, 24);
-            this.btn_buscar.TabIndex = 5;
-            this.btn_buscar.Text = "Buscar rango de fechas";
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            this.panel10.Controls.Add(this.dtp_fin);
+            this.panel10.Controls.Add(this.dtp_inicio);
+            this.panel10.Controls.Add(this.btn_buscar);
+            this.panel10.Location = new System.Drawing.Point(36, 99);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(614, 30);
+            this.panel10.TabIndex = 9;
             // 
             // dtp_fin
             // 
@@ -292,6 +292,52 @@
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.Size = new System.Drawing.Size(217, 20);
             this.dtp_inicio.TabIndex = 3;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.Location = new System.Drawing.Point(460, 3);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(135, 24);
+            this.btn_buscar.TabIndex = 5;
+            this.btn_buscar.Text = "Buscar rango de fechas";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel9.Controls.Add(this.btn_exportar);
+            this.panel9.Controls.Add(this.btn_menosVendido);
+            this.panel9.Controls.Add(this.btn_masVendido);
+            this.panel9.Location = new System.Drawing.Point(162, 397);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(499, 59);
+            this.panel9.TabIndex = 8;
+            // 
+            // btn_menosVendido
+            // 
+            this.btn_menosVendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_menosVendido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_menosVendido.Location = new System.Drawing.Point(204, 6);
+            this.btn_menosVendido.Name = "btn_menosVendido";
+            this.btn_menosVendido.Size = new System.Drawing.Size(106, 45);
+            this.btn_menosVendido.TabIndex = 7;
+            this.btn_menosVendido.Text = "❌Producto menos vendido";
+            this.btn_menosVendido.UseVisualStyleBackColor = false;
+            this.btn_menosVendido.Click += new System.EventHandler(this.btn_menosVendido_Click);
+            // 
+            // btn_masVendido
+            // 
+            this.btn_masVendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_masVendido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.btn_masVendido.Location = new System.Drawing.Point(78, 6);
+            this.btn_masVendido.Name = "btn_masVendido";
+            this.btn_masVendido.Size = new System.Drawing.Size(106, 45);
+            this.btn_masVendido.TabIndex = 6;
+            this.btn_masVendido.Text = "✔️Producto más vendido";
+            this.btn_masVendido.UseVisualStyleBackColor = false;
+            this.btn_masVendido.Click += new System.EventHandler(this.btn_masVendido_Click);
             // 
             // panel8
             // 
@@ -499,47 +545,16 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // btn_masVendido
+            // btn_exportar
             // 
-            this.btn_masVendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_masVendido.Location = new System.Drawing.Point(15, 3);
-            this.btn_masVendido.Name = "btn_masVendido";
-            this.btn_masVendido.Size = new System.Drawing.Size(146, 23);
-            this.btn_masVendido.TabIndex = 6;
-            this.btn_masVendido.Text = "Producto mas vendido";
-            this.btn_masVendido.UseVisualStyleBackColor = true;
-            this.btn_masVendido.Click += new System.EventHandler(this.btn_masVendido_Click);
-            // 
-            // btn_menosVendido
-            // 
-            this.btn_menosVendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_menosVendido.Location = new System.Drawing.Point(170, 3);
-            this.btn_menosVendido.Name = "btn_menosVendido";
-            this.btn_menosVendido.Size = new System.Drawing.Size(164, 23);
-            this.btn_menosVendido.TabIndex = 7;
-            this.btn_menosVendido.Text = "Productos menos vendido";
-            this.btn_menosVendido.UseVisualStyleBackColor = true;
-            this.btn_menosVendido.Click += new System.EventHandler(this.btn_menosVendido_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel9.Controls.Add(this.btn_menosVendido);
-            this.panel9.Controls.Add(this.btn_masVendido);
-            this.panel9.Location = new System.Drawing.Point(290, 397);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(334, 32);
-            this.panel9.TabIndex = 8;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.dtp_fin);
-            this.panel10.Controls.Add(this.dtp_inicio);
-            this.panel10.Controls.Add(this.btn_buscar);
-            this.panel10.Location = new System.Drawing.Point(36, 99);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(614, 30);
-            this.panel10.TabIndex = 9;
+            this.btn_exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_exportar.Location = new System.Drawing.Point(334, 6);
+            this.btn_exportar.Name = "btn_exportar";
+            this.btn_exportar.Size = new System.Drawing.Size(106, 45);
+            this.btn_exportar.TabIndex = 8;
+            this.btn_exportar.Text = "🖨️ Exportar";
+            this.btn_exportar.UseVisualStyleBackColor = false;
+            this.btn_exportar.Click += new System.EventHandler(this.btn_exportar_Click);
             // 
             // FormReportes
             // 
@@ -555,12 +570,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormReportes_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reporte)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -576,8 +594,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -622,5 +638,6 @@
         private System.Windows.Forms.Button btn_masVendido;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btn_exportar;
     }
 }
