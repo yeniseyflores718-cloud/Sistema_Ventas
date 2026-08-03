@@ -68,6 +68,7 @@
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.btn_modoOscuro = new System.Windows.Forms.Button();
+            this.btnActivarLector = new System.Windows.Forms.Button();
             this.tbl_superior.SuspendLayout();
             this.pnl_superior.SuspendLayout();
             this.tlpMenu.SuspendLayout();
@@ -215,6 +216,7 @@
             this.picProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picProductos.TabIndex = 0;
             this.picProductos.TabStop = false;
+            this.picProductos.MouseEnter += new System.EventHandler(this.picProductos_MouseEnter);
             // 
             // label2
             // 
@@ -251,6 +253,7 @@
             this.pnl_ventas.Name = "pnl_ventas";
             this.pnl_ventas.Size = new System.Drawing.Size(245, 180);
             this.pnl_ventas.TabIndex = 5;
+            this.pnl_ventas.MouseEnter += new System.EventHandler(this.pnl_ventas_MouseEnter);
             // 
             // picVentas
             // 
@@ -261,6 +264,8 @@
             this.picVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picVentas.TabIndex = 4;
             this.picVentas.TabStop = false;
+            this.picVentas.Click += new System.EventHandler(this.picVentas_Click);
+            this.picVentas.MouseEnter += new System.EventHandler(this.picVentas_MouseEnter);
             // 
             // label9
             // 
@@ -317,6 +322,7 @@
             this.pnl_inventario.Name = "pnl_inventario";
             this.pnl_inventario.Size = new System.Drawing.Size(276, 180);
             this.pnl_inventario.TabIndex = 2;
+            this.pnl_inventario.MouseEnter += new System.EventHandler(this.pnl_inventario_MouseEnter);
             // 
             // btn_forminventario
             // 
@@ -370,6 +376,7 @@
             this.picInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picInventario.TabIndex = 2;
             this.picInventario.TabStop = false;
+            this.picInventario.MouseEnter += new System.EventHandler(this.picInventario_MouseEnter);
             // 
             // pnl_salir
             // 
@@ -383,6 +390,7 @@
             this.pnl_salir.Name = "pnl_salir";
             this.pnl_salir.Size = new System.Drawing.Size(276, 180);
             this.pnl_salir.TabIndex = 3;
+            this.pnl_salir.MouseEnter += new System.EventHandler(this.pnl_salir_MouseEnter);
             // 
             // btn_salirsistema
             // 
@@ -436,6 +444,7 @@
             this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSalir.TabIndex = 3;
             this.picSalir.TabStop = false;
+            this.picSalir.MouseEnter += new System.EventHandler(this.picSalir_MouseEnter);
             // 
             // pnl_proveedores
             // 
@@ -449,6 +458,7 @@
             this.pnl_proveedores.Name = "pnl_proveedores";
             this.pnl_proveedores.Size = new System.Drawing.Size(274, 180);
             this.pnl_proveedores.TabIndex = 4;
+            this.pnl_proveedores.MouseEnter += new System.EventHandler(this.pnl_proveedores_MouseEnter);
             // 
             // btn_form_proovedores
             // 
@@ -502,6 +512,7 @@
             this.picproveedores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picproveedores.TabIndex = 2;
             this.picproveedores.TabStop = false;
+            this.picproveedores.MouseEnter += new System.EventHandler(this.picproveedores_MouseEnter);
             // 
             // pnl_reportes
             // 
@@ -515,6 +526,7 @@
             this.pnl_reportes.Name = "pnl_reportes";
             this.pnl_reportes.Size = new System.Drawing.Size(274, 180);
             this.pnl_reportes.TabIndex = 5;
+            this.pnl_reportes.MouseEnter += new System.EventHandler(this.pnl_reportes_MouseEnter);
             // 
             // btn_form_reportes
             // 
@@ -568,6 +580,7 @@
             this.picReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picReportes.TabIndex = 1;
             this.picReportes.TabStop = false;
+            this.picReportes.MouseEnter += new System.EventHandler(this.picReportes_MouseEnter);
             // 
             // lblBienvenido
             // 
@@ -604,12 +617,23 @@
             this.btn_modoOscuro.UseVisualStyleBackColor = true;
             this.btn_modoOscuro.Click += new System.EventHandler(this.btn_modoOscuro_Click);
             // 
+            // btnActivarLector
+            // 
+            this.btnActivarLector.Location = new System.Drawing.Point(672, 123);
+            this.btnActivarLector.Name = "btnActivarLector";
+            this.btnActivarLector.Size = new System.Drawing.Size(118, 33);
+            this.btnActivarLector.TabIndex = 6;
+            this.btnActivarLector.Text = "Activar Lector";
+            this.btnActivarLector.UseVisualStyleBackColor = true;
+            this.btnActivarLector.Click += new System.EventHandler(this.btnActivarLector_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.btnActivarLector);
             this.Controls.Add(this.btn_modoOscuro);
             this.Controls.Add(this.lblSubtitulo);
             this.Controls.Add(this.lblBienvenido);
@@ -690,5 +714,6 @@
         private System.Windows.Forms.Panel pnl_ventas;
         private System.Windows.Forms.PictureBox picVentas;
         private System.Windows.Forms.Button btn_modoOscuro;
+        private System.Windows.Forms.Button btnActivarLector;
     }
 }
