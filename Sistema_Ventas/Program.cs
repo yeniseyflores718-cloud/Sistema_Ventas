@@ -18,6 +18,7 @@ namespace Sistema_Ventas
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Formlogin2());
 
+            //comentario salvador del comit
             //Application.Run(new Form1());
 
             //version 3 del señor color noche
