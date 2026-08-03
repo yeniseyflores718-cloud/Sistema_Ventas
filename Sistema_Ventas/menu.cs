@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace Sistema_Ventas
 {
     public partial class menu : Form
     {
+        private SpeechSynthesizer lector = new SpeechSynthesizer();
+        private bool lectorActivo = false;
+
+
         private bool esModoOscuro = false;
         private string rolUsuario;
         public menu()
@@ -69,7 +74,7 @@ namespace Sistema_Ventas
 
         private void Tarjeta_MouseEnter(object sender, EventArgs e)
         {
-
+            LeerTexto("Módulo Productos. Administra el catálogo de tus productos.");
         }
 
         private void btn_modoOscuro_Click(object sender, EventArgs e)
@@ -150,5 +155,104 @@ namespace Sistema_Ventas
                 btn_nuevousuario.Visible = false;
             }
         }
+
+        private void LeerTexto(string texto)
+        {
+            if (!lectorActivo) return;
+
+            try
+            {
+                lector.SpeakAsyncCancelAll();
+                lector.SpeakAsync(texto);     
+            }
+            catch
+            { 
+            
+            }
+        }
+
+        private void btnActivarLector_Click(object sender, EventArgs e)
+        {
+            lectorActivo = !lectorActivo;
+
+            if (lectorActivo)
+            {
+                btnActivarLector.Text = "Desactivar Lector";
+
+                // Saludo de bienvenida completo ignorando el candado inicial
+                try
+                {
+                    lector.SpeakAsyncCancelAll();
+                    lector.SpeakAsync("Bienvenido al menú principal. Elige una opción para comenzar pasando el cursor sobre los módulos.");
+                }
+                catch { }
+            }
+            else
+            {
+                btnActivarLector.Text = "Activar Lector";
+                lector.SpeakAsyncCancelAll(); // Se calla inmediatamente al apagarlo
+            }
+        }
+
+        private void picProductos_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Productos. Administra el catálogo de tus productos.");
+        }
+
+        private void pnl_ventas_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Ventas. Registra ventas.");
+        }
+
+        private void picVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picVentas_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Ventas. Registra ventas.");
+        }
+
+        private void pnl_inventario_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Inventario. Controla el stock, entrada y salidas de tus productos.");
+        }
+
+        private void picInventario_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Inventario. Controla el stock, entrada y salidas de tus productos.");
+        }
+
+        private void pnl_reportes_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Reportes. Visualiza reportes.");
+        }
+
+        private void picReportes_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Reportes. Visualiza reportes.");
+        }
+
+        private void pnl_proveedores_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Proveedores. Administra la información de tus proveedores.");
+        }
+
+        private void picproveedores_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Módulo Proveedores. Administra la información de tus proveedores.");
+        }
+
+        private void pnl_salir_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Cerrar Sesión. Salir del sistema.");
+        }
+
+        private void picSalir_MouseEnter(object sender, EventArgs e)
+        {
+            LeerTexto("Cerrar Sesión. Salir del sistema.");
+        }
     }
 }
+
