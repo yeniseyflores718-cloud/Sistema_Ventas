@@ -21,43 +21,46 @@ namespace Sistema_Ventas
             InitializeComponent();
         }
 
-        private void cargarDatos(int categoria = 0)
+        private void cargarDatos(string nombre = "", int categoria = 0)
         {
             conexion = new dataAcces();
             MySqlConnection con = conexion.getConnection();
 
             string consulta = @"
-            SELECT
-            p.id_Producto,
-            p.nombre_producto,
-            p.precio_c,
-            p.precio_v,
-            p.stock_act,
-            p.stock_min,
-            p.fecha_com,
-            p.fecha_cad,
-            c.categoria
-            FROM productos p
-            INNER JOIN categoria c
-            ON p.id_categoria = c.id_categoria";
+             SELECT
+             p.id_Producto,
+             p.nombre_producto,
+             p.precio_c,
+             p.precio_v,
+             p.stock_act,
+             p.stock_min,
+             p.fecha_com,
+             p.fecha_cad,
+             c.categoria
+             FROM productos p
+             INNER JOIN categoria c
+             ON p.id_categoria = c.id_categoria
+             WHERE 1=1";
 
             if (categoria != 0)
-            {
-                consulta += " WHERE p.id_categoria=@categoria";
-            }
+                consulta += " AND p.id_categoria=@categoria";
+
+            if (!string.IsNullOrWhiteSpace(nombre))
+                consulta += " AND p.nombre_producto LIKE @nombre";
 
             MySqlDataAdapter da = new MySqlDataAdapter(consulta, con);
 
             if (categoria != 0)
-            {
                 da.SelectCommand.Parameters.AddWithValue("@categoria", categoria);
-            }
+
+            if (!string.IsNullOrWhiteSpace(nombre))
+                da.SelectCommand.Parameters.AddWithValue("@nombre", "%" + nombre + "%");
 
             DataTable dt = new DataTable();
             da.Fill(dt);
 
             dgv_productos.DataSource = dt;
-
+            dgv_productos.Columns["id_Producto"].Visible=false;
         }
         private void cargarCategorias()
         {
@@ -97,7 +100,7 @@ namespace Sistema_Ventas
         {
             cargarCategorias();
             cargarDatos();
-            
+            limpiarCampos();
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -256,7 +259,7 @@ namespace Sistema_Ventas
             txt_stock_actual.Text = "";
             txt_precio_venta.Text = "";
             txt_stock_minimo.Text = "";
-            cmb_categoriaProducto.SelectedIndex = 0;
+            cmb_categoriaProducto.SelectedIndex = -1; // Sin categoría seleccionada
         }
 
         private void dgv_productos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -391,33 +394,12 @@ namespace Sistema_Ventas
 
         private void txt_buscador_prod_TextChanged(object sender, EventArgs e)
         {
-            conexion = new dataAcces();
-            MySqlConnection con = conexion.getConnection();
-            if (con != null)
-            {
-                TextBox txt = (TextBox)sender;
-                string consulta = @"
-                SELECT
-                p.id_Producto,
-                p.nombre_producto,
-                p.precio_c,
-                p.precio_v,
-                p.stock_act,
-                p.stock_min,
-                p.fecha_com,
-                p.fecha_cad,
-                c.categoria
-                FROM productos p
-                INNER JOIN categoria c
-                ON p.id_categoria = c.id_categoria
-                WHERE p.nombre_producto LIKE @busqueda";
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, con);
-                adaptador.SelectCommand.Parameters.AddWithValue("@busqueda", "%" + txt.Text + "%");
-                DataTable dt = new DataTable();
-                adaptador.Fill(dt);
-                dgv_productos.DataSource = dt;
-                dgv_productos.Columns["id_Producto"].Visible = false;               
-            }
+            int categoria = 0;
+
+            if (cmb_categoria.SelectedValue != null)
+                int.TryParse(cmb_categoria.SelectedValue.ToString(), out categoria);
+
+            cargarDatos(txt_buscador_prod.Text, categoria);
         }
 
 
@@ -453,11 +435,12 @@ namespace Sistema_Ventas
 
         private void cmb_categoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmb_categoria.SelectedValue != null &&
-        int.TryParse(cmb_categoria.SelectedValue.ToString(), out int categoria))
-            {
-                cargarDatos(categoria);
-            }
+            int categoria = 0;
+
+            if (cmb_categoria.SelectedValue != null)
+                int.TryParse(cmb_categoria.SelectedValue.ToString(), out categoria);
+
+            cargarDatos(txt_buscador_prod.Text, categoria);
         }
 
         private void txt_categoria_TextChanged(object sender, EventArgs e)
