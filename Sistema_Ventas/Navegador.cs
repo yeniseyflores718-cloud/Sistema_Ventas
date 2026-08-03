@@ -18,7 +18,7 @@ namespace Sistema_Ventas
         // Menú principal
         public static void Irmenu(Form actual)
         {
-            Abrir(actual, new menu());
+            Abrir(actual, new menu(sesion.Rol));
         }
 
         // Productos
@@ -48,6 +48,17 @@ namespace Sistema_Ventas
         // Reportes
         public static void Irreportes(Form actual)
         {
+            if (sesion.Rol.Equals("Empleado", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show(
+                    "No tiene permisos para acceder al módulo de Reportes.",
+                    "Acceso denegado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+
             Abrir(actual, new FormReportes());
         }
 
