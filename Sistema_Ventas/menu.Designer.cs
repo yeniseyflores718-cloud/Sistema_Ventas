@@ -184,8 +184,8 @@
             this.btn_formproductos.FlatAppearance.BorderSize = 0;
             this.btn_formproductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(61)))), ((int)(((byte)(107)))));
             this.btn_formproductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.btn_formproductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_formproductos.Font = new System.Drawing.Font("Lucida Fax", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_formproductos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_formproductos.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_formproductos.Location = new System.Drawing.Point(245, 0);
             this.btn_formproductos.Name = "btn_formproductos";
             this.btn_formproductos.Size = new System.Drawing.Size(29, 180);
@@ -300,8 +300,8 @@
             this.btn_formventas.FlatAppearance.BorderSize = 0;
             this.btn_formventas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(61)))), ((int)(((byte)(107)))));
             this.btn_formventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.btn_formventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_formventas.Font = new System.Drawing.Font("Lucida Fax", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_formventas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_formventas.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_formventas.Location = new System.Drawing.Point(245, 0);
             this.btn_formventas.Name = "btn_formventas";
             this.btn_formventas.Size = new System.Drawing.Size(29, 180);
@@ -331,8 +331,8 @@
             this.btn_forminventario.FlatAppearance.BorderSize = 0;
             this.btn_forminventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(61)))), ((int)(((byte)(107)))));
             this.btn_forminventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.btn_forminventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_forminventario.Font = new System.Drawing.Font("Lucida Fax", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_forminventario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_forminventario.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_forminventario.Location = new System.Drawing.Point(247, 0);
             this.btn_forminventario.Name = "btn_forminventario";
             this.btn_forminventario.Size = new System.Drawing.Size(29, 180);
@@ -399,8 +399,8 @@
             this.btn_salirsistema.FlatAppearance.BorderSize = 0;
             this.btn_salirsistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(61)))), ((int)(((byte)(107)))));
             this.btn_salirsistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.btn_salirsistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salirsistema.Font = new System.Drawing.Font("Lucida Fax", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salirsistema.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_salirsistema.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salirsistema.Location = new System.Drawing.Point(247, 0);
             this.btn_salirsistema.Name = "btn_salirsistema";
             this.btn_salirsistema.Size = new System.Drawing.Size(29, 180);
@@ -467,8 +467,8 @@
             this.btn_form_proovedores.FlatAppearance.BorderSize = 0;
             this.btn_form_proovedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(61)))), ((int)(((byte)(107)))));
             this.btn_form_proovedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.btn_form_proovedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_form_proovedores.Font = new System.Drawing.Font("Lucida Fax", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_form_proovedores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_form_proovedores.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_form_proovedores.Location = new System.Drawing.Point(245, 0);
             this.btn_form_proovedores.Name = "btn_form_proovedores";
             this.btn_form_proovedores.Size = new System.Drawing.Size(29, 180);
@@ -535,8 +535,8 @@
             this.btn_form_reportes.FlatAppearance.BorderSize = 0;
             this.btn_form_reportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(61)))), ((int)(((byte)(107)))));
             this.btn_form_reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(228)))), ((int)(((byte)(240)))));
-            this.btn_form_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_form_reportes.Font = new System.Drawing.Font("Lucida Fax", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_form_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_form_reportes.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_form_reportes.Location = new System.Drawing.Point(245, 0);
             this.btn_form_reportes.Name = "btn_form_reportes";
             this.btn_form_reportes.Size = new System.Drawing.Size(29, 180);
@@ -616,10 +616,13 @@
             this.btn_modoOscuro.Text = "🌙 Modo Oscuro";
             this.btn_modoOscuro.UseVisualStyleBackColor = true;
             this.btn_modoOscuro.Click += new System.EventHandler(this.btn_modoOscuro_Click);
+            this.btn_modoOscuro.MouseEnter += new System.EventHandler(this.btn_modoOscuro_MouseEnter);
             // 
             // btnActivarLector
             // 
-            this.btnActivarLector.Location = new System.Drawing.Point(672, 123);
+            this.btnActivarLector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActivarLector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActivarLector.Location = new System.Drawing.Point(684, 123);
             this.btnActivarLector.Name = "btnActivarLector";
             this.btnActivarLector.Size = new System.Drawing.Size(118, 33);
             this.btnActivarLector.TabIndex = 6;

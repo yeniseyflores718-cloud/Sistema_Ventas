@@ -137,6 +137,7 @@ namespace Sistema_Ventas
                 pnl_reportes.BackColor = Color.FromArgb(200, 215, 230);
                 pnl_salir.BackColor = Color.FromArgb(200, 215, 230);
                 pnl_proveedores.BackColor = Color.FromArgb(200, 215, 230);
+                btn_modoOscuro.BackColor = Color.White;
 
                 picProductos.Image = Properties.Resources.producto2;
                 picVentas.Image = Properties.Resources.venta2;
@@ -252,6 +253,20 @@ namespace Sistema_Ventas
         private void picSalir_MouseEnter(object sender, EventArgs e)
         {
             LeerTexto("Cerrar Sesión. Salir del sistema.");
+        }
+
+        private void btn_modoOscuro_MouseEnter(object sender, EventArgs e)
+        {
+            // Cambiamos el texto dinámicamente según lo que vaya a hacer el botón
+            if (this.BackColor == SystemColors.Control)
+            {
+                LeerTexto("Botón Modo Oscuro. Presiona para cambiar a tema oscuro.");
+            }
+            else
+            {
+
+                LeerTexto("Botón Modo Claro. Presiona para cambiar a tema claro.");
+            }
         }
     }
 }
