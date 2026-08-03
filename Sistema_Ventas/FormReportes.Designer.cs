@@ -41,34 +41,39 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.dtp_fin = new System.Windows.Forms.DateTimePicker();
+            this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.data_reportes = new System.Windows.Forms.DataGridView();
+            this.dgv_reporte = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lbl_clientesatendidos = new System.Windows.Forms.Label();
+            this.lbl_clientesAtendidos = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.lbl_productosvendidos = new System.Windows.Forms.Label();
+            this.lbl_productosVendidos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_numeroventas = new System.Windows.Forms.Label();
+            this.lbl_numVentas = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_totalventas = new System.Windows.Forms.Label();
+            this.lbl_totalVentas = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_masVendido = new System.Windows.Forms.Button();
+            this.btn_menosVendido = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data_reportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_reporte)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -78,6 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -249,37 +256,64 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.panel10);
+            this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(200, 100);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(784, 461);
             this.panel3.TabIndex = 2;
             // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.Location = new System.Drawing.Point(460, 3);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(135, 24);
+            this.btn_buscar.TabIndex = 5;
+            this.btn_buscar.Text = "Buscar rango de fechas";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // dtp_fin
+            // 
+            this.dtp_fin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_fin.Location = new System.Drawing.Point(232, 7);
+            this.dtp_fin.Name = "dtp_fin";
+            this.dtp_fin.Size = new System.Drawing.Size(212, 20);
+            this.dtp_fin.TabIndex = 4;
+            // 
+            // dtp_inicio
+            // 
+            this.dtp_inicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_inicio.Location = new System.Drawing.Point(9, 7);
+            this.dtp_inicio.Name = "dtp_inicio";
+            this.dtp_inicio.Size = new System.Drawing.Size(217, 20);
+            this.dtp_inicio.TabIndex = 3;
+            // 
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.data_reportes);
-            this.panel8.Location = new System.Drawing.Point(36, 180);
+            this.panel8.Controls.Add(this.dgv_reporte);
+            this.panel8.Location = new System.Drawing.Point(36, 135);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(722, 256);
             this.panel8.TabIndex = 2;
             // 
-            // data_reportes
+            // dgv_reporte
             // 
-            this.data_reportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_reportes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.data_reportes.GridColor = System.Drawing.SystemColors.Control;
-            this.data_reportes.Location = new System.Drawing.Point(0, 0);
-            this.data_reportes.Name = "data_reportes";
-            this.data_reportes.Size = new System.Drawing.Size(722, 256);
-            this.data_reportes.TabIndex = 0;
-            this.data_reportes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_reportes_CellContentClick);
+            this.dgv_reporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_reporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_reporte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_reporte.GridColor = System.Drawing.SystemColors.Control;
+            this.dgv_reporte.Location = new System.Drawing.Point(0, 0);
+            this.dgv_reporte.Name = "dgv_reporte";
+            this.dgv_reporte.Size = new System.Drawing.Size(722, 256);
+            this.dgv_reporte.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -294,7 +328,7 @@
             this.tableLayoutPanel2.Controls.Add(this.panel6, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(32, 65);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(32, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -304,7 +338,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.lbl_clientesatendidos);
+            this.panel7.Controls.Add(this.lbl_clientesAtendidos);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.pictureBox5);
             this.panel7.Location = new System.Drawing.Point(546, 3);
@@ -312,15 +346,15 @@
             this.panel7.Size = new System.Drawing.Size(159, 81);
             this.panel7.TabIndex = 1;
             // 
-            // lbl_clientesatendidos
+            // lbl_clientesAtendidos
             // 
-            this.lbl_clientesatendidos.AutoSize = true;
-            this.lbl_clientesatendidos.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clientesatendidos.Location = new System.Drawing.Point(99, 43);
-            this.lbl_clientesatendidos.Name = "lbl_clientesatendidos";
-            this.lbl_clientesatendidos.Size = new System.Drawing.Size(14, 14);
-            this.lbl_clientesatendidos.TabIndex = 4;
-            this.lbl_clientesatendidos.Text = "0";
+            this.lbl_clientesAtendidos.AutoSize = true;
+            this.lbl_clientesAtendidos.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_clientesAtendidos.Location = new System.Drawing.Point(99, 43);
+            this.lbl_clientesAtendidos.Name = "lbl_clientesAtendidos";
+            this.lbl_clientesAtendidos.Size = new System.Drawing.Size(14, 14);
+            this.lbl_clientesAtendidos.TabIndex = 4;
+            this.lbl_clientesAtendidos.Text = "0";
             // 
             // label5
             // 
@@ -335,7 +369,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Sistema_Ventas.Properties.Resources.clientesatendidos;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(0, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(72, 74);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,7 +379,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.lbl_productosvendidos);
+            this.panel6.Controls.Add(this.lbl_productosVendidos);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Location = new System.Drawing.Point(365, 3);
@@ -353,15 +387,15 @@
             this.panel6.Size = new System.Drawing.Size(159, 81);
             this.panel6.TabIndex = 1;
             // 
-            // lbl_productosvendidos
+            // lbl_productosVendidos
             // 
-            this.lbl_productosvendidos.AutoSize = true;
-            this.lbl_productosvendidos.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_productosvendidos.Location = new System.Drawing.Point(96, 43);
-            this.lbl_productosvendidos.Name = "lbl_productosvendidos";
-            this.lbl_productosvendidos.Size = new System.Drawing.Size(14, 14);
-            this.lbl_productosvendidos.TabIndex = 3;
-            this.lbl_productosvendidos.Text = "0";
+            this.lbl_productosVendidos.AutoSize = true;
+            this.lbl_productosVendidos.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_productosVendidos.Location = new System.Drawing.Point(96, 43);
+            this.lbl_productosVendidos.Name = "lbl_productosVendidos";
+            this.lbl_productosVendidos.Size = new System.Drawing.Size(14, 14);
+            this.lbl_productosVendidos.TabIndex = 3;
+            this.lbl_productosVendidos.Text = "0";
             // 
             // label4
             // 
@@ -386,7 +420,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.lbl_numeroventas);
+            this.panel5.Controls.Add(this.lbl_numVentas);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Location = new System.Drawing.Point(184, 3);
@@ -394,15 +428,15 @@
             this.panel5.Size = new System.Drawing.Size(159, 81);
             this.panel5.TabIndex = 1;
             // 
-            // lbl_numeroventas
+            // lbl_numVentas
             // 
-            this.lbl_numeroventas.AutoSize = true;
-            this.lbl_numeroventas.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_numeroventas.Location = new System.Drawing.Point(95, 43);
-            this.lbl_numeroventas.Name = "lbl_numeroventas";
-            this.lbl_numeroventas.Size = new System.Drawing.Size(14, 14);
-            this.lbl_numeroventas.TabIndex = 3;
-            this.lbl_numeroventas.Text = "0";
+            this.lbl_numVentas.AutoSize = true;
+            this.lbl_numVentas.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numVentas.Location = new System.Drawing.Point(95, 43);
+            this.lbl_numVentas.Name = "lbl_numVentas";
+            this.lbl_numVentas.Size = new System.Drawing.Size(14, 14);
+            this.lbl_numVentas.TabIndex = 3;
+            this.lbl_numVentas.Text = "0";
             // 
             // label3
             // 
@@ -427,7 +461,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.lbl_totalventas);
+            this.panel4.Controls.Add(this.lbl_totalVentas);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Location = new System.Drawing.Point(3, 3);
@@ -435,15 +469,15 @@
             this.panel4.Size = new System.Drawing.Size(159, 81);
             this.panel4.TabIndex = 0;
             // 
-            // lbl_totalventas
+            // lbl_totalVentas
             // 
-            this.lbl_totalventas.AutoSize = true;
-            this.lbl_totalventas.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalventas.Location = new System.Drawing.Point(88, 43);
-            this.lbl_totalventas.Name = "lbl_totalventas";
-            this.lbl_totalventas.Size = new System.Drawing.Size(14, 14);
-            this.lbl_totalventas.TabIndex = 2;
-            this.lbl_totalventas.Text = "0";
+            this.lbl_totalVentas.AutoSize = true;
+            this.lbl_totalVentas.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalVentas.Location = new System.Drawing.Point(88, 43);
+            this.lbl_totalVentas.Name = "lbl_totalVentas";
+            this.lbl_totalVentas.Size = new System.Drawing.Size(14, 14);
+            this.lbl_totalVentas.TabIndex = 2;
+            this.lbl_totalVentas.Text = "0";
             // 
             // label2
             // 
@@ -465,22 +499,47 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // dateTimePicker1
+            // btn_masVendido
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(36, 19);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(255, 22);
-            this.dateTimePicker1.TabIndex = 0;
+            this.btn_masVendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_masVendido.Location = new System.Drawing.Point(15, 3);
+            this.btn_masVendido.Name = "btn_masVendido";
+            this.btn_masVendido.Size = new System.Drawing.Size(146, 23);
+            this.btn_masVendido.TabIndex = 6;
+            this.btn_masVendido.Text = "Producto mas vendido";
+            this.btn_masVendido.UseVisualStyleBackColor = true;
+            this.btn_masVendido.Click += new System.EventHandler(this.btn_masVendido_Click);
             // 
-            // button1
+            // btn_menosVendido
             // 
-            this.button1.Location = new System.Drawing.Point(614, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_menosVendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_menosVendido.Location = new System.Drawing.Point(170, 3);
+            this.btn_menosVendido.Name = "btn_menosVendido";
+            this.btn_menosVendido.Size = new System.Drawing.Size(164, 23);
+            this.btn_menosVendido.TabIndex = 7;
+            this.btn_menosVendido.Text = "Productos menos vendido";
+            this.btn_menosVendido.UseVisualStyleBackColor = true;
+            this.btn_menosVendido.Click += new System.EventHandler(this.btn_menosVendido_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel9.Controls.Add(this.btn_menosVendido);
+            this.panel9.Controls.Add(this.btn_masVendido);
+            this.panel9.Location = new System.Drawing.Point(290, 397);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(334, 32);
+            this.panel9.TabIndex = 8;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.dtp_fin);
+            this.panel10.Controls.Add(this.dtp_inicio);
+            this.panel10.Controls.Add(this.btn_buscar);
+            this.panel10.Location = new System.Drawing.Point(36, 99);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(614, 30);
+            this.panel10.TabIndex = 9;
             // 
             // FormReportes
             // 
@@ -503,7 +562,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.data_reportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_reporte)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -517,6 +576,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -529,7 +590,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btn_proovedores;
         private System.Windows.Forms.Button btn_reportes;
         private System.Windows.Forms.Button btn_inventario;
@@ -546,15 +606,21 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DataGridView data_reportes;
+        private System.Windows.Forms.DataGridView dgv_reporte;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_clientesatendidos;
-        private System.Windows.Forms.Label lbl_productosvendidos;
-        private System.Windows.Forms.Label lbl_numeroventas;
-        private System.Windows.Forms.Label lbl_totalventas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_clientesAtendidos;
+        private System.Windows.Forms.Label lbl_productosVendidos;
+        private System.Windows.Forms.Label lbl_numVentas;
+        private System.Windows.Forms.Label lbl_totalVentas;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.DateTimePicker dtp_fin;
+        private System.Windows.Forms.DateTimePicker dtp_inicio;
+        private System.Windows.Forms.Button btn_menosVendido;
+        private System.Windows.Forms.Button btn_masVendido;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
     }
 }

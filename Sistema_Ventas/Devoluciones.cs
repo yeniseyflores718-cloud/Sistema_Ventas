@@ -15,14 +15,17 @@ namespace Sistema_Ventas
     public partial class Devoluciones : Form
     {
         dataAcces conexion;
+        private int cantidadMaximaComprada = 0;
+
         public Devoluciones()
         {
             InitializeComponent();
+            lst_productos.SelectedIndexChanged += lst_productos_SelectedIndexChanged;
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Desea cancelar la devolución?","Cancelar devolución", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show("¿Desea cancelar la devolución?", "Cancelar devolución", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (respuesta == DialogResult.Yes)
             {
@@ -30,17 +33,12 @@ namespace Sistema_Ventas
             }
         }
 
-       
-
         private void Devoluciones_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-
-            // 1. VALIDACIONES
             if (string.IsNullOrWhiteSpace(txt_idVenta.Text))
             {
                 MessageBox.Show("Por favor, ingrese un ID de venta.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -66,7 +64,18 @@ namespace Sistema_Ventas
                 return;
             }
 
-            // 2. OBTENER DATOS
+            if (cantidadDevolver > cantidadMaximaComprada)
+            {
+                MessageBox.Show($"Error: No puedes devolver más unidades de las compradas.\n\n" +
+                                $"Cantidad comprada originalmente: {cantidadMaximaComprada} piezas.",
+                                "Cantidad Inválida",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+
+                num_cantidad.Value = cantidadMaximaComprada;
+                return;
+            }
+
             int idProducto = Convert.ToInt32(lst_productos.SelectedValue);
             int idVenta = Convert.ToInt32(txt_idVenta.Text);
             string motivo = txt_motivo.Text.Trim();
@@ -79,7 +88,6 @@ namespace Sistema_Ventas
             {
                 try
                 {
-                    // A) SI ES ACTIVO, SUMAMOS AL INVENTARIO DE LA TABLA PRODUCTOS
                     if (regresaAInventario)
                     {
                         string queryStock = "UPDATE productos SET stock_act = stock_act + @cant WHERE id_Producto = @idProd";
@@ -89,11 +97,10 @@ namespace Sistema_Ventas
                         cmdStock.ExecuteNonQuery();
                     }
 
-                    // B) REGISTRAR EN LA TABLA DEVOLUCIONES (Usando Motivo, FechaDev, Tipo, id_venta)
                     string tipoDevolucion = regresaAInventario ? "Activo" : "Inactivo";
 
                     string queryDev = @"INSERT INTO devoluciones (Motivo, FechaDev, Tipo, id_venta) 
-                               VALUES (@motivo, CURDATE(), @tipo, @idVenta)";
+                                   VALUES (@motivo, CURDATE(), @tipo, @idVenta)";
 
                     MySqlCommand cmdDev = new MySqlCommand(queryDev, con);
                     cmdDev.Parameters.AddWithValue("@motivo", motivo);
@@ -107,13 +114,13 @@ namespace Sistema_Ventas
 
                     MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Limpiar campos
                     txt_idVenta.Clear();
                     lst_productos.DataSource = null;
                     num_cantidad.Value = 0;
                     txt_motivo.Clear();
                     rb_activo.Checked = false;
                     rb_inactivo.Checked = false;
+                    cantidadMaximaComprada = 0;
                     txt_idVenta.Focus();
 
                     this.Close();
@@ -128,7 +135,6 @@ namespace Sistema_Ventas
                 }
             }
         }
-        
 
         private void LimpiarDevoluciones()
         {
@@ -138,12 +144,12 @@ namespace Sistema_Ventas
             txt_motivo.Clear();
             rb_activo.Checked = false;
             rb_inactivo.Checked = false;
+            cantidadMaximaComprada = 0;
             txt_idVenta.Focus();
         }
 
         private void txt_idVenta_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txt_idVenta_KeyDown(object sender, KeyEventArgs e)
@@ -169,11 +175,10 @@ namespace Sistema_Ventas
             {
                 try
                 {
-                    // Usamos d.id_Producto (P mayúscula)
-                    string query = @"SELECT d.id_Producto, p.nombre_Producto 
-                             FROM detalle_venta d 
-                             INNER JOIN productos p ON d.id_Producto = p.id_Producto 
-                             WHERE d.id_venta = @idVenta";
+                    string query = @"SELECT d.id_Producto, p.nombre_Producto, d.Cantidad 
+                                 FROM detalle_venta d 
+                                 INNER JOIN productos p ON d.id_Producto = p.id_Producto 
+                                 WHERE d.id_venta = @idVenta";
 
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@idVenta", Convert.ToInt32(idVenta));
@@ -187,10 +192,13 @@ namespace Sistema_Ventas
                         lst_productos.DataSource = dt;
                         lst_productos.DisplayMember = "nombre_Producto";
                         lst_productos.ValueMember = "id_Producto";
+
+                        ActualizarCantidadMaxima();
                     }
                     else
                     {
                         lst_productos.DataSource = null;
+                        cantidadMaximaComprada = 0;
                         MessageBox.Show("No se encontraron productos para esta venta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -203,8 +211,24 @@ namespace Sistema_Ventas
                     con.Close();
                 }
             }
-        
+        }
+
+        private void lst_productos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActualizarCantidadMaxima();
+        }
+
+        private void ActualizarCantidadMaxima()
+        {
+            if (lst_productos.SelectedItem != null && lst_productos.DataSource is DataTable)
+            {
+                DataRowView fila = (DataRowView)lst_productos.SelectedItem;
+                cantidadMaximaComprada = Convert.ToInt32(fila["Cantidad"]);
+            }
+            else
+            {
+                cantidadMaximaComprada = 0;
+            }
         }
     }
-    
 }
