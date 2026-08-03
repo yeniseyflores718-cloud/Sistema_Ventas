@@ -379,5 +379,17 @@ namespace Sistema_Ventas
         {
             //nada
         }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            dgv_ventas.Rows.Clear();
+            txt_buscarProducto.Clear();
+            txt_recibido.Clear();
+            txt_total.Text = "$0.00";
+            txt_cambio.Text = "$0.00";
+            txt_productos.Clear();
+            txt_cantidad.Clear();
+            txt_buscarProducto.Focus();
+        }
     }
 }
