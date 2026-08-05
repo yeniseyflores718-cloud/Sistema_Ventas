@@ -1,10 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using Sistema_Ventas.DataAcces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +46,7 @@ namespace Sistema_Ventas
 
         private void btn_reportes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ya estás en este formulario.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Ya estás en este formulario.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_proovedores_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace Sistema_Ventas
             Navegador.Irproveedores(this);
         }
 
-        
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -66,6 +68,7 @@ namespace Sistema_Ventas
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
+
             dataAcces conexion = new dataAcces();
             MySqlConnection con = conexion.getConnection();
 
@@ -73,23 +76,40 @@ namespace Sistema_Ventas
             {
                 try
                 {
-                    string queryTabla = @"SELECT 
-                         d.id_venta AS 'ID Venta',
-                         v.Fecha_venta AS 'Fecha',
-                         p.nombre_producto AS 'Producto',
-                         d.Cantidad AS 'Cantidad',
-                         d.PrecioU AS 'Precio Unitario ($)',
-                         d.Subtotal AS 'Subtotal ($)',
-                         IFNULL(e.nombre_usuario, 'Sin Vendedor') AS 'Vendedor'
-                     FROM detalle_venta d
-                     INNER JOIN venta v ON d.id_venta = v.id_venta
-                     INNER JOIN productos p ON d.id_Producto = p.id_Producto
-                     LEFT JOIN empleados e ON v.id_empleado = e.id_empleado
-                     WHERE v.Fecha_venta BETWEEN @inicio AND @fin";
+                    // 1. CONFIGURACIÓN DE FECHAS
+                    string fechaInicio;
+                    string fechaFin;
+
+                    if (rbUnicoDia.Checked)
+                    {
+                        fechaInicio = dtp_inicio.Value.ToString("yyyy-MM-dd 00:00:00");
+                        fechaFin = dtp_inicio.Value.ToString("yyyy-MM-dd 23:59:59");
+                    }
+                    else
+                    {
+                        fechaInicio = dtp_inicio.Value.ToString("yyyy-MM-dd 00:00:00");
+                        fechaFin = dtp_fin.Value.ToString("yyyy-MM-dd 23:59:59");
+                    }
+
+                    // 2. CONSULTA Y LLENADO DEL DATAGRIDVIEW
+                    string queryTabla = @"
+                    SELECT 
+                        d.id_venta AS 'ID Venta',
+                        v.Fecha_venta AS 'Fecha',
+                        p.nombre_producto AS 'Producto',
+                        d.Cantidad AS 'Cantidad',
+                        d.PrecioU AS 'Precio Unitario ($)',
+                        d.Subtotal AS 'Subtotal ($)',
+                        IFNULL(e.nombre_usuario, 'Sin Vendedor') AS 'Vendedor'
+                    FROM detalle_venta d
+                    INNER JOIN venta v ON d.id_venta = v.id_venta
+                    INNER JOIN productos p ON d.id_Producto = p.id_Producto
+                    LEFT JOIN empleados e ON v.id_empleado = e.id_empleado
+                    WHERE v.Fecha_venta BETWEEN @inicio AND @fin";
 
                     MySqlCommand cmd = new MySqlCommand(queryTabla, con);
-                    cmd.Parameters.AddWithValue("@inicio", dtp_inicio.Value.ToString("yyyy-MM-dd"));
-                    cmd.Parameters.AddWithValue("@fin", dtp_fin.Value.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@inicio", fechaInicio);
+                    cmd.Parameters.AddWithValue("@fin", fechaFin);
 
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -97,16 +117,18 @@ namespace Sistema_Ventas
 
                     dgv_reporte.DataSource = dt;
 
-                    string queryTotales = @"SELECT 
-                                        IFNULL(SUM(Total), 0) AS TotalDinero,
-                                        COUNT(id_venta) AS TotalVentas,
-                                        COUNT(DISTINCT id_cliente) AS TotalClientes
-                                     FROM venta 
-                                     WHERE Fecha_venta BETWEEN @inicio AND @fin";
+                    // 3. CONSULTA DE TARJETAS (DINERO, VENTAS, CLIENTES)
+                    string queryTotales = @"
+                    SELECT 
+                        IFNULL(SUM(Total), 0) AS TotalDinero,
+                        COUNT(id_venta) AS TotalVentas,
+                        COUNT(DISTINCT id_cliente) AS TotalClientes
+                    FROM venta 
+                    WHERE Fecha_venta BETWEEN @inicio AND @fin";
 
                     MySqlCommand cmdTotales = new MySqlCommand(queryTotales, con);
-                    cmdTotales.Parameters.AddWithValue("@inicio", dtp_inicio.Value.ToString("yyyy-MM-dd"));
-                    cmdTotales.Parameters.AddWithValue("@fin", dtp_fin.Value.ToString("yyyy-MM-dd"));
+                    cmdTotales.Parameters.AddWithValue("@inicio", fechaInicio);
+                    cmdTotales.Parameters.AddWithValue("@fin", fechaFin);
 
                     using (MySqlDataReader dr = cmdTotales.ExecuteReader())
                     {
@@ -118,21 +140,22 @@ namespace Sistema_Ventas
                         }
                     }
 
-                    // 3. Consulta para la cantidad total de artículos que se saieron o descontaron de la tienda
-                    string queryProductos = @"SELECT IFNULL(SUM(d.Cantidad), 0) AS TotalProd
-                                     FROM detalle_venta d
-                                     INNER JOIN venta v ON d.id_venta = v.id_venta
-                                     WHERE v.Fecha_venta BETWEEN @inicio AND @fin";
+                    // 4. CONSULTA DE PRODUCTOS VENDIDOS
+                    string queryProductos = @"
+                    SELECT IFNULL(SUM(d.Cantidad), 0) AS TotalProd
+                    FROM detalle_venta d
+                    INNER JOIN venta v ON d.id_venta = v.id_venta
+                    WHERE v.Fecha_venta BETWEEN @inicio AND @fin";
 
                     MySqlCommand cmdProd = new MySqlCommand(queryProductos, con);
-                    cmdProd.Parameters.AddWithValue("@inicio", dtp_inicio.Value.ToString("yyyy-MM-dd"));
-                    cmdProd.Parameters.AddWithValue("@fin", dtp_fin.Value.ToString("yyyy-MM-dd"));
+                    cmdProd.Parameters.AddWithValue("@inicio", fechaInicio);
+                    cmdProd.Parameters.AddWithValue("@fin", fechaFin);
 
                     lbl_productosVendidos.Text = cmdProd.ExecuteScalar().ToString();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al generar el reporte de productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al generar el reporte: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -404,7 +427,28 @@ namespace Sistema_Ventas
 
             ppd.ShowDialog();
         }
-    
+
+        private void rbUnicoDia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbUnicoDia.Checked)
+            {
+                // Oculta el segundo calendario
+                dtp_fin.Visible = false;
+
+                // Cambia el texto del botón para que haga sentido
+                btn_buscar.Text = "Buscar Día";
+            }
+            else
+            {
+                // Muestra de nuevo el segundo calendario
+                dtp_fin.Visible = true;
+
+                // Regresa el texto original del botón
+                btn_buscar.Text = "Buscar rango de fechas";
+            }
+        }
+
+
     }
-    
+
 }

@@ -46,6 +46,7 @@
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_exportar = new System.Windows.Forms.Button();
             this.btn_menosVendido = new System.Windows.Forms.Button();
             this.btn_masVendido = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -67,7 +68,7 @@
             this.lbl_totalVentas = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_exportar = new System.Windows.Forms.Button();
+            this.rbUnicoDia = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -257,6 +258,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(250)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.rbUnicoDia);
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
@@ -314,6 +316,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(499, 59);
             this.panel9.TabIndex = 8;
+            // 
+            // btn_exportar
+            // 
+            this.btn_exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_exportar.Location = new System.Drawing.Point(334, 6);
+            this.btn_exportar.Name = "btn_exportar";
+            this.btn_exportar.Size = new System.Drawing.Size(106, 45);
+            this.btn_exportar.TabIndex = 8;
+            this.btn_exportar.Text = "🖨️ Exportar";
+            this.btn_exportar.UseVisualStyleBackColor = false;
+            this.btn_exportar.Click += new System.EventHandler(this.btn_exportar_Click);
             // 
             // btn_menosVendido
             // 
@@ -545,16 +558,17 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // btn_exportar
+            // rbUnicoDia
             // 
-            this.btn_exportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_exportar.Location = new System.Drawing.Point(334, 6);
-            this.btn_exportar.Name = "btn_exportar";
-            this.btn_exportar.Size = new System.Drawing.Size(106, 45);
-            this.btn_exportar.TabIndex = 8;
-            this.btn_exportar.Text = "🖨️ Exportar";
-            this.btn_exportar.UseVisualStyleBackColor = false;
-            this.btn_exportar.Click += new System.EventHandler(this.btn_exportar_Click);
+            this.rbUnicoDia.AutoSize = true;
+            this.rbUnicoDia.Location = new System.Drawing.Point(656, 106);
+            this.rbUnicoDia.Name = "rbUnicoDia";
+            this.rbUnicoDia.Size = new System.Drawing.Size(109, 17);
+            this.rbUnicoDia.TabIndex = 10;
+            this.rbUnicoDia.TabStop = true;
+            this.rbUnicoDia.Text = "Ventas en Un Dia";
+            this.rbUnicoDia.UseVisualStyleBackColor = true;
+            this.rbUnicoDia.CheckedChanged += new System.EventHandler(this.rbUnicoDia_CheckedChanged);
             // 
             // FormReportes
             // 
@@ -577,6 +591,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -639,5 +654,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btn_exportar;
+        private System.Windows.Forms.RadioButton rbUnicoDia;
     }
 }
